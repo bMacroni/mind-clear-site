@@ -5,57 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mind Clear Studio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-black text-gray-100">
 
   <!-- Hero -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <h1 class="text-4xl sm:text-6xl font-bold text-teal-600">Mind Clear Studio</h1>
-    <p class="mt-4 text-lg sm:text-xl max-w-2xl">
-      Helping people live better, more productive lives through simple, powerful apps.
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-black">
+    <h1 class="text-5xl sm:text-7xl font-extrabold text-yellow-500 tracking-wide uppercase">
+      Mind Clear Studio
+    </h1>
+    <p class="mt-6 text-lg sm:text-2xl max-w-2xl text-gray-300 leading-relaxed">
+      Helping people with ADHD get things done — through simple, powerful apps that reduce stress, not add to it.
     </p>
+    <a href="#download" class="mt-10 inline-block bg-yellow-500 text-black px-8 py-4 rounded-full shadow-lg font-semibold hover:bg-yellow-400 transition">
+      Explore the App
+    </a>
   </section>
 
   <!-- Mission -->
-  <section class="py-16 px-6 bg-gray-50 text-center">
-    <h2 class="text-2xl font-semibold text-teal-600">Our Mission</h2>
-    <p class="mt-4 max-w-3xl mx-auto text-lg">
-      At Mind Clear, my mission is to design apps that increase productivity and efficiency —
-      without adding complexity. Technology should reduce stress, not create it.
+  <section class="py-24 px-6 bg-neutral-900 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-yellow-500 uppercase">Our Mission</h2>
+    <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed">
+      At Mind Clear, our mission is to design apps that increase productivity and efficiency without adding complexity. 
+      Technology should empower focus and clarity — not overwhelm.
     </p>
   </section>
 
   <!-- About -->
-  <section class="py-16 px-6 text-center">
-    <h2 class="text-2xl font-semibold text-teal-600">About Me</h2>
-    <p class="mt-4 max-w-2xl mx-auto text-lg">
-      Hi, I’m Brian Cornell, the developer behind Mind Clear. I’m passionate about creating
-      Hi, I’m Brian Cornell, the vibe coder behind Mind Clear. I’m passionate about creating
-      apps that improve daily life. This is just the beginning — my first app is launching soon.
+  <section class="py-24 px-6 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-yellow-500 uppercase">About Me</h2>
+    <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
+      I’m Brian Cornell, the vibe coder behind Mind Clear. I create apps that help people live better, more productive lives. 
+      My first app is launching soon, and this is just the beginning.
     </p>
   </section>
 
   <!-- App Download -->
-  <section class="py-16 px-6 bg-gray-50 text-center">
-    <h2 class="text-2xl font-semibold text-teal-600">Try the App</h2>
-    <p class="mt-4 text-lg">Coming soon to Google Play.</p>
+  <section id="download" class="py-24 px-6 bg-neutral-900 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-yellow-500 uppercase">Try the App</h2>
+    <p class="mt-6 text-lg text-gray-300">Coming soon to Google Play.</p>
     <!-- Placeholder QR Code -->
-    <div class="mt-6 flex justify-center">
+    <div class="mt-8 flex justify-center">
       <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://play.google.com/store/apps/details?id=your.app.id" 
-           alt="QR Code" class="w-40 h-40 border rounded-lg shadow-md" />
+           alt="QR Code" class="w-44 h-44 border border-yellow-500 rounded-xl shadow-lg" />
     </div>
-    <a href="#" class="mt-6 inline-block bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:bg-teal-700 transition">
+    <a href="#" class="mt-10 inline-block bg-yellow-500 text-black px-8 py-4 rounded-full shadow-lg font-semibold hover:bg-yellow-400 transition">
       Download on Google Play
     </a>
   </section>
 
-  <!-- Contact / Footer -->
-  <footer class="py-8 text-center text-sm text-gray-500">
-    <p>Let’s connect: <a href="mailto:mindclear.studio@gmail.com" class="text-teal-600">Email me</a></p>
-    <p class="mt-2">
-      <a href="privacy.html" class="text-teal-600 hover:underline">Privacy Policy</a>
+  <!-- Footer -->
+  <footer class="py-12 text-center text-sm text-gray-400 bg-black border-t border-neutral-800">
+    <p>Let’s connect: 
+      <a href="mailto:mindclear.studio@gmail.com" class="text-yellow-500 hover:underline">Email me</a>
     </p>
-    <p class="mt-2">© 2025 Mind Clear</p>
+    <p class="mt-3">
+      <a href="privacy.html" class="text-yellow-500 hover:underline">Privacy Policy</a>
+    </p>
+    <p class="mt-3">© 2025 Mind Clear</p>
   </footer>
 
 </body>

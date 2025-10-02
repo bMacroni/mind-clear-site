@@ -12,7 +12,6 @@
 </head>
 <body class="bg-black text-gray-200 antialiased">
 
-  <!-- Banner / Hero -->
   <header class="relative w-full">
     <img src="banner.png" alt="Mind Clear Studio Banner" class="w-full object-cover h-56 sm:h-72 md:h-96"/>
     <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
@@ -23,11 +22,10 @@
     </div>
   </header>
 
-  <!-- Main content -->
   <main class="max-w-4xl mx-auto px-6 py-12 leading-relaxed">
     <div class="text-sm text-gray-400">
       <div>Effective Date: <strong class="text-gray-200">September 22, 2025</strong></div>
-      <div>Last Updated: <strong class="text-gray-200">September 22, 2025</strong></div>
+      <div>Last Updated: <strong class="text-gray-200">October 1, 2025</strong></div>
     </div>
 
     <article class="mt-8 space-y-10 text-base sm:text-lg text-gray-300">
@@ -71,6 +69,7 @@
           <li><strong>Google Account Data:</strong> Information from your Google account when you sign in.</li>
           <li><strong>Calendar Data:</strong> Google Calendar events (only when you grant permission).</li>
           <li><strong>Weather Data:</strong> Local weather information for scheduling optimization.</li>
+          <li><strong>Google OAuth Scopes:</strong> Specifically for Google integration, the following OAuth Scopes are requested for authentication and read-only calendar access: openid, email, profile, and <code class="bg-neutral-800 text-yellow-300 rounded px-1 text-sm">https://www.googleapis.com/auth/calendar.events.readonly</code>.</li>
         </ul>
       </section>
 
@@ -91,7 +90,7 @@
 
       <section>
         <h2 class="text-2xl font-bold text-yellow-500">4. Information Sharing and Disclosure</h2>
-        <p class="mt-3">We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:</p>
+        <p class="mt-3">We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
 
         <h3 class="mt-4 font-semibold text-yellow-400">4.1 Service Providers</h3>
         <ul class="list-disc pl-6 mt-2 space-y-2">
@@ -100,6 +99,7 @@
           <li>Firebase: Analytics and crash reporting.</li>
           <li>Railway: Backend hosting services.</li>
         </ul>
+        <p class="mt-2 text-sm text-gray-400"><strong>Note:</strong> This list may be updated as our technical infrastructure evolves.</p>
 
         <h3 class="mt-4 font-semibold text-yellow-400">4.2 Legal Requirements</h3>
         <p class="mt-2">We may disclose your information if required by law or to:</p>
@@ -114,6 +114,9 @@
 
         <h3 class="mt-4 font-semibold text-yellow-400">4.4 Aggregated and De-Identified Data</h3>
         <p class="mt-2">We may share aggregated, anonymized data for research, analytics, or marketing purposes. This data cannot reasonably identify you.</p>
+
+        <h3 class="mt-4 font-semibold text-yellow-400">4.5 With Your Consent</h3>
+        <p class="mt-2">We may share your information with third parties when we have your explicit consent to do so.</p>
       </section>
 
       <section>
@@ -121,6 +124,7 @@
         <ul class="list-disc pl-6 mt-2 space-y-2">
           <li><strong>Encryption:</strong> Data is encrypted in transit and at rest.</li>
           <li><strong>Access Controls:</strong> Limited access to personal information on a need-to-know basis.</li>
+          <li><strong>Authentication:</strong> Secure authentication is enforced, primarily through trusted providers like Google Sign-In.</li>
           <li><strong>Regular Audits:</strong> Security assessments and vulnerability testing.</li>
           <li><strong>Secure Infrastructure:</strong> Hosting on secure, compliant platforms.</li>
           <li><strong>Breach Notification:</strong> Users will be informed promptly in case of a data breach affecting personal information.</li>
@@ -136,7 +140,9 @@
           <li>Analytics Data: Retained for up to 2 years.</li>
           <li>Crash Reports: Retained for up to 1 year.</li>
         </ul>
-        <p class="mt-2">Deleted information may remain in backups for a limited period for disaster recovery purposes.</p>
+        <p class="mt-2">
+          <strong>Deletion:</strong> Deleted information will be completely removed from our systems within 30 days, though it may remain in backups for a limited period until the next backup cycle is complete.
+        </p>
       </section>
 
       <section>
@@ -150,6 +156,18 @@
           <li>Restriction &amp; Objection: Limit or object to processing under applicable laws.</li>
           <li>Opt-Out: Opt out of marketing communications or the sale of personal information (where applicable).</li>
         </ul>
+
+        <h3 class="mt-4 font-semibold text-yellow-400">7.1 Data Deletion &amp; Account Management</h3>
+        <p class="mt-2">You can delete your account and all associated data at any time by:</p>
+        <ul class="list-disc pl-6 mt-2 space-y-2">
+          <li>Using the "Delete Account" option in the app's Profile settings.</li>
+          <li>Contacting us directly at <a href="mailto:mindclear.studio@gmail.com" class="text-yellow-400 underline">mindclear.studio@gmail.com</a>.</li>
+        </ul>
+        <p class="mt-2">When you request deletion, we will remove all your personal information, goals, tasks, calendar data, and authentication tokens, completing the deletion process within 30 days.</p>
+
+        <h3 class="mt-4 font-semibold text-yellow-400">7.2 Notification Preferences</h3>
+        <p class="mt-2">You can manage push notification settings in your device settings or app preferences, and opt out of email notifications in your account settings.</p>
+
         <p class="mt-3">To exercise your rights, contact us at
           <a href="mailto:mindclear.studio@gmail.com" class="text-yellow-400 underline">mindclear.studio@gmail.com</a>.
           We will respond within the timeframe required by law.
@@ -168,7 +186,7 @@
 
       <section>
         <h2 class="text-2xl font-bold text-yellow-500">9. International Users</h2>
-        <p class="mt-3">If you are using the Service from outside the United States, your data may be transferred and processed in the U.S. or other countries where our service providers operate. We ensure appropriate safeguards are in place for cross-border data transfers.</p>
+        <p class="mt-3">If you are using the Service from outside the United States, your data may be transferred to and processed in the U.S. or other countries where our service providers operate. We ensure appropriate safeguards are in place for cross-border data transfers in accordance with applicable data protection laws.</p>
       </section>
 
       <section>
@@ -178,23 +196,44 @@
 
       <section>
         <h2 class="text-2xl font-bold text-yellow-500">11. Policy Updates</h2>
-        <p class="mt-3">We may update this Privacy Policy from time to time. When we make material changes, we will notify you via the Service or email. Please review this page periodically for the latest information.</p>
+        <p class="mt-3">We may update this Privacy Policy from time to time. When we make material changes, we will notify you by updating the "Last Updated" date, posting the new Privacy Policy within the app, and/or sending you an email notification. Please review this page periodically for the latest information.</p>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-yellow-500">12. Contact Us</h2>
+        <h2 class="text-2xl font-bold text-yellow-500">12. AI-Generated Content</h2>
+        <p class="mt-3">Our app includes AI-powered features that generate content and recommendations. Please note:</p>
+        <ul class="list-disc pl-6 mt-2 space-y-2">
+          <li>AI responses are generated based on your input and may not always be accurate.</li>
+          <li>You should verify important information and use your best judgment.</li>
+          <li>AI-generated content is for productivity assistance only and should not be used as a substitute for professional advice.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-yellow-500">13. Contact Us</h2>
         <p class="mt-3">If you have any questions about this Privacy Policy, please contact us:</p>
         <p class="mt-2"><strong>Email:</strong> <a href="mailto:mindclear.studio@gmail.com" class="text-yellow-400 underline">mindclear.studio@gmail.com</a></p>
         <p class="mt-2"><strong>Website:</strong> <a href="index.html" class="text-yellow-400 underline">mind-clear.com</a></p>
-        <p class="mt-6 text-sm text-gray-400">This Privacy Policy is effective as of September 22, 2025.</p>
+        <p class="mt-2"><strong>Address:</strong> [Company Address Placeholder]</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-yellow-500">14. Compliance</h2>
+        <p class="mt-3">This Privacy Policy and our data practices are designed to comply with:</p>
+        <ul class="list-disc pl-6 mt-2 space-y-2">
+          <li>Google Play Store requirements.</li>
+          <li>General Data Protection Regulation (GDPR).</li>
+          <li>California Consumer Privacy Act (CCPA).</li>
+          <li>Other applicable privacy laws.</li>
+        </ul>
       </section>
 
     </article>
   </main>
 
-  <!-- Footer -->
   <footer class="py-10 text-center text-sm text-gray-400 bg-black border-t border-neutral-800">
-    © 2025 Mind Clear
+    <p>© 2025 Mind Clear</p>
+    <p class="mt-6 text-sm text-gray-400">This Privacy Policy is effective as of September 22, 2025.</p>
   </footer>
 
 </body>

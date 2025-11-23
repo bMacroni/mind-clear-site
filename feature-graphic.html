@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Clear - Feature Graphic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        /* Feature Graphic Container - Google Play dimensions 1024x500 */
+        .feature-graphic {
+            width: 1024px;
+            height: 500px;
+            background: #000000;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 90px rgba(0,0,0,0.8);
+        }
+        
+        /* Gradient overlay */
+        .gradient-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(251, 191, 36, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        /* Grid pattern background */
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(251, 191, 36, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(251, 191, 36, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+        
+        /* Main content layout */
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 0 80px;
+            gap: 60px;
+        }
+        
+        /* Left side - Text content */
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .logo-text {
+            font-size: 64px;
+            font-weight: 900;
+            color: #FBBF24;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 0.95;
+            text-shadow: 0 0 40px rgba(251, 191, 36, 0.4);
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .tagline {
+            font-size: 22px;
+            color: #999;
+            font-weight: 400;
+            line-height: 1.5;
+            max-width: 400px;
+        }
+        
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 15px;
+            color: #888;
+            font-weight: 500;
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: #FBBF24;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 16px rgba(251, 191, 36, 0.3);
+        }
+        
+        .feature-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #000;
+        }
+        
+        /* Right side - Visual */
+        .visual-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100%;
+        }
+        
+        /* Main visualization container */
+        .brain-dump-visual {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 0;
+        }
+        
+        /* Brain icon at top */
+        .brain-container {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .brain-glow {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+        
+        .brain-icon {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+        }
+        
+        .brain-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 20px rgba(251, 191, 36, 0.4));
+        }
+        
+        /* Flowing particles */
+        .particle-stream {
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .particle {
+            position: absolute;
+            animation: particleFlow 2.5s ease-in-out infinite;
+        }
+        
+        .particle-1 { animation-delay: 0s; left: -30px; }
+        .particle-2 { animation-delay: 0.3s; left: 0px; }
+        .particle-3 { animation-delay: 0.6s; left: 30px; }
+        .particle-4 { animation-delay: 0.9s; left: -15px; }
+        .particle-5 { animation-delay: 1.2s; left: 15px; }
+        .particle-6 { animation-delay: 1.5s; left: -25px; }
+        .particle-7 { animation-delay: 1.8s; left: 25px; }
+        .particle-8 { animation-delay: 2.1s; left: -10px; }
+        
+        @keyframes particleFlow {
+            0% {
+                top: 0;
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            10% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                top: 180px;
+                opacity: 0;
+                transform: scale(0.8);
+            }
+        }
+        
+        .particle-dot {
+            width: 8px;
+            height: 8px;
+            background: #FBBF24;
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(251, 191, 36, 0.8);
+        }
+        
+        .particle-square {
+            width: 7px;
+            height: 7px;
+            background: #FBBF24;
+            border-radius: 2px;
+            box-shadow: 0 0 12px rgba(251, 191, 36, 0.8);
+        }
+        
+        .particle-triangle {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 8px solid #FBBF24;
+            filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.8));
+        }
+        
+        /* App container at bottom */
+        .app-container {
+            position: relative;
+            width: 200px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .app-box {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 3px solid #FBBF24;
+            border-radius: 16px;
+            box-shadow: 
+                0 0 30px rgba(251, 191, 36, 0.4),
+                inset 0 2px 20px rgba(251, 191, 36, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .app-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 200%; }
+        }
+        
+        .app-icon {
+            font-size: 36px;
+            color: #FBBF24;
+            font-weight: 900;
+            z-index: 1;
+        }
+        
+        /* Download CTA */
+        .cta-button {
+            position: absolute;
+            bottom: 40px;
+            right: 80px;
+            background: #FBBF24;
+            color: #000;
+            padding: 16px 40px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.5);
+            transition: all 0.3s ease;
+            z-index: 20;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(251, 191, 36, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="feature-graphic">
+        <!-- Background elements -->
+        <div class="gradient-overlay"></div>
+        <div class="grid-pattern"></div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <!-- Left: Text -->
+            <div class="text-content">
+                <div class="brand">
+                    <div class="logo-text">
+                        MIND<br>CLEAR
+                    </div>
+                    <div class="subtitle">FOR THE ADHD BRAIN</div>
+                </div>
+                
+                <div class="tagline">
+                    Transform mental chaos into organized action. Your thoughts, captured and structured.
+                </div>
+                
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.75 4.75a.75.75 0 00-1.5 0v2.5h-2.5a.75.75 0 000 1.5h2.5v2.5a.75.75 0 001.5 0v-2.5h2.5a.75.75 0 000-1.5h-2.5v-2.5z"/>
+                            </svg>
+                        </div>
+                        <span>AI-Powered Goal Breakdown</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2 4.75h10.5v6a.25.25 0 01-.25.25H2.75a.25.25 0 01-.25-.25v-6z"/>
+                            </svg>
+                        </div>
+                        <span>Smart Calendar Integration</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.695 8.695 0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.75.75 0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75zM6 15.25a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zM5.75 12a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5z"/>
+                            </svg>
+                        </div>
+                        <span>Reduce Overwhelm, Increase Focus</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right: Visual -->
+            <div class="visual-content">
+                <div class="brain-dump-visual">
+                    <!-- Brain at top -->
+                    <div class="brain-container">
+                        <div class="brain-glow"></div>
+                        <div class="brain-icon">
+                            <svg class="brain-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#FBBF24;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <!-- Simplified, bold brain shape -->
+                                <path d="M 30 35 Q 20 38, 18 48 Q 16 58, 22 68 Q 26 75, 35 78 L 50 80" 
+                                      fill="none" stroke="url(#brainGradient)" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M 70 35 Q 80 38, 82 48 Q 84 58, 78 68 Q 74 75, 65 78 L 50 80" 
+                                      fill="none" stroke="url(#brainGradient)" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M 35 78 Q 42 82, 50 82 Q 58 82, 65 78" 
+                                      fill="none" stroke="url(#brainGradient)" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="32" cy="50" r="3" fill="#FBBF24"/>
+                                <circle cx="68" cy="50" r="3" fill="#FBBF24"/>
+                                <circle cx="50" cy="55" r="3" fill="#FBBF24"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Flowing particles -->
+                    <div class="particle-stream">
+                        <div class="particle particle-1"><div class="particle-dot"></div></div>
+                        <div class="particle particle-2"><div class="particle-square"></div></div>
+                        <div class="particle particle-3"><div class="particle-dot"></div></div>
+                        <div class="particle particle-4"><div class="particle-triangle"></div></div>
+                        <div class="particle particle-5"><div class="particle-dot"></div></div>
+                        <div class="particle particle-6"><div class="particle-square"></div></div>
+                        <div class="particle particle-7"><div class="particle-dot"></div></div>
+                        <div class="particle particle-8"><div class="particle-triangle"></div></div>
+                    </div>
+                    
+                    <!-- App container at bottom -->
+                    <div class="app-container">
+                        <div class="app-box">
+                            <div class="app-icon">MC</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Button -->
+        <a href="#" class="cta-button">Get Started</a>
+    </div>
+</body>
+</html>

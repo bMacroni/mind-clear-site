@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import Mission from "../components/Mission";
 import FeaturedProject from "../components/FeaturedProject";
+import ScreenshotGallery from "../components/ScreenshotGallery";
 import FutureVision from "../components/FutureVision";
 import Footer from "../components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero scrollY={scrollY} />
       <Mission />
       <FeaturedProject />
+      <ScreenshotGallery />
       <FutureVision />
       <Footer />
     </div>

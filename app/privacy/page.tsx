@@ -314,7 +314,7 @@ export default function PrivacyPage() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-white/20 text-white hover:bg-white/10 px-8 py-6 text-lg backdrop-blur-sm group"
+                className="border-2 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10 hover:border-yellow-500/50 px-8 py-6 text-lg backdrop-blur-sm group transition-all"
               >
                 <ArrowLeft className="mr-2 w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                 Back to Home

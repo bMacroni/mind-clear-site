@@ -37,7 +37,7 @@ export default function PrivacyPage() {
               <li><strong>User Content:</strong> Goals, tasks, milestones, AI conversations, and other content you create.</li>
               <li><strong>Preferences:</strong> App settings, notification preferences, and scheduling preferences.</li>
               <li><strong>Feedback:</strong> Support requests, survey responses, and other feedback.</li>
-              <li><strong>Payment Information:</strong> Only if you make purchases; payment info is handled and stored securely by our payment processor.</li>
+              <li><strong>Payment Information:</strong> Only if you make purchases; payment info is handled and stored securely by our payment processor (we do not store full credit card numbers).</li>
             </ul>
           </div>
           
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
           <p>We use the information we collect to:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
             <li>Provide the Service: Deliver goal and task management features.</li>
-            <li>AI Processing: Process your conversations to provide AI-powered assistance and personalized recommendations.</li>
+            <li>AI Processing: Process your conversations, goals, and tasks to provide AI-powered assistance and personalized recommendations via trusted third-party AI services, including Groq and Google.</li>
             <li>Scheduling: Optimize task scheduling based on your preferences and external factors.</li>
             <li>Notifications: Send reminders and updates about your goals and tasks.</li>
             <li>Marketing & Communication: Send optional promotional emails or updates (you may opt out at any time).</li>
@@ -95,23 +95,20 @@ export default function PrivacyPage() {
           
           <div>
             <h3 className="text-xl font-semibold text-yellow-400 mb-3">4.1 Service Providers</h3>
+            <p className="mb-2">We share information with trusted third-party services that help us operate and provide our core features:</p>
             <ul className="list-disc pl-6 space-y-2 text-gray-300">
-              <li>Google: Authentication, Calendar integration, and AI services.</li>
-              <li>Supabase: Database and authentication services.</li>
-              <li>Firebase: Analytics and crash reporting.</li>
-              <li>Railway: Backend hosting services.</li>
+              <li><strong>Groq:</strong> Used for high-speed AI inference and processing of user prompts/conversations. For these specific AI requests, the user's input (prompts/context) is not retained by Groq and is not used to train their models.</li>
+              <li><strong>Google:</strong> Authentication, Calendar integration, and other AI services.</li>
+              <li><strong>Supabase:</strong> Database and authentication services.</li>
+              <li><strong>Firebase:</strong> Analytics and crash reporting.</li>
+              <li><strong>Railway:</strong> Backend hosting services.</li>
             </ul>
             <p className="mt-2 text-sm text-gray-400"><strong>Note:</strong> This list may be updated as our technical infrastructure evolves.</p>
           </div>
 
           <div>
             <h3 className="text-xl font-semibold text-yellow-400 mb-3">4.2 Legal Requirements</h3>
-            <p className="mb-2">We may disclose your information if required by law or to:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-300">
-              <li>Comply with legal obligations.</li>
-              <li>Protect our rights, property, or safety, and the safety of our users.</li>
-              <li>Prevent fraud, abuse, or security incidents.</li>
-            </ul>
+            <p>We may disclose your information if required by law or to: comply with legal obligations, protect our rights, property, or safety, and the safety of our users, and prevent fraud, abuse, or security incidents.</p>
           </div>
 
           <div>
@@ -195,12 +192,6 @@ export default function PrivacyPage() {
             <h3 className="text-xl font-semibold text-yellow-400 mb-3">7.2 Notification Preferences</h3>
             <p>You can manage push notification settings in your device settings or app preferences, and opt out of email notifications in your account settings.</p>
           </div>
-
-          <p className="text-gray-300">
-            To exercise your rights, contact us at{" "}
-            <a href="mailto:mindclear.studio@gmail.com" className="text-yellow-400 underline hover:text-yellow-300">mindclear.studio@gmail.com</a>.
-            We will respond within the timeframe required by law.
-          </p>
         </div>
       )
     },
@@ -213,6 +204,7 @@ export default function PrivacyPage() {
           <p>Our Service integrates with third-party services that have their own privacy policies. Key integrations include:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
             <li><a href="https://policies.google.com/privacy" className="text-yellow-400 underline hover:text-yellow-300" target="_blank" rel="noopener noreferrer">Google Services: Privacy Policy</a></li>
+            <li><a href="https://groq.com/privacy" className="text-yellow-400 underline hover:text-yellow-300" target="_blank" rel="noopener noreferrer">Groq Services: Privacy Policy</a></li>
             <li><a href="https://firebase.google.com/support/privacy" className="text-yellow-400 underline hover:text-yellow-300" target="_blank" rel="noopener noreferrer">Firebase: Privacy Policy</a></li>
             <li><a href="https://supabase.com/privacy" className="text-yellow-400 underline hover:text-yellow-300" target="_blank" rel="noopener noreferrer">Supabase: Privacy Policy</a></li>
           </ul>
@@ -328,7 +320,7 @@ export default function PrivacyPage() {
       <main className="max-w-4xl mx-auto px-6 pb-20">
         <div className="text-sm text-gray-400 mb-12 text-center">
           <div>Effective Date: <strong className="text-gray-200">September 22, 2025</strong></div>
-          <div>Last Updated: <strong className="text-gray-200">October 1, 2025</strong></div>
+          <div>Last Updated: <strong className="text-gray-200">December 7, 2025</strong></div>
         </div>
 
         <div className="space-y-16">

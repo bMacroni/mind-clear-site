@@ -1,0 +1,65 @@
+# Terms of Service
+
+**Last Updated:** January 11, 2026
+
+Welcome to Mind Clear Studio! These Terms of Service ("Terms") enable you to use our website, [mind-clear.com](https://mind-clear.com), and our related software applications and services (collectively, the "Services").
+
+By accessing or using our Services, you agree to be bound by these Terms. If you do not agree, please do not use our Services.
+
+## 1. Who We Are
+**Mind Clear Studio LLC** ("we," "us," or "our") is a limited liability company organized under the laws of the State of Missouri.
+**Nature of Business:** The purpose of Mind Clear Studio LLC is to engage in the design, development, and distribution of software applications and digital services, and to transact any or all lawful business for which a limited liability company may be organized under the laws of the State of Missouri.
+
+## 2. User Accounts
+To access certain features of our Services, you may be required to create an account.
+*   **Registration:** You agree to provide accurate, current, and complete information during the registration process.
+*   **Security:** You are responsible for maintaining the confidentiality of your account credentials (username and password). You are responsible for all activities that occur under your account.
+*   **Eligibility:** You must be at least 13 years old to use our Services. If you are under 18, you may only use the Services with the permission of a parent or guardian has reviewed and agreed to these Terms on your behalf.
+*   **Termination:** We reserve the right to suspend or terminate your account if you violate these Terms or for any other reason at our sole discretion. Upon account deletion, your data will be processed in accordance with our Privacy Policy. You may delete your account at any time through the app settings or by contacting us.
+
+## 3. User Conduct
+You agree to use the Services only for lawful purposes and in accordance with these Terms. You agree not to:
+*   Use the Services in any way that violates applicable federal, state, local, or international law.
+*   Engage in any conduct that restricts or inhibits anyone’s use or enjoyment of the Services.
+*   Impersonate or attempt to impersonate Mind Clear Studio, our employees, another user, or any other person or entity.
+*   Upload or transmit viruses, Trojan horses, or other malicious code.
+*   Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Services or the server on which the Services are stored.
+
+## 4. Intellectual Property
+*   **Our Content:** The Services and their entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof) are owned by Mind Clear Studio LLC, its licensors, or other providers of such material and are protected by copyright, trademark, and other intellectual property laws.
+*   **User Content:** You retain ownership of any data, text, or other materials you upload or input into the Services ("User Content"). However, by providing User Content, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and display such content solely for the purpose of providing and improving the Services to you.
+
+## 5. Payment Terms
+*   **Subscriptions:** Some portions of the Services may be available only via a paid subscription. You will be billed in advance on a recurring and periodic basis (such as monthly or annually), depending on the type of subscription plan you select.
+*   **Billing:** You agree to provide valid payment information. By submitting such payment information, you automatically authorize Mind Clear Studio LLC to charge all subscription fees incurred through your account to any such payment instruments.
+*   **Refunds:** Except when required by law, paid subscription fees are non-refundable. Certain refund requests for subscriptions may be considered by Mind Clear Studio on a case-by-case basis and granted at the sole discretion of the company.
+*   **Changes:** We may modify subscription fees at any time. Any subscription fee change will become effective at the end of the then-current billing cycle.
+
+## 6. Disclaimers and Warranties
+**The Services are provided on an "AS IS" and "AS AVAILABLE" basis.**
+Mind Clear Studio LLC makes no representations or warranties of any kind, express or implied, regarding the operation of the Services or the information, content, or materials included therein. To the full extent permissible by law, we disclaim all warranties, express or implied, including, but not limited to, implied warranties of merchantability and fitness for a particular purpose. We do not warrant that the Services will be uninterrupted, error-free, or free of viruses or other harmful components.
+
+## 7. Limitation of Liability
+To the fullest extent provided by law, in no event will Mind Clear Studio LLC, its affiliates, or their licensors, service providers, employees, agents, officers, or directors be liable for damages of any kind, under any legal theory, arising out of or in connection with your use, or inability to use, the Services, including any direct, indirect, special, incidental, consequential, or punitive damages, including but not limited to, personal injury, pain and suffering, emotional distress, loss of revenue, loss of profits, loss of business or anticipated savings, loss of use, loss of goodwill, loss of data, whether caused by tort (including negligence), breach of contract, or otherwise, even if foreseeable.
+
+## 8. Dispute Resolution and Governing Law
+*   **Governing Law:** All matters relating to the Services and these Terms shall be governed by and construed in accordance with the internal laws of the State of Missouri, without giving effect to any choice or conflict of law provision or rule.
+*   **Mediation:** In the event of any dispute, claim, or controversy arising out of or relating to these Terms, the parties agree to first try in good faith to settle the dispute by mediation administered by a neutral mediator in Missouri before resorting to litigation.
+*   **Jurisdiction:** Any legal suit, action, or proceeding arising out of, or related to, these Terms or the Services shall be instituted exclusively in the federal courts of the United States or the courts of the State of Missouri.
+
+## 9. Privacy Policy
+Your use of the Services is also subject to our Privacy Policy. Please review our Privacy Policy, which explains how we collect, use, and share your information. [Privacy Policy](https://www.mind-clear.com/privacy)
+
+## 10. Termination
+We may terminate or suspend your access to all or part of the Services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms. Upon termination, your right to use the Services will cease immediately. For information regarding data retention and deletion post-termination, pelase refer to our Privacy Policy.
+
+## 11. Changes to Terms
+We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By continuing to access or use our Services after those revisions become effective, you agree to be bound by the revised terms.
+
+## 12. Contact Us
+If you have any questions about these Terms, please contact us at:
+*   Mind Clear Studio LLC
+*   Email: support@mind-clear.com
+
+
+[def]: https://www.mind-clear.com/privacy

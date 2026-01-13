@@ -40,7 +40,7 @@ export default function PrivacyPage() {
               <li><strong>Payment Information:</strong> Only if you make purchases; payment info is handled and stored securely by our payment processor (we do not store full credit card numbers).</li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-semibold text-yellow-400 mb-3">2.2 Information We Collect Automatically</h3>
             <ul className="list-disc pl-6 space-y-2 text-gray-300">
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
       content: (
         <div className="space-y-6">
           <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
-          
+
           <div>
             <h3 className="text-xl font-semibold text-yellow-400 mb-3">4.1 Service Providers</h3>
             <p className="mb-2">We share information with trusted third-party services that help us operate and provide our core features:</p>
@@ -183,7 +183,7 @@ export default function PrivacyPage() {
             <p className="mb-2">You can delete your account and all associated data at any time by:</p>
             <ul className="list-disc pl-6 space-y-2 text-gray-300">
               <li>Using the "Delete Account" option in the app's Profile settings.</li>
-              <li>Contacting us directly at <a href="mailto:mindclear.studio@gmail.com" className="text-yellow-400 underline hover:text-yellow-300">mindclear.studio@gmail.com</a>.</li>
+              <li>Contacting us directly at <a href="mailto:support@mind-clear.com" className="text-yellow-400 underline hover:text-yellow-300">support@mind-clear.com</a>.</li>
             </ul>
             <p className="mt-2 text-gray-300">When you request deletion, we will remove all your personal information, goals, tasks, calendar data, and authentication tokens, completing the deletion process within 30 days.</p>
           </div>
@@ -258,9 +258,9 @@ export default function PrivacyPage() {
         <div className="space-y-4">
           <p>If you have any questions about this Privacy Policy, please contact us:</p>
           <div className="space-y-2 text-gray-300">
-            <p><strong>Email:</strong> <a href="mailto:mindclear.studio@gmail.com" className="text-yellow-400 underline hover:text-yellow-300">mindclear.studio@gmail.com</a></p>
+            <p><strong>Email:</strong> <a href="mailto:support@mind-clear.com" className="text-yellow-400 underline hover:text-yellow-300">support@mind-clear.com</a></p>
             <p><strong>Website:</strong> <Link href="/" className="text-yellow-400 underline hover:text-yellow-300">mind-clear.com</Link></p>
-            <p><strong>Address:</strong> [Company Address Placeholder]</p>
+            <p><strong>Address:</strong> Missouri, USA</p>
           </div>
         </div>
       )
@@ -292,18 +292,18 @@ export default function PrivacyPage() {
             <Shield className="w-4 h-4 text-yellow-500" />
             <span className="text-sm text-gray-300">Privacy Policy</span>
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
             Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Policy</span>
           </h1>
-          
+
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
             Your privacy matters to us. Learn how we collect, use, and protect your information.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/">
-              <Button 
+              <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10 hover:border-yellow-500/50 px-8 py-6 text-lg backdrop-blur-sm group transition-all"
@@ -334,7 +334,7 @@ export default function PrivacyPage() {
                   {section.title}
                 </h2>
               </div>
-              
+
               <div className="ml-16 text-gray-300 leading-relaxed">
                 {section.content}
               </div>
@@ -346,7 +346,12 @@ export default function PrivacyPage() {
 
       {/* Footer */}
       <footer className="py-10 text-center text-sm text-gray-400 bg-black/50 border-t border-gray-800">
-        <p>© 2025 Mind Clear Studio. All rights reserved.</p>
+        <div className="flex justify-center gap-4 mb-4">
+          <Link href="/" className="text-yellow-500 hover:underline">Home</Link>
+          <span className="text-gray-600">|</span>
+          <Link href="/terms" className="text-yellow-500 hover:underline">Terms of Service</Link>
+        </div>
+        <p>© 2026 Mind Clear Studio. All rights reserved.</p>
         <p className="mt-2">This Privacy Policy is effective as of September 22, 2025.</p>
       </footer>
     </div>

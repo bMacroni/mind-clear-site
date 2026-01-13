@@ -87,4 +87,4 @@ You can also deploy manually:
 
 ## License
 
-© 2025 Mind Clear Studio. All rights reserved.
+© 2026 Mind Clear Studio. All rights reserved.

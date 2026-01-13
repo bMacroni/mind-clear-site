@@ -78,10 +78,10 @@ export default function Footer() {
 
           <div className="pt-12 flex flex-col gap-2 text-xs text-gray-700 font-mono">
             <div className="flex gap-4">
-              <Link href="#" className="hover:text-gray-500 transition-colors">Privacy Policy</Link>
-              <Link href="#" className="hover:text-gray-500 transition-colors">Terms of Service</Link>
+              <Link href="/privacy" className="hover:text-gray-500 transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-gray-500 transition-colors">Terms of Service</Link>
             </div>
-            <span>© 2025 Mind Clear Studio. All rights reserved.</span>
+            <span>© 2026 Mind Clear Studio. All rights reserved.</span>
           </div>
         </div>
 

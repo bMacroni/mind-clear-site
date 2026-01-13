@@ -15,7 +15,7 @@ export default function TermsPage() {
         <div className="space-y-4">
           <p>
             Welcome to Mind Clear Studio! These Terms of Service ("Terms") enable you to use our website,{" "}
-            <a href="https://mind-clear.com" className="text-yellow-400 underline hover:text-yellow-300">mind-clear.com</a>, 
+            <a href="https://mind-clear.com" className="text-yellow-400 underline hover:text-yellow-300">mind-clear.com</a>,
             and our related software applications and services (collectively, the "Services").
           </p>
           <p>
@@ -31,12 +31,12 @@ export default function TermsPage() {
       content: (
         <div className="space-y-4">
           <p>
-            <strong className="text-yellow-400">Mind Clear Studio LLC</strong> ("we," "us," or "our") is a limited liability company 
+            <strong className="text-yellow-400">Mind Clear Studio LLC</strong> ("we," "us," or "our") is a limited liability company
             organized under the laws of the State of Missouri.
           </p>
           <p>
-            <strong className="text-yellow-400">Nature of Business:</strong> The purpose of Mind Clear Studio LLC is to engage in the 
-            design, development, and distribution of software applications and digital services, and to transact any or all lawful business 
+            <strong className="text-yellow-400">Nature of Business:</strong> The purpose of Mind Clear Studio LLC is to engage in the
+            design, development, and distribution of software applications and digital services, and to transact any or all lawful business
             for which a limited liability company may be organized under the laws of the State of Missouri.
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function TermsPage() {
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
             <li><strong className="text-yellow-400">Registration:</strong> You agree to provide accurate, current, and complete information during the registration process.</li>
             <li><strong className="text-yellow-400">Security:</strong> You are responsible for maintaining the confidentiality of your account credentials (username and password). You are responsible for all activities that occur under your account.</li>
-            <li><strong className="text-yellow-400">Eligibility:</strong> You must be at least 13 years old to use our Services. If you are under 18, you may only use the Services with the permission of a parent or guardian has reviewed and agreed to these Terms on your behalf.</li>
+            <li><strong className="text-yellow-400">Eligibility:</strong> You must be at least 13 years old to use our Services. If you are under 18, you may only use the Services with the permission of a parent or guardian who has reviewed and agreed to these Terms on your behalf.</li>
             <li><strong className="text-yellow-400">Termination:</strong> We reserve the right to suspend or terminate your account if you violate these Terms or for any other reason at our sole discretion. Upon account deletion, your data will be processed in accordance with our Privacy Policy. You may delete your account at any time through the app settings or by contacting us.</li>
           </ul>
         </div>
@@ -83,17 +83,17 @@ export default function TermsPage() {
         <div className="space-y-4">
           <div>
             <p className="mb-2">
-              <strong className="text-yellow-400">Our Content:</strong> The Services and their entire contents, features, and functionality 
-              (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, 
-              and arrangement thereof) are owned by Mind Clear Studio LLC, its licensors, or other providers of such material and are 
+              <strong className="text-yellow-400">Our Content:</strong> The Services and their entire contents, features, and functionality
+              (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection,
+              and arrangement thereof) are owned by Mind Clear Studio LLC, its licensors, or other providers of such material and are
               protected by copyright, trademark, and other intellectual property laws.
             </p>
           </div>
           <div>
             <p>
-              <strong className="text-yellow-400">User Content:</strong> You retain ownership of any data, text, or other materials you 
-              upload or input into the Services ("User Content"). However, by providing User Content, you grant us a worldwide, 
-              non-exclusive, royalty-free license to use, reproduce, modify, and display such content solely for the purpose of providing 
+              <strong className="text-yellow-400">User Content:</strong> You retain ownership of any data, text, or other materials you
+              upload or input into the Services ("User Content"). However, by providing User Content, you grant us a worldwide,
+              non-exclusive, royalty-free license to use, reproduce, modify, and display such content solely for the purpose of providing
               and improving the Services to you.
             </p>
           </div>
@@ -108,22 +108,22 @@ export default function TermsPage() {
         <div className="space-y-4">
           <ul className="list-disc pl-6 space-y-2 text-gray-300">
             <li>
-              <strong className="text-yellow-400">Subscriptions:</strong> Some portions of the Services may be available only via a paid 
-              subscription. You will be billed in advance on a recurring and periodic basis (such as monthly or annually), depending on 
+              <strong className="text-yellow-400">Subscriptions:</strong> Some portions of the Services may be available only via a paid
+              subscription. You will be billed in advance on a recurring and periodic basis (such as monthly or annually), depending on
               the type of subscription plan you select.
             </li>
             <li>
-              <strong className="text-yellow-400">Billing:</strong> You agree to provide valid payment information. By submitting such 
-              payment information, you automatically authorize Mind Clear Studio LLC to charge all subscription fees incurred through your 
+              <strong className="text-yellow-400">Billing:</strong> You agree to provide valid payment information. By submitting such
+              payment information, you automatically authorize Mind Clear Studio LLC to charge all subscription fees incurred through your
               account to any such payment instruments.
             </li>
             <li>
-              <strong className="text-yellow-400">Refunds:</strong> Except when required by law, paid subscription fees are non-refundable. 
-              Certain refund requests for subscriptions may be considered by Mind Clear Studio on a case-by-case basis and granted at the 
+              <strong className="text-yellow-400">Refunds:</strong> Except when required by law, paid subscription fees are non-refundable.
+              Certain refund requests for subscriptions may be considered by Mind Clear Studio on a case-by-case basis and granted at the
               sole discretion of the company.
             </li>
             <li>
-              <strong className="text-yellow-400">Changes:</strong> We may modify subscription fees at any time. Any subscription fee change 
+              <strong className="text-yellow-400">Changes:</strong> We may modify subscription fees at any time. Any subscription fee change
               will become effective at the end of the then-current billing cycle.
             </li>
           </ul>
@@ -140,9 +140,9 @@ export default function TermsPage() {
             The Services are provided on an "AS IS" and "AS AVAILABLE" basis.
           </p>
           <p>
-            Mind Clear Studio LLC makes no representations or warranties of any kind, express or implied, regarding the operation of the 
-            Services or the information, content, or materials included therein. To the full extent permissible by law, we disclaim all 
-            warranties, express or implied, including, but not limited to, implied warranties of merchantability and fitness for a particular 
+            Mind Clear Studio LLC makes no representations or warranties of any kind, express or implied, regarding the operation of the
+            Services or the information, content, or materials included therein. To the full extent permissible by law, we disclaim all
+            warranties, express or implied, including, but not limited to, implied warranties of merchantability and fitness for a particular
             purpose. We do not warrant that the Services will be uninterrupted, error-free, or free of viruses or other harmful components.
           </p>
         </div>
@@ -154,11 +154,11 @@ export default function TermsPage() {
       icon: AlertTriangle,
       content: (
         <p>
-          To the fullest extent provided by law, in no event will Mind Clear Studio LLC, its affiliates, or their licensors, service 
-          providers, employees, agents, officers, or directors be liable for damages of any kind, under any legal theory, arising out of or 
-          in connection with your use, or inability to use, the Services, including any direct, indirect, special, incidental, consequential, 
-          or punitive damages, including but not limited to, personal injury, pain and suffering, emotional distress, loss of revenue, loss 
-          of profits, loss of business or anticipated savings, loss of use, loss of goodwill, loss of data, whether caused by tort 
+          To the fullest extent provided by law, in no event will Mind Clear Studio LLC, its affiliates, or their licensors, service
+          providers, employees, agents, officers, or directors be liable for damages of any kind, under any legal theory, arising out of or
+          in connection with your use, or inability to use, the Services, including any direct, indirect, special, incidental, consequential,
+          or punitive damages, including but not limited to, personal injury, pain and suffering, emotional distress, loss of revenue, loss
+          of profits, loss of business or anticipated savings, loss of use, loss of goodwill, loss of data, whether caused by tort
           (including negligence), breach of contract, or otherwise, even if foreseeable.
         </p>
       )
@@ -171,22 +171,22 @@ export default function TermsPage() {
         <div className="space-y-4">
           <div>
             <p className="mb-2">
-              <strong className="text-yellow-400">Governing Law:</strong> All matters relating to the Services and these Terms shall be 
-              governed by and construed in accordance with the internal laws of the State of Missouri, without giving effect to any choice 
+              <strong className="text-yellow-400">Governing Law:</strong> All matters relating to the Services and these Terms shall be
+              governed by and construed in accordance with the internal laws of the State of Missouri, without giving effect to any choice
               or conflict of law provision or rule.
             </p>
           </div>
           <div>
             <p className="mb-2">
-              <strong className="text-yellow-400">Mediation:</strong> In the event of any dispute, claim, or controversy arising out of or 
-              relating to these Terms, the parties agree to first try in good faith to settle the dispute by mediation administered by a 
+              <strong className="text-yellow-400">Mediation:</strong> In the event of any dispute, claim, or controversy arising out of or
+              relating to these Terms, the parties agree to first try in good faith to settle the dispute by mediation administered by a
               neutral mediator in Missouri before resorting to litigation.
             </p>
           </div>
           <div>
             <p>
-              <strong className="text-yellow-400">Jurisdiction:</strong> Any legal suit, action, or proceeding arising out of, or related 
-              to, these Terms or the Services shall be instituted exclusively in the federal courts of the United States or the courts of 
+              <strong className="text-yellow-400">Jurisdiction:</strong> Any legal suit, action, or proceeding arising out of, or related
+              to, these Terms or the Services shall be instituted exclusively in the federal courts of the United States or the courts of
               the State of Missouri.
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function TermsPage() {
       content: (
         <div className="space-y-4">
           <p>
-            Your use of the Services is also subject to our Privacy Policy. Please review our Privacy Policy, which explains how we collect, 
+            Your use of the Services is also subject to our Privacy Policy. Please review our Privacy Policy, which explains how we collect,
             use, and share your information.
           </p>
           <p>
@@ -217,8 +217,8 @@ export default function TermsPage() {
       icon: Lock,
       content: (
         <p>
-          We may terminate or suspend your access to all or part of the Services immediately, without prior notice or liability, for any 
-          reason whatsoever, including without limitation if you breach these Terms. Upon termination, your right to use the Services will 
+          We may terminate or suspend your access to all or part of the Services immediately, without prior notice or liability, for any
+          reason whatsoever, including without limitation if you breach these Terms. Upon termination, your right to use the Services will
           cease immediately. For information regarding data retention and deletion post-termination, please refer to our{" "}
           <Link href="/privacy" className="text-yellow-400 underline hover:text-yellow-300">Privacy Policy</Link>.
         </p>
@@ -230,8 +230,8 @@ export default function TermsPage() {
       icon: RefreshCw,
       content: (
         <p>
-          We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' 
-          notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By 
+          We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days'
+          notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By
           continuing to access or use our Services after those revisions become effective, you agree to be bound by the revised terms.
         </p>
       )
@@ -266,18 +266,18 @@ export default function TermsPage() {
             <FileText className="w-4 h-4 text-yellow-500" />
             <span className="text-sm text-gray-300">Terms of Service</span>
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
             Terms of <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Service</span>
           </h1>
-          
+
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
             Please read these terms carefully before using our Services.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/">
-              <Button 
+              <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10 hover:border-yellow-500/50 px-8 py-6 text-lg backdrop-blur-sm group transition-all"
@@ -307,7 +307,7 @@ export default function TermsPage() {
                   {section.title}
                 </h2>
               </div>
-              
+
               <div className="ml-16 text-gray-300 leading-relaxed">
                 {section.content}
               </div>
@@ -319,7 +319,12 @@ export default function TermsPage() {
 
       {/* Footer */}
       <footer className="py-10 text-center text-sm text-gray-400 bg-black/50 border-t border-gray-800">
-        <p>© 2025 Mind Clear Studio. All rights reserved.</p>
+        <div className="flex justify-center gap-4 mb-4">
+          <Link href="/" className="text-yellow-500 hover:underline">Home</Link>
+          <span className="text-gray-600">|</span>
+          <Link href="/privacy" className="text-yellow-500 hover:underline">Privacy Policy</Link>
+        </div>
+        <p>© 2026 Mind Clear Studio. All rights reserved.</p>
         <p className="mt-2">These Terms of Service are effective as of January 11, 2026.</p>
       </footer>
     </div>

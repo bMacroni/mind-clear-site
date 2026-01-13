@@ -14,14 +14,14 @@ export default function DeleteAccountPage() {
     <div className="min-h-screen bg-black text-gray-100">
       <main className="py-20 sm:py-28 px-6">
         <div className="max-w-3xl mx-auto">
-          
+
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-yellow-600/30 backdrop-blur-sm mb-8">
               <Trash2 className="w-4 h-4 text-yellow-500" />
               <span className="text-sm text-gray-300">Account Deletion</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl font-extrabold text-yellow-500 tracking-wide uppercase mb-4">
               Delete Your Account
             </h1>
@@ -31,7 +31,7 @@ export default function DeleteAccountPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
               <Link href="/">
-                <Button 
+                <Button
                   size="lg"
                   variant="outline"
                   className="border-2 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10 hover:border-yellow-500/50 px-8 py-6 text-lg backdrop-blur-sm group transition-all"
@@ -44,7 +44,7 @@ export default function DeleteAccountPage() {
           </div>
 
           <div className="space-y-12">
-            
+
             {/* How to Delete */}
             <div>
               <div className="flex items-start gap-4 mb-5">
@@ -87,7 +87,7 @@ export default function DeleteAccountPage() {
                 </ul>
               </div>
             </div>
-            
+
             {/* Data Retention */}
             <div>
               <div className="flex items-start gap-4 mb-5">
@@ -115,12 +115,12 @@ export default function DeleteAccountPage() {
               </div>
               <p className="ml-16 mt-5 text-lg text-gray-300 leading-relaxed">
                 If you need any assistance or have questions, please reach out to us at{" "}
-                <a href="mailto:mindclear.studio@gmail.com" className="text-yellow-500 hover:underline">
-                  mindclear.studio@gmail.com
+                <a href="mailto:support@mind-clear.com" className="text-yellow-500 hover:underline">
+                  support@mind-clear.com
                 </a>.
               </p>
             </div>
-            
+
           </div>
 
         </div>
@@ -132,10 +132,11 @@ export default function DeleteAccountPage() {
           <Link href="/" className="text-yellow-500 hover:underline">Home</Link>
           <span className="mx-2 text-neutral-600">|</span>
           <Link href="/privacy" className="text-yellow-500 hover:underline">Privacy Policy</Link>
+          <span className="mx-2 text-neutral-600">|</span>
+          <Link href="/terms" className="text-yellow-500 hover:underline">Terms of Service</Link>
         </p>
-        <p className="mt-4">© 2025 Mind Clear Studio</p>
+        <p className="mt-4">© 2026 Mind Clear Studio</p>
       </footer>
     </div>
   );
 }
-

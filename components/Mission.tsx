@@ -1,23 +1,23 @@
 import React from "react";
-import { Heart, Brain, Zap } from "lucide-react";
+import { Heart, Zap, FlaskConical } from "lucide-react";
 import { Card } from "./ui/card";
 
 export default function Mission() {
   const values = [
     {
-      icon: Brain,
-      title: "AI for Everyone",
-      description: "Making sophisticated AI accessible and understandable for everyday people, not just tech experts."
-    },
-    {
-      icon: Heart,
-      title: "Empathy-Driven Design",
-      description: "Building with deep understanding of real challenges people face, creating solutions that truly help."
+      icon: FlaskConical,
+      title: "Purposeful Experiments",
+      description: "I don't just build apps; I test solutions. Every project starts with a real-world problem and ends with a smarter way to solve it."
     },
     {
       icon: Zap,
-      title: "Simplify Complexity",
-      description: "Transforming overwhelming tasks into clear, manageable actions that empower users to thrive."
+      title: "Invisible Intelligence",
+      description: "Leveraging powerful AI that works in the background. No complex prompts required—just helpful tools that know what you need."
+    },
+    {
+      icon: Heart,
+      title: "Built for Balance",
+      description: "Success isn't about doing more; it's about struggling less. I design software that helps you stabilize your day so you can focus on what matters."
     }
   ];
 
@@ -26,17 +26,17 @@ export default function Mission() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-black">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-600">Mission</span>
+            Turning AI into <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-600">Everyday Ease</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            To democratize artificial intelligence by creating beautiful, intuitive applications 
-            that help people become the best version of themselves.
+            My mission is simple: use advanced technology to solve the 'small but heavy' problems of daily life.
+            I experiment with AI to build intuitive tools that handle the mental load for you—so you can reclaim your time and your balance.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {values.map((value, index) => (
-            <Card 
+            <Card
               key={index}
               className="group p-8 border-2 border-gray-100 hover:border-yellow-500/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-white"
             >

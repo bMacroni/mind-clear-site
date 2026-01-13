@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Hero from "../components/Hero";
+import InteractiveHero from "../components/InteractiveHero";
 import Mission from "../components/Mission";
 import FeaturedProject from "../components/FeaturedProject";
-import ScreenshotGallery from "../components/ScreenshotGallery";
-import FutureVision from "../components/FutureVision";
+import ScrollTelling from "../components/ScrollTelling";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -18,12 +17,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-[#FAFAF9] min-h-screen">
-      <Hero scrollY={scrollY} />
+    <div className="bg-[#121212] min-h-screen">
+      <InteractiveHero scrollY={scrollY} />
       <Mission />
       <FeaturedProject />
-      <ScreenshotGallery />
-      <FutureVision />
+      <ScrollTelling />
       <Footer />
     </div>
   );

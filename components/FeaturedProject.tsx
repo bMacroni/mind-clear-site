@@ -1,95 +1,84 @@
+"use client";
+
 import React from "react";
-import { Brain, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
+import { motion } from "framer-motion";
+import PhoneMockup from "./PhoneMockup";
 
 export default function FeaturedProject() {
-  const features = [
-    "AI-powered task breakdown for overwhelming projects",
-    "Smart prioritization that understands ADHD challenges",
-    "Gentle reminders designed to support, not overwhelm",
-    "Guided Brain dump to help you get your thoughts out of your head"
-  ];
-
   return (
-    <section id="featured-project" className="py-32 px-6 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-yellow-600/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-yellow-500/5 rounded-full blur-3xl" />
+    <section id="featured-project" className="py-32 px-6 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <Badge className="mb-6 bg-yellow-500/10 text-yellow-500 border-yellow-500/30 px-4 py-2 text-sm">
-            <Sparkles className="w-4 h-4 mr-2" />
-            Featured Project
-          </Badge>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-            Mind Clear for the
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
-              ADHD Brain
-            </span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            A productivity companion that understands how ADHD minds work, using AI to transform 
-            chaos into clarity and help you accomplish what matters most.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image/Mockup side */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
-            <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-12 border-2 border-gray-700 hover:border-yellow-500/50 transition-all duration-500">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center">
-                    <Brain className="w-6 h-6 text-black" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold text-lg">Mind Clear</div>
-                    <div className="text-gray-400 text-sm">ADHD Productivity</div>
-                  </div>
-                </div>
-                
-                <div className="space-y-3">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="bg-white/5 rounded-lg p-4 border border-white/10 animate-pulse" style={{ animationDelay: `${i * 200}ms` }}>
-                      <div className="h-3 bg-gradient-to-r from-gray-600 to-gray-700 rounded w-3/4 mb-2" />
-                      <div className="h-2 bg-gray-700 rounded w-1/2" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Features side */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              {features.map((feature, index) => (
-                <div 
-                  key={index}
-                  className="flex items-start gap-4 group"
-                >
-                  <div className="w-8 h-8 rounded-full bg-yellow-500/10 border-2 border-yellow-500/30 flex items-center justify-center mt-1 group-hover:bg-yellow-500 group-hover:scale-110 transition-all duration-300">
-                    <CheckCircle2 className="w-5 h-5 text-yellow-500 group-hover:text-black" strokeWidth={2.5} />
-                  </div>
-                  <p className="text-lg text-gray-300 leading-relaxed flex-1">{feature}</p>
-                </div>
-              ))}
+          {/* Left Column: Text */}
+          <div className="space-y-8 relative z-10">
+            {/* Eyebrow Label */}
+            <div className="inline-flex items-center px-3 py-1 rounded-full border border-gray-200 bg-gray-50 text-xs font-mono tracking-wider text-gray-600">
+              PROJECT 001 // ACTIVE
             </div>
 
-            <div className="pt-8">
-              <Button 
+            <div className="space-y-4">
+              <h2 className="text-6xl md:text-8xl font-bold text-black tracking-tight leading-none">
+                Mind Clear
+              </h2>
+              <p className="text-2xl md:text-3xl text-gray-400 font-light">
+                Your Executive Function, Outsourced.
+              </p>
+            </div>
+
+            <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+              ADHD brains don't need a tougher calendar. They need a translator.
+              Mind Clear uses AI to turn overwhelming projects into dopamine-ready tasks.
+            </p>
+
+            <div className="flex items-center gap-4 text-sm font-mono text-gray-400 pt-2 border-t border-gray-100 max-w-md">
+              <span>Built with:</span>
+              <span className="text-gray-600">Node.js</span>
+              <span className="text-gray-300">•</span>
+              <span className="text-gray-600">AI</span>
+              <span className="text-gray-300">•</span>
+              <span className="text-gray-600">React</span>
+            </div>
+
+            <div className="pt-4">
+              <Button
                 size="lg"
-                className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black font-semibold px-8 py-6 text-lg shadow-xl shadow-yellow-500/25 group"
+                disabled
+                className="bg-gray-100 text-gray-400 cursor-not-allowed rounded-full px-8 py-6 text-lg shadow-none"
               >
-                Learn More About Mind Clear
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Case Study Coming Soon
               </Button>
-              <p className="text-gray-500 text-sm mt-4">Coming Soon • Join the waitlist</p>
             </div>
           </div>
+
+          {/* Right Column: Visual */}
+          <div className="relative">
+            {/* Floating Animation */}
+            <motion.div
+              animate={{ y: [-15, 15, -15] }}
+              transition={{
+                repeat: Infinity,
+                duration: 6,
+                ease: "easeInOut"
+              }}
+              className="relative z-10"
+            >
+              {/* Super Shadow Container */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-black/20 blur-[60px] rounded-[40px] translate-y-20 scale-90" />
+                <PhoneMockup currentScreen="brain-dump" />
+              </div>
+            </motion.div>
+
+            {/* Background contextual numbers/decorations */}
+            <div className="absolute -top-20 -right-20 text-[20rem] font-bold text-gray-50 opacity-50 z-0 select-none pointer-events-none">
+              01
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

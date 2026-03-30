@@ -2,8 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import PhoneMockup from "./PhoneMockup";
 
@@ -35,23 +33,13 @@ export default function FeaturedProject() {
             </p>
 
             <div className="flex items-center gap-4 text-sm font-mono text-gray-400 pt-2 border-t border-gray-100 max-w-md">
-              <span>Built with:</span>
-              <span className="text-gray-600">Node.js</span>
+              <span className="text-gray-600">Android</span>
               <span className="text-gray-300">•</span>
-              <span className="text-gray-600">AI</span>
+              <span className="text-gray-600">AI-powered</span>
               <span className="text-gray-300">•</span>
-              <span className="text-gray-600">React</span>
+              <span className="text-gray-600">Free to try</span>
             </div>
 
-            <div className="pt-4">
-              <Button
-                size="lg"
-                disabled
-                className="bg-gray-100 text-gray-400 cursor-not-allowed rounded-full px-8 py-6 text-lg shadow-none"
-              >
-                Case Study Coming Soon
-              </Button>
-            </div>
           </div>
 
           {/* Right Column: Visual */}

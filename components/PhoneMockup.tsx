@@ -9,9 +9,11 @@ interface PhoneMockupProps {
 
 export default function PhoneMockup({ currentScreen }: PhoneMockupProps) {
     const images = {
-        "brain-dump": "/images/brain-dump.jpg",
-        prioritize: "/images/prioritize.jpg",
-        focus: "/images/calendar.jpg",
+        "brain-dump": "/screenshots/brain-dump.png",
+        prioritize: "/screenshots/prioritize.png",
+        focus: "/screenshots/calendar-day.png",
+        routines: "/screenshots/routines.png",
+        notifications: "/screenshots/notifications.png",
     };
 
     const imageSrc = images[currentScreen as keyof typeof images] || images["brain-dump"];

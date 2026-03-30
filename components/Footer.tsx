@@ -46,7 +46,6 @@ export default function Footer() {
           <h4 className="text-xs font-mono text-gray-500 uppercase tracking-widest">Navigation</h4>
           <ul className="space-y-3 text-gray-400">
             <li><Link href="/" className="hover:text-[#8f00ff] transition-colors flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-gray-700 group-hover:bg-[#8f00ff] transition-colors" /> Lab</Link></li>
-            <li><Link href="#" className="text-gray-600 cursor-not-allowed flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-gray-800" /> Case Study: Coming Soon</Link></li>
 
           </ul>
         </div>

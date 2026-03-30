@@ -8,17 +8,27 @@ const features = [
     {
         id: "brain-dump",
         title: "Brain Dump",
-        description: "Get everything out of your head. Our AI instantly breaks down complex tasks into manageable steps.",
+        description: "My brain was always juggling everything at once and nothing was moving. Getting it all out — in any order, any format — was the only thing that helped me start. Mind Clear turns that unstructured mess into a list I can actually work from.",
     },
     {
         id: "prioritize",
         title: "Ruthless Prioritization",
-        description: "Stop juggling. We help you pick the ONE thing that matters right now and hide the rest.",
+        description: "When everything felt urgent, I got nothing done. Mind Clear helped me land on the one thing that actually mattered right now, and quietly hide the rest until I was ready.",
     },
     {
         id: "focus",
         title: "Daily Calendar View",
-        description: "See your day, not just a list. Our smart calendar organizes your tasks into a realistic schedule so you can get meaningful things done.",
+        description: "A to-do list never told me when. I needed to see my day, not just read it. Mind Clear schedules my tasks into a realistic view of today so nothing gets lost in the fog.",
+    },
+    {
+        id: "routines",
+        title: "Routines & Streaks",
+        description: "I knew what I should be doing every day — I just couldn't make it stick. Having a routine with a visible streak gave me the structure my brain was missing and made consistency feel achievable for the first time.",
+    },
+    {
+        id: "notifications",
+        title: "Reminders That Actually Help",
+        description: "Out of sight, out of mind — but on steroids. I'd set intentions in the morning and forget them by noon. Timely reminders bring my tasks back into focus exactly when I need them, not just when I happen to open the app.",
     },
 ];
 

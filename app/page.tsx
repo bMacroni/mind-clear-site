@@ -3,6 +3,7 @@
 import React from "react";
 import InteractiveHero from "../components/InteractiveHero";
 import Mission from "../components/Mission";
+import FounderStory from "../components/FounderStory";
 import FeaturedProject from "../components/FeaturedProject";
 import ScrollTelling from "../components/ScrollTelling";
 import Footer from "../components/Footer";
@@ -12,6 +13,7 @@ export default function Home() {
     <div className="bg-[#121212] min-h-screen">
       <InteractiveHero />
       <Mission />
+      <FounderStory />
       <FeaturedProject />
       <ScrollTelling />
       <Footer />

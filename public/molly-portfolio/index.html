@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Molly Spurgin | Marketing Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:#FAF7F2; --white:#FFFFFF; --charcoal:#2C2C2C; --gray:#6B6B6B;
+  --light:#E8E4DE; --accent:#C17B3F; --accent-lt:#F2E8DC; --accent-dk:#9A5E2A; --navy:#1E2D40;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.6;}
+nav{position:fixed;top:0;left:0;right:0;background:rgba(250,247,242,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--light);z-index:100;padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{text-decoration:none;color:var(--gray);font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--accent);}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 48px 80px;max-width:1100px;margin:0 auto;gap:80px;}
+.hero-text{flex:1;}
+.eyebrow{font-size:0.78rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(3rem,5vw,4.5rem);font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:24px;}
+.hero-tag{font-size:1.1rem;color:var(--gray);font-weight:300;max-width:480px;margin-bottom:32px;line-height:1.7;}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
+.chip{background:var(--accent-lt);color:var(--accent-dk);padding:5px 14px;border-radius:100px;font-size:0.78rem;font-weight:500;}
+.hero-bio{font-size:0.92rem;color:var(--gray);line-height:1.8;max-width:480px;border-left:3px solid var(--accent);padding-left:18px;font-style:italic;}
+.stats{flex:0 0 300px;display:flex;flex-direction:column;gap:14px;}
+.stat{background:var(--white);border-radius:14px;padding:20px 24px;box-shadow:0 2px 16px rgba(0,0,0,0.06);border:1px solid var(--light);transition:transform 0.2s;}
+.stat:hover{transform:translateY(-3px);}
+.stat-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:5px;}
+.stat-l{font-size:0.8rem;color:var(--gray);}
+section{padding:90px 48px;max-width:1100px;margin:0 auto;}
+.sec-label{font-size:0.72rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.4rem);color:var(--navy);margin-bottom:14px;line-height:1.2;}
+.sec-desc{font-size:0.97rem;color:var(--gray);max-width:580px;line-height:1.7;margin-bottom:48px;}
+.divider{height:1px;background:var(--light);max-width:1004px;margin:0 auto;}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+.card{background:var(--white);border-radius:18px;overflow:hidden;border:1px solid var(--light);box-shadow:0 2px 14px rgba(0,0,0,0.05);transition:transform 0.25s,box-shadow 0.25s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 36px rgba(0,0,0,0.1);}
+.card.wide{grid-column:span 2;display:grid;grid-template-columns:1.2fr 1fr;}
+.card-img{width:100%;height:220px;object-fit:cover;object-position:top;display:block;cursor:zoom-in;}
+.card.wide .card-img{height:100%;min-height:300px;}
+.card-body{padding:24px 28px;}
+.card-tag{font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+.card-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:10px;line-height:1.3;}
+.card-desc{font-size:0.87rem;color:var(--gray);line-height:1.7;margin-bottom:16px;}
+.pills{display:flex;flex-wrap:wrap;gap:7px;}
+.pill{background:var(--accent-lt);color:var(--accent-dk);padding:3px 11px;border-radius:100px;font-size:0.75rem;font-weight:500;}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.g-item{border-radius:14px;overflow:hidden;border:1px solid var(--light);box-shadow:0 2px 10px rgba(0,0,0,0.05);transition:transform 0.2s;cursor:pointer;}
+.g-item:hover{transform:scale(1.02);}
+.g-item img{width:100%;height:190px;object-fit:cover;object-position:top;display:block;}
+.g-cap{padding:12px 14px;background:var(--white);font-size:0.78rem;color:var(--gray);font-weight:500;}
+.abm-text h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);margin-bottom:14px;}
+.abm-text p{font-size:0.9rem;color:var(--gray);line-height:1.8;margin-bottom:16px;}
+.tiers{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:8px;max-width:680px;}
+.tier{display:flex;align-items:flex-start;gap:12px;background:var(--accent-lt);padding:12px 16px;border-radius:10px;}
+.tier-n{background:var(--accent);color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0;}
+.tier-t{font-size:0.86rem;color:var(--accent-dk);line-height:1.5;}
+.tier-t strong{display:block;font-weight:600;margin-bottom:2px;color:var(--navy);}
+.press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.press-card{background:var(--white);border-radius:18px;overflow:hidden;border:1px solid var(--light);box-shadow:0 2px 14px rgba(0,0,0,0.05);transition:transform 0.25s;}
+.press-card:hover{transform:translateY(-4px);}
+.press-img{height:260px;overflow:hidden;}
+.press-img img{width:100%;height:100%;object-fit:cover;object-position:top;cursor:zoom-in;}
+.press-body{padding:20px 22px;}
+.press-pub{font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px;}
+.press-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:9px;line-height:1.35;}
+.press-desc{font-size:0.83rem;color:var(--gray);line-height:1.65;}
+.badge{display:inline-block;margin-top:12px;background:var(--navy);color:white;padding:3px 11px;border-radius:100px;font-size:0.7rem;font-weight:600;letter-spacing:0.06em;}
+.contact{background:var(--navy);color:white;text-align:center;padding:90px 48px;margin-top:40px;}
+.contact .sec-label{color:var(--accent);}
+.contact-title{font-family:'Playfair Display',serif;font-size:2.2rem;color:white;margin-bottom:14px;}
+.contact p{color:rgba(255,255,255,0.6);font-size:0.97rem;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;}
+.contact-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;}
+.clink{background:rgba(255,255,255,0.1);color:white;text-decoration:none;padding:12px 26px;border-radius:100px;font-size:0.86rem;font-weight:500;border:1px solid rgba(255,255,255,0.2);transition:background 0.2s;}
+.clink:hover{background:var(--accent);border-color:var(--accent);}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:999;align-items:center;justify-content:center;padding:40px;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:90vh;border-radius:8px;object-fit:contain;}
+.lb-close{position:fixed;top:20px;right:28px;color:white;font-size:2rem;cursor:pointer;opacity:0.7;background:none;border:none;}
+.lb-close:hover{opacity:1;}
+.fade{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade.on{opacity:1;transform:translateY(0);}
+@media(max-width:768px){
+  nav{padding:0 20px;} .nav-links{display:none;}
+  .hero{flex-direction:column;padding:100px 20px 60px;gap:36px;} .stats{flex:none;width:100%;}
+  section{padding:56px 20px;} .grid{grid-template-columns:1fr;} .card.wide{grid-column:span 1;grid-template-columns:1fr;}
+  .gallery{grid-template-columns:1fr 1fr;} .press-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Molly Spurgin</span>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#abm">ABM</a></li>
+    <li><a href="#content">Content</a></li>
+    <li><a href="#press">Press</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-text fade">
+    <p class="eyebrow">Marketing Portfolio</p>
+    <h1 class="hero-name">Molly<br>Spurgin</h1>
+    <p class="hero-tag">B2B SaaS marketer with 9+ years building programs from scratch — webinars, campaigns, launches, and everything in between.</p>
+    <div class="chips">
+      <span class="chip">Customer Marketing</span>
+      <span class="chip">Product Marketing</span>
+      <span class="chip">Lifecycle Campaigns</span>
+      <span class="chip">Brand &amp; Content</span>
+      <span class="chip">ABM</span>
+    </div>
+    <p class="hero-bio">I've spent my career as a solo marketer in a niche industry — which means I've had to be strategic, scrappy, and excellent at the same time. Every piece in this portfolio was researched, written, designed, and launched by me.</p>
+  </div>
+  <div class="stats fade">
+    <div class="stat"><div class="stat-n">557+</div><div class="stat-l">Webinar attendees — grown from 50 in one year</div></div>
+    <div class="stat"><div class="stat-n">3-Tier</div><div class="stat-l">ABM campaign built from competitive research across hundreds of prospects</div></div>
+    <div class="stat"><div class="stat-n">48-Page</div><div class="stat-l">Personalized scorecard report — fully automated delivery</div></div>
+    <div class="stat"><div class="stat-n">9 yrs</div><div class="stat-l">Sole marketer — owning every channel, every campaign</div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<section id="work">
+  <p class="sec-label fade">Featured Work</p>
+  <h2 class="sec-title fade">Product Launches &amp; GTM</h2>
+  <p class="sec-desc fade">End-to-end product marketing for a niche B2B SaaS platform — from positioning and messaging to collateral, one-pagers, and launch campaigns.</p>
+  <div class="grid">
+    <div class="card wide fade">
+      <img class="card-img" src="images/vinsight.png" alt="vinSIGHT One-Pager" onclick="lb(this.src)">
+      <div class="card-body">
+        <p class="card-tag">Product Launch / GTM</p>
+        <h3 class="card-title">vinSIGHT Analytics Module Launch</h3>
+        <p class="card-desc">Led the full go-to-market for vinSUITE's analytics product — developing positioning, messaging, and all customer-facing collateral. Built the one-pager to translate complex data capabilities into clear value for winery owners focused on churn prediction and revenue intelligence.</p>
+        <p class="card-desc">Coordinated launch across sales, product, and marketing. Wrote the press release, designed supporting assets, and managed the rollout from announcement through adoption.</p>
+        <div class="pills">
+          <span class="pill">Positioning &amp; Messaging</span><span class="pill">One-Pager</span><span class="pill">Press Release</span><span class="pill">Sales Enablement</span>
+        </div>
+      </div>
+    </div>
+    <div class="card fade">
+      <img class="card-img" src="images/brochure.png" alt="Brochure" onclick="lb(this.src)">
+      <div class="card-body">
+        <p class="card-tag">Brand / Sales Collateral</p>
+        <h3 class="card-title">Brand Brochure</h3>
+        <p class="card-desc">Full brand brochure for field sales and event use. Wrote all copy, directed design, and tailored messaging for winery decision-makers evaluating wine club software.</p>
+        <div class="pills"><span class="pill">Copywriting</span><span class="pill">Brand Design</span><span class="pill">Sales Enablement</span></div>
+      </div>
+    </div>
+    <div class="card fade">
+      <img class="card-img" src="images/ewinery.png" alt="eWinery One-Pager" onclick="lb(this.src)">
+      <div class="card-body">
+        <p class="card-tag">Product Marketing / GTM</p>
+        <h3 class="card-title">eWinery Migration Campaign</h3>
+        <p class="card-desc">Positioning and collateral for a competitive migration campaign targeting eWinery customers. Messaging anchored to zero-cost switching and zero data migration to reduce friction and drive conversion.</p>
+        <div class="pills"><span class="pill">Competitive Positioning</span><span class="pill">Migration Campaign</span><span class="pill">One-Pager</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="abm">
+  <p class="sec-label fade">Demand Generation</p>
+  <h2 class="sec-title fade">3-Tier ABM Campaign</h2>
+  <p class="sec-desc fade">A fully custom account-based marketing program built from competitive research — segmented by company size, competitor platform, and messaging strategy.</p>
+  <div class="abm-text fade">
+    <h3>The Strategy</h3>
+    <p>Starting from scratch, I researched and identified the current software provider for every prospect in our target list — then segmented them into three competitive tiers based on platform type and deal size. Each tier received a fully customized email sequence with messaging tailored to their specific software pain points, switching concerns, and business size.</p>
+    <p>The campaigns ran through Pardot Engagement Studio with lead scoring built in to surface the highest-intent accounts for sales follow-up.</p>
+    <ul class="tiers">
+      <li class="tier"><span class="tier-n">1</span><span class="tier-t"><strong>Tier 1 — Enterprise Targets</strong>Largest wineries on legacy platforms. Messaging focused on modern features and scalability.</span></li>
+      <li class="tier"><span class="tier-n">2</span><span class="tier-t"><strong>Tier 2 — Mid-Market</strong>Mid-size accounts on direct competitors. Messaging anchored to differentiation and ease of switching.</span></li>
+      <li class="tier"><span class="tier-n">3</span><span class="tier-t"><strong>Tier 3 — Growth Targets</strong>Smaller accounts on general-purpose platforms. Messaging focused on wine-industry specificity.</span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="scorecard">
+  <p class="sec-label fade">Lead Generation / Analytics</p>
+  <h2 class="sec-title fade">Wine Club Scorecard</h2>
+  <p class="sec-desc fade">A 22-question interactive assessment that generates a fully personalized 48-page PDF report — built as both a lead gen tool and a prospect intelligence engine for sales.</p>
+  <div class="grid">
+    <div class="card fade">
+      <img class="card-img" src="images/scorecard-landing.png" alt="Scorecard Landing Page" onclick="lb(this.src)">
+      <div class="card-body">
+        <p class="card-tag">Lead Generation</p>
+        <h3 class="card-title">Landing Page &amp; Conversion</h3>
+        <p class="card-desc">Designed and wrote the landing page driving scorecard completions — built to convert cold traffic through a clear value proposition and low-friction signup flow.</p>
+        <div class="pills"><span class="pill">Conversion Copywriting</span><span class="pill">Landing Page</span></div>
+      </div>
+    </div>
+    <div class="card fade">
+      <img class="card-img" src="images/scorecard-report.png" alt="Scorecard Report" onclick="lb(this.src)">
+      <div class="card-body">
+        <p class="card-tag">Personalized Report</p>
+        <h3 class="card-title">48-Page Personalized Output</h3>
+        <p class="card-desc">Each completed scorecard generates a fully personalized PDF with benchmarks, insights, and recommendations tailored to that winery's answers. Wrote all content across every conditional section of the report.</p>
+        <div class="pills"><span class="pill">Content Strategy</span><span class="pill">Personalization</span><span class="pill">Sales Intelligence</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="content">
+  <p class="sec-label fade">Brand &amp; Content</p>
+  <h2 class="sec-title fade">Content &amp; Campaign Assets</h2>
+  <p class="sec-desc fade">eBooks, one-pagers, acquisition guides, and paid ads — all researched, written, and produced in-house.</p>
+  <div class="gallery">
+    <div class="g-item fade" onclick="lb('images/ebook-cover.png')">
+      <img src="images/ebook-cover.png" alt="eBook Cover">
+      <div class="g-cap">eBook — Maximizing Wine Club Retention</div>
+    </div>
+    <div class="g-item fade" onclick="lb('images/ebook-ad.png')">
+      <img src="images/ebook-ad.png" alt="eBook Ad">
+      <div class="g-cap">Paid Ad — eBook Campaign</div>
+    </div>
+    <div class="g-item fade" onclick="lb('images/ebook-onepager.png')">
+      <img src="images/ebook-onepager.png" alt="Power of Personalization">
+      <div class="g-cap">One-Pager — Power of Personalization</div>
+    </div>
+    <div class="g-item fade" onclick="lb('images/acquisition.png')">
+      <img src="images/acquisition.png" alt="Wine Club Acquisition Guide">
+      <div class="g-cap">One-Pager — Wine Club Acquisition Guide</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="press">
+  <p class="sec-label fade">Press &amp; Media</p>
+  <h2 class="sec-title fade">Earned Media &amp; Press</h2>
+  <p class="sec-desc fade">Press releases placed in industry publications and third-party editorial coverage — written and pitched to Wine Industry Advisor and Wine Business Monthly.</p>
+  <div class="press-grid">
+    <div class="press-card fade">
+      <div class="press-img"><img src="images/pr-vinsight.jpg" alt="vinSIGHT Press Release" onclick="lb(this.src)"></div>
+      <div class="press-body">
+        <p class="press-pub">Wine Business Monthly</p>
+        <h3 class="press-title">vinSUITE Launches vinSIGHT Analytics Platform</h3>
+        <p class="press-desc">Press release written and placed for the vinSIGHT product launch — announcing churn prediction with up to 94% confidence.</p>
+        <span class="badge">Press Release</span>
+      </div>
+    </div>
+    <div class="press-card fade">
+      <div class="press-img"><img src="images/pr-jimmy.jpg" alt="Jimmy Wu Press Release" onclick="lb(this.src)"></div>
+      <div class="press-body">
+        <p class="press-pub">Wine Industry Advisor</p>
+        <h3 class="press-title">A New Chapter for vinSUITE: Jimmy Wu Joins as President</h3>
+        <p class="press-desc">Executive announcement press release written to introduce incoming leadership and signal a new strategic direction.</p>
+        <span class="badge">Press Release</span>
+      </div>
+    </div>
+    <div class="press-card fade">
+      <div class="press-img"><img src="images/pr-symposium.jpg" alt="Symposium Coverage" onclick="lb(this.src)"></div>
+      <div class="press-body">
+        <p class="press-pub">Wine Business Monthly</p>
+        <h3 class="press-title">Wine Club Symposium Coverage — 500+ Viewers</h3>
+        <p class="press-desc">Third-party editorial coverage citing 500+ attendees across six webinars over two days. Event conceived, built, and produced entirely in-house.</p>
+        <span class="badge">Editorial Coverage</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="contact">
+  <p class="sec-label">Get in Touch</p>
+  <h2 class="contact-title">Let's talk.</h2>
+  <p>Mom of two. Fueled by coffee and color-coded spreadsheets.</p>
+  <div class="contact-links">
+    <a href="mailto:molly.spurgin5637@gmail.com" class="clink">molly.spurgin5637@gmail.com</a>
+    <a href="https://www.linkedin.com/in/mollyspurgin" class="clink">LinkedIn</a>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLb()">
+  <button class="lb-close" onclick="closeLb()">&times;</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+const obs = new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('on')}),{threshold:0.1});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+function lb(src){document.getElementById('lb-img').src=src;document.getElementById('lightbox').classList.add('active');}
+function closeLb(){document.getElementById('lightbox').classList.remove('active');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+</script>
+</body>
+</html>

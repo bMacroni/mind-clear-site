@@ -133,7 +133,7 @@ The single most important page on the site. Every section has a job. Every secti
 
 Long-form version of the founder story. Sections like:
 
-- "Why I built Mind Clear" — the sober-after-Matilda story you already wrote, expanded
+- "Why I built Mind Clear" — the after-Matilda founder story you already wrote, expanded
 - "What Mind Clear is — and what it isn't" — pulls from `marketing-playbook.md` section 1
 - "Who it's for" — the audience deep dive, said warmly
 - A photo, maybe of you with the family if you're comfortable

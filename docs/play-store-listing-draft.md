@@ -85,7 +85,7 @@ After that: the free tier includes tasks, your daily view, and basic routines, e
 
 Mind Clear was built by an Army veteran and father of two who spent years not knowing why his brain worked the way it did.
 
-When he finally connected the dots on his ADHD as an adult, a lot of things suddenly made sense, including years of struggling with apps that assumed he could already organize his thoughts. After getting sober in 2025, the ADHD came back full force. No more workarounds. He built the app he needed.
+When he finally connected the dots on his ADHD as an adult, a lot of things suddenly made sense, including years of struggling with apps that assumed he could already organize his thoughts. No more workarounds. He built the app he needed.
 
 That's not a marketing story. That's just what happened.
 

@@ -18,7 +18,7 @@ export default function FounderStory() {
 
           <div className="space-y-6 text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
             <p>
-              I spent years not knowing why my brain worked the way it did. When I got sober after my daughter was born, I couldn't ignore it anymore.
+              I spent years not knowing why my brain worked the way it did. When my daughter was born, I couldn't ignore it anymore.
             </p>
             <p>
               I'd read enough about ADHD to recognize myself in it — the wall of awful, the paralysis, the inability to start anything without the right conditions. I tried every productivity app I could find. None of them stuck. They were all built for brains that work differently than mine.

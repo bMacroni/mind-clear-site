@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Clear — Mark Concepts</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F2EFE9;
+    color: #111;
+    padding: 64px 48px;
+  }
+
+  .page-header {
+    margin-bottom: 72px;
+  }
+  .page-header .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .page-header h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #111;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .page-header p {
+    font-size: 14px;
+    color: #888;
+    max-width: 480px;
+    line-height: 1.6;
+  }
+
+  /* Two-column concept layout */
+  .concepts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+  }
+
+  .concept {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .concept-header {
+    padding: 28px 32px 20px;
+    border-bottom: 1px solid #F0EDE8;
+  }
+  .concept-number {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #BBB;
+    margin-bottom: 6px;
+  }
+  .concept-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 6px;
+  }
+  .concept-desc {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+    max-width: 340px;
+  }
+
+  /* Swatch grid inside each concept */
+  .swatch-grid {
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .swatch-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+  }
+
+  .swatch-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #BBB;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  /* Individual swatches */
+  .sw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .sw-caption {
+    font-size: 9px;
+    color: #BBB;
+    letter-spacing: 0.08em;
+  }
+
+  .bg-light {
+    background: #F7F6F3;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .bg-dark {
+    background: #111111;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Icon sizes */
+  .sz-lg { width: 96px;  height: 96px;  }
+  .sz-md { width: 56px;  height: 56px;  }
+  .sz-sm { width: 32px;  height: 32px;  }
+  .sz-xs { width: 20px;  height: 20px;  }
+
+  /* Wordmark row */
+  .wordmark-area {
+    padding: 0 32px 28px;
+  }
+  .wm-swatch {
+    display: flex; align-items: center; justify-content: center;
+    padding: 22px 32px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  .wm-lockup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .wm-name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .on-light .wm-name { color: #111; }
+  .on-dark  .wm-name { color: #F7F6F3; }
+
+  /* Divider line between concepts */
+  .concept-divider {
+    padding: 0 32px 24px;
+    border-top: 1px solid #F0EDE8;
+    padding-top: 20px;
+  }
+  .rationale-text {
+    font-size: 12px;
+    line-height: 1.75;
+    color: #777;
+  }
+  .rationale-text strong { color: #333; font-weight: 500; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="eyebrow">Mind Clear — Mark Exploration</div>
+  <h1>Two Concepts</h1>
+  <p>Both marks are built around the same feeling: forward momentum, things not piling up, space opening ahead. Two different ways to get there.</p>
+</div>
+
+<div class="concepts">
+
+  <!-- ============================================================
+       CONCEPT A — THE ARROW THAT ISN'T
+       A wedge/chevron shape that implies direction without
+       being a literal arrow. Forward lean built into the geometry.
+       Two angled strokes meeting at a point — velocity, not symbol.
+       ============================================================ -->
+  <div class="concept">
+    <div class="concept-header">
+      <div class="concept-number">Concept A</div>
+      <div class="concept-name">The Arrow That Isn't</div>
+      <div class="concept-desc">Two angled strokes that converge forward — reads as motion without being a literal arrow. The gap between the strokes is the point: space opening up ahead of you.</div>
+    </div>
+
+    <div class="swatch-grid">
+
+      <!-- Large icons -->
+      <div>
+        <div class="swatch-label">Icon</div>
+        <div class="swatch-row">
+
+          <div class="sw">
+            <div class="bg-light sz-lg">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Upper stroke: comes from left, angles forward to point -->
+                <path d="M8 14 L44 26" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+                <!-- Lower stroke: comes from left, angles forward to same point -->
+                <path d="M8 38 L44 26" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+                <!-- Subtle tail — the left anchor, showing where it came from -->
+                <line x1="8" y1="14" x2="8" y2="38" stroke="#111111" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+              </svg>
+            </div>
+            <span class="sw-caption">Light</span>
+          </div>
+
+          <div class="sw">
+            <div class="bg-dark sz-lg">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 14 L44 26" stroke="#F7F6F3" stroke-width="5.5" stroke-linecap="round"/>
+                <path d="M8 38 L44 26" stroke="#F7F6F3" stroke-width="5.5" stroke-linecap="round"/>
+                <line x1="8" y1="14" x2="8" y2="38" stroke="#F7F6F3" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+              </svg>
+            </div>
+            <span class="sw-caption">Dark</span>
+          </div>
+
+          <!-- Medium -->
+          <div class="sw">
+            <div class="bg-light sz-md">
+              <svg width="30" height="30" viewBox="0 0 52 52" fill="none">
+                <path d="M8 14 L44 26" stroke="#111111" stroke-width="6" stroke-linecap="round"/>
+                <path d="M8 38 L44 26" stroke="#111111" stroke-width="6" stroke-linecap="round"/>
+                <line x1="8" y1="14" x2="8" y2="38" stroke="#111111" stroke-width="2.5" stroke-linecap="round" opacity="0.2"/>
+              </svg>
+            </div>
+            <span class="sw-caption">48px</span>
+          </div>
+
+          <!-- Small -->
+          <div class="sw">
+            <div class="bg-light sz-sm">
+              <svg width="17" height="17" viewBox="0 0 52 52" fill="none">
+                <path d="M8 14 L44 26" stroke="#111111" stroke-width="8" stroke-linecap="round"/>
+                <path d="M8 38 L44 26" stroke="#111111" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="sw-caption">32px</span>
+          </div>
+
+          <!-- XS -->
+          <div class="sw">
+            <div class="bg-light sz-xs">
+              <svg width="11" height="11" viewBox="0 0 52 52" fill="none">
+                <path d="M8 14 L44 26" stroke="#111111" stroke-width="10" stroke-linecap="round"/>
+                <path d="M8 38 L44 26" stroke="#111111" stroke-width="10" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="sw-caption">16px</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contained app icon -->
+      <div>
+        <div class="swatch-label">App icon (contained)</div>
+        <div class="swatch-row">
+          <div class="sw">
+            <div style="width:96px;height:96px;background:#111111;border-radius:22%;display:flex;align-items:center;justify-content:center;">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                <path d="M8 14 L44 26" stroke="#F7F6F3" stroke-width="5.5" stroke-linecap="round"/>
+                <path d="M8 38 L44 26" stroke="#F7F6F3" stroke-width="5.5" stroke-linecap="round"/>
+                <line x1="8" y1="14" x2="8" y2="38" stroke="#F7F6F3" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+              </svg>
+            </div>
+            <span class="sw-caption">Black</span>
+          </div>
+          <div class="sw">
+            <div style="width:96px;height:96px;background:#F7F6F3;border:1px solid rgba(0,0,0,0.07);border-radius:22%;display:flex;align-items:center;justify-content:center;">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                <path d="M8 14 L44 26" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+                <path d="M8 38 L44 26" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+                <line x1="8" y1="14" x2="8" y2="38" stroke="#111111" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+              </svg>
+            </div>
+            <span class="sw-caption">White</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Wordmark -->
+    <div class="wordmark-area">
+      <div class="swatch-label">Wordmark</div>
+      <div class="wm-swatch bg-light on-light">
+        <div class="wm-lockup">
+          <svg width="28" height="28" viewBox="0 0 52 52" fill="none">
+            <path d="M8 14 L44 26" stroke="#111111" stroke-width="6" stroke-linecap="round"/>
+            <path d="M8 38 L44 26" stroke="#111111" stroke-width="6" stroke-linecap="round"/>
+            <line x1="8" y1="14" x2="8" y2="38" stroke="#111111" stroke-width="2.5" stroke-linecap="round" opacity="0.2"/>
+          </svg>
+          <span class="wm-name">Mind Clear</span>
+        </div>
+      </div>
+      <div class="wm-swatch bg-dark on-dark">
+        <div class="wm-lockup">
+          <svg width="28" height="28" viewBox="0 0 52 52" fill="none">
+            <path d="M8 14 L44 26" stroke="#F7F6F3" stroke-width="6" stroke-linecap="round"/>
+            <path d="M8 38 L44 26" stroke="#F7F6F3" stroke-width="6" stroke-linecap="round"/>
+            <line x1="8" y1="14" x2="8" y2="38" stroke="#F7F6F3" stroke-width="2.5" stroke-linecap="round" opacity="0.2"/>
+          </svg>
+          <span class="wm-name">Mind Clear</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-divider">
+      <div class="rationale-text">
+        <strong>The read:</strong> Two strokes converging to a single forward point. No arrowhead — the motion is implied by the geometry, not declared by a symbol. The faint vertical tail on the left side is the "before" — where you came from, slightly visible but not the story. The point is where you're going.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       CONCEPT B — THE UNBLOCKED
+       A rounded rectangle (container/structure) with a clean
+       forward-facing opening on the right side. The container
+       gives structure; the opening gives relief and direction.
+       Something was blocked. Now it isn't.
+       ============================================================ -->
+  <div class="concept">
+    <div class="concept-header">
+      <div class="concept-number">Concept B</div>
+      <div class="concept-name">The Unblocked</div>
+      <div class="concept-desc">A container with a clean opening on the forward edge. Structure on three sides — the frame that holds things together. Open on the right: the way forward is clear. Relief built into the shape.</div>
+    </div>
+
+    <div class="swatch-grid">
+
+      <!-- Large icons -->
+      <div>
+        <div class="swatch-label">Icon</div>
+        <div class="swatch-row">
+
+          <div class="sw">
+            <div class="bg-light sz-lg">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Three sides of a rounded rectangle — left, top, bottom -->
+                <!-- Top edge -->
+                <path d="M16 11 L38 11" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+                <!-- Left edge (connects top to bottom, rounded corner implied) -->
+                <path d="M11 16 L11 36" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+                <!-- Bottom edge -->
+                <path d="M16 41 L38 41" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+                <!-- Corner connectors (top-left and bottom-left rounded corners) -->
+                <path d="M11 16 Q11 11 16 11" stroke="#111111" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M11 36 Q11 41 16 41" stroke="#111111" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <!-- Forward dot — the opening is not empty, there's somewhere to go -->
+                <circle cx="41" cy="26" r="3.5" fill="#111111"/>
+              </svg>
+            </div>
+            <span class="sw-caption">Light</span>
+          </div>
+
+          <div class="sw">
+            <div class="bg-dark sz-lg">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 11 L38 11" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round"/>
+                <path d="M11 16 L11 36" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round"/>
+                <path d="M16 41 L38 41" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round"/>
+                <path d="M11 16 Q11 11 16 11" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M11 36 Q11 41 16 41" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <circle cx="41" cy="26" r="3.5" fill="#F7F6F3"/>
+              </svg>
+            </div>
+            <span class="sw-caption">Dark</span>
+          </div>
+
+          <!-- Medium -->
+          <div class="sw">
+            <div class="bg-light sz-md">
+              <svg width="30" height="30" viewBox="0 0 52 52" fill="none">
+                <path d="M16 11 L38 11" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+                <path d="M11 16 L11 36" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+                <path d="M16 41 L38 41" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+                <path d="M11 16 Q11 11 16 11" stroke="#111111" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+                <path d="M11 36 Q11 41 16 41" stroke="#111111" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+                <circle cx="41" cy="26" r="4" fill="#111111"/>
+              </svg>
+            </div>
+            <span class="sw-caption">48px</span>
+          </div>
+
+          <!-- Small -->
+          <div class="sw">
+            <div class="bg-light sz-sm">
+              <svg width="17" height="17" viewBox="0 0 52 52" fill="none">
+                <path d="M16 11 L38 11" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+                <path d="M11 16 L11 36" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+                <path d="M16 41 L38 41" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+                <path d="M11 16 Q11 11 16 11" stroke="#111111" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <path d="M11 36 Q11 41 16 41" stroke="#111111" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <circle cx="41" cy="26" r="5" fill="#111111"/>
+              </svg>
+            </div>
+            <span class="sw-caption">32px</span>
+          </div>
+
+          <!-- XS -->
+          <div class="sw">
+            <div class="bg-light sz-xs">
+              <svg width="11" height="11" viewBox="0 0 52 52" fill="none">
+                <!-- At 16px: simplified to just the C shape + dot -->
+                <path d="M16 11 L36 11" stroke="#111111" stroke-width="9" stroke-linecap="round"/>
+                <path d="M11 16 L11 36" stroke="#111111" stroke-width="9" stroke-linecap="round"/>
+                <path d="M16 41 L36 41" stroke="#111111" stroke-width="9" stroke-linecap="round"/>
+                <path d="M11 16 Q11 11 16 11" stroke="#111111" stroke-width="9" fill="none"/>
+                <path d="M11 36 Q11 41 16 41" stroke="#111111" stroke-width="9" fill="none"/>
+                <circle cx="41" cy="26" r="6" fill="#111111"/>
+              </svg>
+            </div>
+            <span class="sw-caption">16px</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contained app icon -->
+      <div>
+        <div class="swatch-label">App icon (contained)</div>
+        <div class="swatch-row">
+          <div class="sw">
+            <div style="width:96px;height:96px;background:#111111;border-radius:22%;display:flex;align-items:center;justify-content:center;">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                <path d="M16 11 L38 11" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round"/>
+                <path d="M11 16 L11 36" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round"/>
+                <path d="M16 41 L38 41" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round"/>
+                <path d="M11 16 Q11 11 16 11" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M11 36 Q11 41 16 41" stroke="#F7F6F3" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <circle cx="41" cy="26" r="3.5" fill="#F7F6F3"/>
+              </svg>
+            </div>
+            <span class="sw-caption">Black</span>
+          </div>
+          <div class="sw">
+            <div style="width:96px;height:96px;background:#F7F6F3;border:1px solid rgba(0,0,0,0.07);border-radius:22%;display:flex;align-items:center;justify-content:center;">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                <path d="M16 11 L38 11" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+                <path d="M11 16 L11 36" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+                <path d="M16 41 L38 41" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+                <path d="M11 16 Q11 11 16 11" stroke="#111111" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M11 36 Q11 41 16 41" stroke="#111111" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <circle cx="41" cy="26" r="3.5" fill="#111111"/>
+              </svg>
+            </div>
+            <span class="sw-caption">White</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Wordmark -->
+    <div class="wordmark-area">
+      <div class="swatch-label">Wordmark</div>
+      <div class="wm-swatch bg-light on-light">
+        <div class="wm-lockup">
+          <svg width="28" height="28" viewBox="0 0 52 52" fill="none">
+            <path d="M16 11 L38 11" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M11 16 L11 36" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M16 41 L38 41" stroke="#111111" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M11 16 Q11 11 16 11" stroke="#111111" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+            <path d="M11 36 Q11 41 16 41" stroke="#111111" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+            <circle cx="41" cy="26" r="4" fill="#111111"/>
+          </svg>
+          <span class="wm-name">Mind Clear</span>
+        </div>
+      </div>
+      <div class="wm-swatch bg-dark on-dark">
+        <div class="wm-lockup">
+          <svg width="28" height="28" viewBox="0 0 52 52" fill="none">
+            <path d="M16 11 L38 11" stroke="#F7F6F3" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M11 16 L11 36" stroke="#F7F6F3" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M16 41 L38 41" stroke="#F7F6F3" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M11 16 Q11 11 16 11" stroke="#F7F6F3" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+            <path d="M11 36 Q11 41 16 41" stroke="#F7F6F3" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+            <circle cx="41" cy="26" r="4" fill="#F7F6F3"/>
+          </svg>
+          <span class="wm-name">Mind Clear</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-divider">
+      <div class="rationale-text">
+        <strong>The read:</strong> Three sides of a rounded rectangle — a container that holds things in place. The right side is open: not broken, just clear. The dot sits just beyond the opening — a destination, one specific next thing. Structure gives you the frame. The opening gives you the way out. Together: things are held, and you can still move.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

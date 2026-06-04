@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Clear — Logo System</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0D0D0D;
+    --white: #F7F6F3;
+    --mid: #888;
+    --gold: #C9A84C;
+    --section-gap: 80px;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F0EDE8;
+    color: var(--black);
+    padding: 60px 40px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
+
+  .page-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+
+  .page-sub {
+    font-size: 14px;
+    color: var(--mid);
+    margin-bottom: 60px;
+  }
+
+  .section {
+    margin-bottom: var(--section-gap);
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .logo-row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .logo-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-cell .caption {
+    font-size: 11px;
+    color: var(--mid);
+    letter-spacing: 0.06em;
+  }
+
+  /* Light background swatch */
+  .swatch-light {
+    background: #F7F6F3;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 40px;
+  }
+
+  /* Dark background swatch */
+  .swatch-dark {
+    background: #0D0D0D;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 40px;
+  }
+
+  /* App icon swatches */
+  .swatch-icon-light {
+    background: #F7F6F3;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+  }
+  .swatch-icon-dark {
+    background: #0D0D0D;
+    border-radius: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+  }
+
+  /* Banner swatches */
+  .swatch-banner-light {
+    background: #F7F6F3;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 48px;
+    width: 480px;
+  }
+  .swatch-banner-dark {
+    background: #0D0D0D;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 48px;
+    width: 480px;
+  }
+
+  /* ============================================
+     THE MARK — SVG inline components
+     ============================================ */
+
+  /* Wordmark containers */
+  .wordmark {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    user-select: none;
+  }
+
+  .wordmark-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .wordmark-name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .wordmark-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  /* Banner wordmark — larger */
+  .banner-wordmark .wordmark-name { font-size: 28px; }
+  .banner-wordmark .wordmark-sub  { font-size: 11px; }
+
+  /* Small wordmark */
+  .wordmark-sm .wordmark-name { font-size: 16px; }
+  .wordmark-sm .wordmark-sub  { font-size: 9px; }
+
+  /* Colors */
+  .on-light .wordmark-name, .on-light .wordmark-sub { color: #0D0D0D; }
+  .on-dark  .wordmark-name, .on-dark  .wordmark-sub { color: #F7F6F3; }
+
+  /* Favicon sizes row */
+  .favicon-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+  }
+  .favicon-swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .favicon-swatch .caption { font-size: 10px; color: var(--mid); }
+
+  .fav-light {
+    background: #F7F6F3;
+    border: 1px solid rgba(0,0,0,0.08);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 4px;
+  }
+  .fav-dark {
+    background: #0D0D0D;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Mind Clear — Brand Identity</h1>
+<div class="page-title">Logo System</div>
+<div class="page-sub">Light + Dark · App Icon · Wordmark · Banner · Favicon</div>
+
+<!-- ============================================
+     THE MARK (standalone icon reference)
+     ============================================ -->
+
+<!--
+  THE CONCEPT:
+  A single open arc with a clean gap at top — like a thought releasing, a loop
+  almost-completed but intentionally open. Signals "clearing" not "closing."
+  Paired with a small centered dot below, it reads as both a simplified brain
+  cross-section (prefrontal focus) and a minimal breath/release symbol.
+  No drop shadows. No gradients. No noise. Just form.
+-->
+
+<!-- SECTION 1: App Icon -->
+<div class="section">
+  <div class="section-label">App Icon — 1024px master</div>
+  <div class="logo-row">
+
+    <!-- Light mode app icon -->
+    <div class="logo-cell">
+      <div class="swatch-icon-light" style="width:140px;height:140px;">
+        <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Open arc — the "clearing" mark -->
+          <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                stroke="#0D0D0D" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <!-- Anchor dot -->
+          <circle cx="44" cy="70" r="4.5" fill="#0D0D0D"/>
+          <!-- Small secondary arc suggesting layers / depth -->
+          <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+                stroke="#0D0D0D" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.18"/>
+        </svg>
+      </div>
+      <span class="caption">Light</span>
+    </div>
+
+    <!-- Dark mode app icon -->
+    <div class="logo-cell">
+      <div class="swatch-icon-dark" style="width:140px;height:140px;">
+        <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                stroke="#F7F6F3" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="44" cy="70" r="4.5" fill="#F7F6F3"/>
+          <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+                stroke="#F7F6F3" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.2"/>
+        </svg>
+      </div>
+      <span class="caption">Dark</span>
+    </div>
+
+    <!-- Gold accent version -->
+    <div class="logo-cell">
+      <div class="swatch-icon-dark" style="width:140px;height:140px; background:#0D0D0D;">
+        <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                stroke="#F7F6F3" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="44" cy="70" r="4.5" fill="#C9A84C"/>
+          <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+                stroke="#C9A84C" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+        </svg>
+      </div>
+      <span class="caption">Dark + Gold accent</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 2: Wordmark — "Mind Clear" -->
+<div class="section">
+  <div class="section-label">Wordmark — Mind Clear (App)</div>
+  <div class="logo-row">
+
+    <div class="logo-cell">
+      <div class="swatch-light" style="min-width: 280px;">
+        <div class="wordmark on-light">
+          <svg width="40" height="40" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                  stroke="#0D0D0D" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <circle cx="44" cy="70" r="4.5" fill="#0D0D0D"/>
+            <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+                  stroke="#0D0D0D" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.18"/>
+          </svg>
+          <div class="wordmark-text">
+            <span class="wordmark-name">Mind Clear</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Light</span>
+    </div>
+
+    <div class="logo-cell">
+      <div class="swatch-dark" style="min-width: 280px;">
+        <div class="wordmark on-dark">
+          <svg width="40" height="40" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                  stroke="#F7F6F3" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <circle cx="44" cy="70" r="4.5" fill="#F7F6F3"/>
+            <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+                  stroke="#F7F6F3" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="wordmark-text">
+            <span class="wordmark-name">Mind Clear</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Dark</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 3: Wordmark — "Mind Clear Studio" -->
+<div class="section">
+  <div class="section-label">Wordmark — Mind Clear Studio (Company)</div>
+  <div class="logo-row">
+
+    <div class="logo-cell">
+      <div class="swatch-light" style="min-width: 300px;">
+        <div class="wordmark on-light">
+          <svg width="40" height="40" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                  stroke="#0D0D0D" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <circle cx="44" cy="70" r="4.5" fill="#0D0D0D"/>
+            <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+                  stroke="#0D0D0D" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.18"/>
+          </svg>
+          <div class="wordmark-text">
+            <span class="wordmark-name">Mind Clear</span>
+            <span class="wordmark-sub" style="color:#888;">Studio</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Light</span>
+    </div>
+
+    <div class="logo-cell">
+      <div class="swatch-dark" style="min-width: 300px;">
+        <div class="wordmark on-dark">
+          <svg width="40" height="40" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                  stroke="#F7F6F3" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <circle cx="44" cy="70" r="4.5" fill="#F7F6F3"/>
+            <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+                  stroke="#F7F6F3" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="wordmark-text">
+            <span class="wordmark-name">Mind Clear</span>
+            <span class="wordmark-sub" style="color:#666;">Studio</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Dark</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 4: Social / Banner -->
+<div class="section">
+  <div class="section-label">Social Banner — 1500 × 500</div>
+  <div class="logo-row" style="flex-direction: column;">
+
+    <!-- Light banner -->
+    <div class="logo-cell" style="align-items:flex-start;">
+      <div class="swatch-banner-light">
+        <div class="wordmark banner-wordmark on-light" style="gap: 20px;">
+          <svg width="56" height="56" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                  stroke="#0D0D0D" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <circle cx="44" cy="70" r="4.5" fill="#0D0D0D"/>
+            <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+                  stroke="#0D0D0D" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.18"/>
+          </svg>
+          <div class="wordmark-text">
+            <span class="wordmark-name" style="font-size:30px;">Mind Clear Studio</span>
+            <span class="wordmark-sub" style="color:#999; font-size:11px; margin-top:4px;">Clear your head. One step at a time.</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Light banner</span>
+    </div>
+
+    <!-- Dark banner -->
+    <div class="logo-cell" style="align-items:flex-start;">
+      <div class="swatch-banner-dark">
+        <div class="wordmark banner-wordmark on-dark" style="gap: 20px;">
+          <svg width="56" height="56" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                  stroke="#F7F6F3" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <circle cx="44" cy="70" r="4.5" fill="#C9A84C"/>
+            <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+                  stroke="#F7F6F3" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="wordmark-text">
+            <span class="wordmark-name" style="font-size:30px;">Mind Clear Studio</span>
+            <span class="wordmark-sub" style="color:#555; font-size:11px; margin-top:4px;">Clear your head. One step at a time.</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Dark banner (gold dot accent)</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 5: Favicon sizes -->
+<div class="section">
+  <div class="section-label">Favicon — Scale test</div>
+  <div class="favicon-row">
+
+    <!-- 64px -->
+    <div class="favicon-swatch">
+      <div class="fav-light" style="width:64px;height:64px;">
+        <svg width="44" height="44" viewBox="0 0 88 88" fill="none">
+          <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                stroke="#0D0D0D" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="44" cy="70" r="5" fill="#0D0D0D"/>
+        </svg>
+      </div>
+      <span class="caption">64px</span>
+    </div>
+
+    <!-- 32px -->
+    <div class="favicon-swatch">
+      <div class="fav-light" style="width:32px;height:32px;">
+        <svg width="22" height="22" viewBox="0 0 88 88" fill="none">
+          <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                stroke="#0D0D0D" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <circle cx="44" cy="70" r="6" fill="#0D0D0D"/>
+        </svg>
+      </div>
+      <span class="caption">32px</span>
+    </div>
+
+    <!-- 16px -->
+    <div class="favicon-swatch">
+      <div class="fav-light" style="width:16px;height:16px;">
+        <svg width="11" height="11" viewBox="0 0 88 88" fill="none">
+          <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                stroke="#0D0D0D" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <circle cx="44" cy="70" r="7" fill="#0D0D0D"/>
+        </svg>
+      </div>
+      <span class="caption">16px</span>
+    </div>
+
+    <!-- 64px dark -->
+    <div class="favicon-swatch" style="margin-left:24px;">
+      <div class="fav-dark" style="width:64px;height:64px;">
+        <svg width="44" height="44" viewBox="0 0 88 88" fill="none">
+          <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                stroke="#F7F6F3" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="44" cy="70" r="5" fill="#C9A84C"/>
+        </svg>
+      </div>
+      <span class="caption">64px dark</span>
+    </div>
+
+    <!-- 32px dark -->
+    <div class="favicon-swatch">
+      <div class="fav-dark" style="width:32px;height:32px;">
+        <svg width="22" height="22" viewBox="0 0 88 88" fill="none">
+          <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+                stroke="#F7F6F3" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <circle cx="44" cy="70" r="6" fill="#C9A84C"/>
+        </svg>
+      </div>
+      <span class="caption">32px dark</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 6: Mark rationale -->
+<div class="section" style="max-width: 560px;">
+  <div class="section-label">Design Rationale</div>
+  <p style="font-size:13px; line-height:1.8; color:#555;">
+    <strong style="color:#0D0D0D; font-weight:500;">The Mark:</strong> An open arc with an anchor dot.
+    The arc is almost-closed — deliberately not. It signals a thought mid-release,
+    a head clearing, a loop that doesn't trap you. The inner arc (ghost ring) adds depth
+    at large sizes without adding noise at small ones. The dot grounds it —
+    one point of focus, which is exactly what the app delivers.
+    <br><br>
+    <strong style="color:#0D0D0D; font-weight:500;">Why not the medal:</strong>
+    The ribbon/trophy mark signals achievement and performance pressure —
+    the exact shame spiral Mind Clear is designed to interrupt.
+    This mark signals release, clarity, and calm instead.
+    <br><br>
+    <strong style="color:#0D0D0D; font-weight:500;">Gold accent:</strong>
+    Used only on the dot in dark contexts. Restraint here is the point —
+    one warm moment in a minimal mark.
+  </p>
+</div>
+
+</body>
+</html>

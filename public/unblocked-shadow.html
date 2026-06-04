@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Clear — Curved Shadow Mark</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0F0F0F;
+    --white: #F7F5F0;
+    --gold:  #C9A84C;
+    --gold2: #E2BF6A;
+    --mid:   #999;
+    --bg:    #EDEBE5;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--black);
+    padding: 64px 48px;
+  }
+
+  .page-header { margin-bottom: 64px; }
+  .eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); margin-bottom: 10px; }
+  h1 { font-family: 'Instrument Serif', serif; font-size: 40px; font-weight: 400; line-height: 1.1; margin-bottom: 8px; }
+  .sub { font-size: 13px; color: #888; line-height: 1.6; max-width: 460px; }
+
+  .sheet {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    overflow: hidden;
+    max-width: 1000px;
+  }
+
+  .section { padding: 36px 40px; border-bottom: 1px solid #F2EFEA; }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.22em;
+    text-transform: uppercase; color: #CCC; margin-bottom: 28px;
+  }
+
+  .row { display: flex; gap: 20px; align-items: flex-end; flex-wrap: wrap; }
+
+  .sw { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .sw-cap { font-size: 9px; color: #CCC; letter-spacing: 0.08em; }
+
+  .bg-l {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .bg-d {
+    background: var(--black);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .app-icon { border-radius: 22%; display: flex; align-items: center; justify-content: center; }
+
+  .wm-pill { display: flex; align-items: center; gap: 13px; padding: 20px 30px; border-radius: 12px; }
+  .wm-name { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 22px; letter-spacing: -0.02em; line-height: 1; }
+
+  .anatomy-note { display: flex; gap: 10px; align-items: flex-start; }
+  .anatomy-dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 3px; flex-shrink: 0; }
+  .anatomy-line { width: 24px; height: 3px; border-radius: 2px; margin-top: 6px; flex-shrink: 0; }
+  .anatomy-title { font-size: 12px; font-weight: 500; color: #111; margin-bottom: 2px; }
+  .anatomy-body { font-size: 11px; color: #999; line-height: 1.55; }
+</style>
+</head>
+<body>
+
+<!--
+  MARK CONSTRUCTION:
+  The C path:     M72 16  L28 16  Q10 16  10 34  L10 68  Q10 86  28 86  L72 86
+  The shadow C:   Same curve, offset ~6px down and ~4px to the right —
+                  achieved by nudging all control points uniformly outward/down.
+                  The shadow is slightly shorter on both ends (starts and ends
+                  a few units inside the main C) so it peeks out from behind
+                  rather than extending beyond. Thinner stroke, gold, slightly
+                  transparent so it reads as shadow not a second mark.
+-->
+
+<div class="page-header">
+  <div class="eyebrow">The Unblocked — Final</div>
+  <h1>Curved gold shadow</h1>
+  <p class="sub">The gold follows the C — same curve, offset just behind and below. A warm shadow, not a separate element. Tight, grounded, one mark.</p>
+</div>
+
+<div class="sheet">
+
+  <!-- HERO -->
+  <div class="section">
+    <div class="section-label">Mark — Hero sizes</div>
+    <div class="row">
+
+      <!-- Light XL -->
+      <div class="sw">
+        <div class="bg-l" style="width:168px;height:168px;">
+          <svg width="100" height="100" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Gold shadow C — offset +5 down, +3 right, slightly shorter arms, thinner -->
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#C9A84C" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.85"/>
+            <!-- Main C — sits on top -->
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#0F0F0F" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <!-- Large gold dot -->
+            <circle cx="88" cy="52" r="10" fill="#C9A84C"/>
+          </svg>
+        </div>
+        <span class="sw-cap">Light</span>
+      </div>
+
+      <!-- Dark XL -->
+      <div class="sw">
+        <div class="bg-d" style="width:168px;height:168px;">
+          <svg width="100" height="100" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#E2BF6A" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#F7F5F0" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="10" fill="#E2BF6A"/>
+          </svg>
+        </div>
+        <span class="sw-cap">Dark</span>
+      </div>
+
+      <!-- App icon — black -->
+      <div class="sw" style="margin-left:16px;">
+        <div class="app-icon" style="width:168px;height:168px;background:#0F0F0F;">
+          <svg width="100" height="100" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#E2BF6A" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#F7F5F0" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="10" fill="#E2BF6A"/>
+          </svg>
+        </div>
+        <span class="sw-cap">App — Black</span>
+      </div>
+
+      <!-- App icon — white -->
+      <div class="sw">
+        <div class="app-icon" style="width:168px;height:168px;background:#F7F5F0;border:1px solid rgba(0,0,0,0.07);">
+          <svg width="100" height="100" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#C9A84C" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.85"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#0F0F0F" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="10" fill="#C9A84C"/>
+          </svg>
+        </div>
+        <span class="sw-cap">App — White</span>
+      </div>
+
+      <!-- App icon — gold -->
+      <div class="sw">
+        <div class="app-icon" style="width:168px;height:168px;background:#C9A84C;">
+          <svg width="100" height="100" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#0F0F0F" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.25"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#0F0F0F" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="10" fill="#0F0F0F"/>
+          </svg>
+        </div>
+        <span class="sw-cap">App — Gold</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCALE TEST -->
+  <div class="section">
+    <div class="section-label">Scale test</div>
+    <div class="row" style="align-items:flex-end;">
+
+      <!-- 96 light -->
+      <div class="sw">
+        <div class="bg-l" style="width:96px;height:96px;">
+          <svg width="58" height="58" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#C9A84C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.85"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#0F0F0F" stroke-width="9" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="11" fill="#C9A84C"/>
+          </svg>
+        </div>
+        <span class="sw-cap">96px</span>
+      </div>
+
+      <!-- 64 light -->
+      <div class="sw">
+        <div class="bg-l" style="width:64px;height:64px;">
+          <svg width="38" height="38" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#C9A84C" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.85"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#0F0F0F" stroke-width="9.5" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="12" fill="#C9A84C"/>
+          </svg>
+        </div>
+        <span class="sw-cap">64px</span>
+      </div>
+
+      <!-- 48 light -->
+      <div class="sw">
+        <div class="bg-l" style="width:48px;height:48px;">
+          <svg width="29" height="29" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#C9A84C" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.85"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#0F0F0F" stroke-width="10" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="13" fill="#C9A84C"/>
+          </svg>
+        </div>
+        <span class="sw-cap">48px</span>
+      </div>
+
+      <!-- 32 light -->
+      <div class="sw">
+        <div class="bg-l" style="width:32px;height:32px;">
+          <svg width="19" height="19" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#C9A84C" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.85"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#0F0F0F" stroke-width="11" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="15" fill="#C9A84C"/>
+          </svg>
+        </div>
+        <span class="sw-cap">32px</span>
+      </div>
+
+      <!-- 20 light -->
+      <div class="sw">
+        <div class="bg-l" style="width:20px;height:20px;">
+          <svg width="12" height="12" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#C9A84C" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.85"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#0F0F0F" stroke-width="13" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="18" fill="#C9A84C"/>
+          </svg>
+        </div>
+        <span class="sw-cap">16px</span>
+      </div>
+
+      <!-- 96 dark -->
+      <div class="sw" style="margin-left:20px;">
+        <div class="bg-d" style="width:96px;height:96px;">
+          <svg width="58" height="58" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#E2BF6A" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#F7F5F0" stroke-width="9" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="11" fill="#E2BF6A"/>
+          </svg>
+        </div>
+        <span class="sw-cap">96px dark</span>
+      </div>
+
+      <!-- 32 dark -->
+      <div class="sw">
+        <div class="bg-d" style="width:32px;height:32px;">
+          <svg width="19" height="19" viewBox="0 0 110 110" fill="none">
+            <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                  stroke="#E2BF6A" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.7"/>
+            <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                  stroke="#F7F5F0" stroke-width="11" stroke-linecap="round" fill="none"/>
+            <circle cx="88" cy="52" r="15" fill="#E2BF6A"/>
+          </svg>
+        </div>
+        <span class="sw-cap">32px dark</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WORDMARK -->
+  <div class="section">
+    <div class="section-label">Wordmark</div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+
+      <div class="wm-pill bg-l" style="border:1px solid rgba(0,0,0,0.07);">
+        <svg width="34" height="34" viewBox="0 0 110 110" fill="none">
+          <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                stroke="#C9A84C" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.85"/>
+          <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                stroke="#0F0F0F" stroke-width="8.5" stroke-linecap="round" fill="none"/>
+          <circle cx="88" cy="52" r="10" fill="#C9A84C"/>
+        </svg>
+        <span class="wm-name" style="color:#0F0F0F;">Mind Clear</span>
+      </div>
+
+      <div class="wm-pill" style="background:#0F0F0F;">
+        <svg width="34" height="34" viewBox="0 0 110 110" fill="none">
+          <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+                stroke="#E2BF6A" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+          <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+                stroke="#F7F5F0" stroke-width="8.5" stroke-linecap="round" fill="none"/>
+          <circle cx="88" cy="52" r="10" fill="#E2BF6A"/>
+        </svg>
+        <span class="wm-name" style="color:#F7F5F0;">Mind Clear</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ANATOMY -->
+  <div class="section" style="background:#FAFAF8;">
+    <div class="section-label">Mark anatomy</div>
+    <div style="display:flex;gap:48px;align-items:center;flex-wrap:wrap;">
+
+      <svg width="150" height="150" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+              stroke="#C9A84C" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.85"/>
+        <path d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+              stroke="#0F0F0F" stroke-width="8" stroke-linecap="round" fill="none"/>
+        <circle cx="88" cy="52" r="10" fill="#C9A84C"/>
+      </svg>
+
+      <div style="display:flex;flex-direction:column;gap:18px;">
+        <div class="anatomy-note">
+          <div class="anatomy-dot" style="background:#0F0F0F;"></div>
+          <div>
+            <div class="anatomy-title">The container</div>
+            <div class="anatomy-body">Single smooth C. Structure on three sides, open ahead. Things are held — and you can still move.</div>
+          </div>
+        </div>
+        <div class="anatomy-note">
+          <div class="anatomy-dot" style="background:#C9A84C;"></div>
+          <div>
+            <div class="anatomy-title">The dot</div>
+            <div class="anatomy-body">One destination. One next thing. Large enough to be the anchor of the whole mark.</div>
+          </div>
+        </div>
+        <div class="anatomy-note">
+          <div class="anatomy-line" style="background:#C9A84C;"></div>
+          <div>
+            <div class="anatomy-title">The shadow</div>
+            <div class="anatomy-body">Gold curved echo of the C — offset just behind and below. Warmth beneath the structure. Relief.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

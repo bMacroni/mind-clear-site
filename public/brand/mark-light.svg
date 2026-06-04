@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88" fill="none">
+  <!-- Mind Clear mark — light version (dark on light) -->
+  <!-- Outer open arc — the "clearing" -->
+  <path d="M18 44 C18 28.536 28.536 18 44 18 C59.464 18 70 28.536 70 44 C70 59.464 59.464 70 44 70"
+        stroke="#0D0D0D" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <!-- Anchor dot — one point of focus -->
+  <circle cx="44" cy="70" r="4.5" fill="#0D0D0D"/>
+  <!-- Inner arc — depth / layers of thought -->
+  <path d="M28 44 C28 35.163 35.163 28 44 28 C52.837 28 60 35.163 60 44 C60 52.837 52.837 60 44 60"
+        stroke="#0D0D0D" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.18"/>
+</svg>

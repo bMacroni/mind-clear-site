@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Clear Lab — Logo System</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #0E1929;
+    --navy2:  #16253A;
+    --cream:  #F4F1EB;
+    --amber:  #C8922A;
+    --amber2: #E8B84B;
+    --slate:  #8A9BB0;
+    --white:  #FAF9F6;
+    --mid:    #6B7C8F;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #ECEAE4;
+    color: var(--navy);
+    padding: 60px 48px;
+    min-height: 100vh;
+  }
+
+  .masthead {
+    margin-bottom: 64px;
+    border-left: 3px solid var(--amber);
+    padding-left: 20px;
+  }
+  .masthead .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .masthead .sub {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--mid);
+    letter-spacing: 0.04em;
+  }
+
+  .section { margin-bottom: 72px; }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(14,25,41,0.12);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--amber);
+    flex-shrink: 0;
+  }
+
+  .logo-row {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .logo-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-cell .caption {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+
+  /* Swatches */
+  .sw-light {
+    background: var(--cream);
+    border: 1px solid rgba(14,25,41,0.1);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 44px;
+  }
+  .sw-dark {
+    background: var(--navy);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 44px;
+  }
+  .sw-icon-light {
+    background: var(--cream);
+    border: 1px solid rgba(14,25,41,0.1);
+    border-radius: 20%;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .sw-icon-dark {
+    background: var(--navy);
+    border-radius: 20%;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .sw-banner-light {
+    background: var(--cream);
+    border: 1px solid rgba(14,25,41,0.1);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 56px;
+    min-width: 520px;
+  }
+  .sw-banner-dark {
+    background: var(--navy);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 56px;
+    min-width: 520px;
+  }
+
+  /* Wordmark layout */
+  .wm {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+  }
+  .wm-text { display: flex; flex-direction: column; gap: 3px; }
+
+  .wm-name {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+  .wm-name strong {
+    font-weight: 500;
+  }
+  .wm-lab {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    font-size: 9.5px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .wm-tagline {
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: italic;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    line-height: 1;
+  }
+
+  /* Banner larger */
+  .wm-banner .wm-name  { font-size: 28px; }
+  .wm-banner .wm-lab   { font-size: 11px; margin-top: 2px; }
+  .wm-banner .wm-tagline { font-size: 10px; }
+
+  /* Colors */
+  .on-light .wm-name    { color: var(--navy); }
+  .on-light .wm-lab     { color: var(--amber); }
+  .on-light .wm-tagline { color: var(--mid); }
+
+  .on-dark .wm-name    { color: var(--white); }
+  .on-dark .wm-lab     { color: var(--amber2); }
+  .on-dark .wm-tagline { color: var(--slate); }
+
+  /* Divider between name + Lab tag */
+  .wm-divider {
+    width: 1px;
+    height: 28px;
+    background: currentColor;
+    opacity: 0.15;
+    align-self: center;
+    margin: 0 2px;
+  }
+
+  /* Favicon row */
+  .fav-row { display: flex; gap: 20px; align-items: flex-end; }
+  .fav-cell { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .fav-cell .caption { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--mid); }
+
+  .fav-l {
+    background: var(--cream);
+    border: 1px solid rgba(14,25,41,0.1);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 3px;
+  }
+  .fav-d {
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 3px;
+  }
+
+  /* Rationale */
+  .rationale {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: #4A5A6A;
+    max-width: 560px;
+  }
+  .rationale strong { color: var(--navy); font-weight: 500; }
+  .rationale em { font-style: italic; color: var(--amber); }
+
+  /* Grid rule lines in background — subtle lab paper feel */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(14,25,41,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,25,41,0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  body > * { position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="eyebrow">Brand Identity System — v1.0</div>
+  <h1>Mind Clear Lab</h1>
+  <div class="sub">Scientific variant · Light + Dark · Icon · Wordmark · Banner</div>
+</div>
+
+<!--
+  THE MARK — Concept:
+  A stylized EEG/neural waveform that starts turbulent (scattered input) and
+  resolves into a flat calm line. Read left to right: chaos → clarity.
+  This directly mirrors the ADHD experience and the app's value proposition.
+  At small sizes, the wave simplifies to a clean signal-line silhouette.
+  Scientific but accessible. Precise but human.
+-->
+
+<!-- ===================== APP ICON ===================== -->
+<div class="section">
+  <div class="section-label">App Icon — 1024px master</div>
+  <div class="logo-row">
+
+    <!-- Light -->
+    <div class="logo-cell">
+      <div class="sw-icon-light" style="width:148px;height:148px;">
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Neural waveform: turbulent left → calm right -->
+          <!-- The path reads as a simplified EEG trace resolving to baseline -->
+          <path d="M8 52
+                   L18 52
+                   L22 36
+                   L27 68
+                   L32 28
+                   L37 72
+                   L42 40
+                   L46 56
+                   L50 52
+                   L88 52"
+                stroke="#0E1929" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- Baseline grid tick — scientific reference line -->
+          <line x1="8" y1="66" x2="88" y2="66" stroke="#0E1929" stroke-width="1" opacity="0.12"/>
+          <!-- Amber highlight on the resolved (calm) section -->
+          <path d="M50 52 L88 52" stroke="#C8922A" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <!-- Small dot at resolution point -->
+          <circle cx="50" cy="52" r="3.5" fill="#C8922A"/>
+        </svg>
+      </div>
+      <span class="caption">Light</span>
+    </div>
+
+    <!-- Dark -->
+    <div class="logo-cell">
+      <div class="sw-icon-dark" style="width:148px;height:148px;">
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 52
+                   L18 52
+                   L22 36
+                   L27 68
+                   L32 28
+                   L37 72
+                   L42 40
+                   L46 56
+                   L50 52
+                   L88 52"
+                stroke="#F4F1EB" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <line x1="8" y1="66" x2="88" y2="66" stroke="#F4F1EB" stroke-width="1" opacity="0.1"/>
+          <path d="M50 52 L88 52" stroke="#E8B84B" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <circle cx="50" cy="52" r="3.5" fill="#E8B84B"/>
+        </svg>
+      </div>
+      <span class="caption">Dark</span>
+    </div>
+
+    <!-- Contained (for Google Play badge background) -->
+    <div class="logo-cell">
+      <div style="background: var(--navy); border-radius: 22%; width:148px; height:148px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+        <!-- Subtle grid lines inside icon -->
+        <svg style="position:absolute;inset:0;width:100%;height:100%;" viewBox="0 0 148 148" fill="none" preserveAspectRatio="none">
+          <line x1="0" y1="49" x2="148" y2="49" stroke="#F4F1EB" stroke-width="0.5" opacity="0.06"/>
+          <line x1="0" y1="74" x2="148" y2="74" stroke="#F4F1EB" stroke-width="0.5" opacity="0.06"/>
+          <line x1="0" y1="99" x2="148" y2="99" stroke="#F4F1EB" stroke-width="0.5" opacity="0.06"/>
+          <line x1="49" y1="0" x2="49" y2="148" stroke="#F4F1EB" stroke-width="0.5" opacity="0.06"/>
+          <line x1="74" y1="0" x2="74" y2="148" stroke="#F4F1EB" stroke-width="0.5" opacity="0.06"/>
+          <line x1="99" y1="0" x2="99" y2="148" stroke="#F4F1EB" stroke-width="0.5" opacity="0.06"/>
+        </svg>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                stroke="#F4F1EB" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <line x1="8" y1="66" x2="88" y2="66" stroke="#F4F1EB" stroke-width="1" opacity="0.1"/>
+          <path d="M50 52 L88 52" stroke="#E8B84B" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <circle cx="50" cy="52" r="3.5" fill="#E8B84B"/>
+        </svg>
+      </div>
+      <span class="caption">Contained (app store)</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== WORDMARK ===================== -->
+<div class="section">
+  <div class="section-label">Wordmark — Mind Clear Lab</div>
+  <div class="logo-row">
+
+    <!-- Light -->
+    <div class="logo-cell">
+      <div class="sw-light" style="min-width:300px;">
+        <div class="wm on-light">
+          <svg width="44" height="44" viewBox="0 0 96 96" fill="none">
+            <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                  stroke="#0E1929" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M50 52 L88 52" stroke="#C8922A" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <circle cx="50" cy="52" r="4" fill="#C8922A"/>
+          </svg>
+          <div class="wm-divider" style="color: #0E1929;"></div>
+          <div class="wm-text">
+            <span class="wm-name"><strong>Mind Clear</strong></span>
+            <span class="wm-lab">Lab</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Light</span>
+    </div>
+
+    <!-- Dark -->
+    <div class="logo-cell">
+      <div class="sw-dark" style="min-width:300px;">
+        <div class="wm on-dark">
+          <svg width="44" height="44" viewBox="0 0 96 96" fill="none">
+            <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                  stroke="#F4F1EB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M50 52 L88 52" stroke="#E8B84B" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <circle cx="50" cy="52" r="4" fill="#E8B84B"/>
+          </svg>
+          <div class="wm-divider" style="color: #F4F1EB;"></div>
+          <div class="wm-text">
+            <span class="wm-name"><strong>Mind Clear</strong></span>
+            <span class="wm-lab">Lab</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Dark</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== WORDMARK with tagline ===================== -->
+<div class="section">
+  <div class="section-label">Wordmark with tagline — extended lockup</div>
+  <div class="logo-row">
+
+    <div class="logo-cell">
+      <div class="sw-light" style="min-width:320px;">
+        <div class="wm on-light">
+          <svg width="44" height="44" viewBox="0 0 96 96" fill="none">
+            <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                  stroke="#0E1929" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M50 52 L88 52" stroke="#C8922A" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <circle cx="50" cy="52" r="4" fill="#C8922A"/>
+          </svg>
+          <div class="wm-divider" style="color: #0E1929;"></div>
+          <div class="wm-text">
+            <span class="wm-name"><strong>Mind Clear</strong></span>
+            <span class="wm-lab">Lab</span>
+            <span class="wm-tagline" style="color:#8A9BB0; margin-top:4px;">ADHD research + tools</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Light + tagline</span>
+    </div>
+
+    <div class="logo-cell">
+      <div class="sw-dark" style="min-width:320px;">
+        <div class="wm on-dark">
+          <svg width="44" height="44" viewBox="0 0 96 96" fill="none">
+            <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                  stroke="#F4F1EB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M50 52 L88 52" stroke="#E8B84B" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <circle cx="50" cy="52" r="4" fill="#E8B84B"/>
+          </svg>
+          <div class="wm-divider" style="color: #F4F1EB;"></div>
+          <div class="wm-text">
+            <span class="wm-name"><strong>Mind Clear</strong></span>
+            <span class="wm-lab">Lab</span>
+            <span class="wm-tagline" style="margin-top:4px;">ADHD research + tools</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Dark + tagline</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== BANNER ===================== -->
+<div class="section">
+  <div class="section-label">Social / Site Banner</div>
+  <div class="logo-row" style="flex-direction:column;">
+
+    <div class="logo-cell" style="align-items:flex-start;">
+      <div class="sw-banner-light">
+        <div class="wm wm-banner on-light" style="gap:24px;">
+          <svg width="64" height="64" viewBox="0 0 96 96" fill="none">
+            <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                  stroke="#0E1929" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <line x1="8" y1="66" x2="88" y2="66" stroke="#0E1929" stroke-width="1" opacity="0.1"/>
+            <path d="M50 52 L88 52" stroke="#C8922A" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+            <circle cx="50" cy="52" r="3.5" fill="#C8922A"/>
+          </svg>
+          <div class="wm-divider" style="color:#0E1929; height:40px;"></div>
+          <div class="wm-text">
+            <span class="wm-name"><strong>Mind Clear</strong></span>
+            <span class="wm-lab" style="font-size:12px;">Lab</span>
+            <span class="wm-tagline" style="color:#8A9BB0; margin-top:6px; font-size:10px;">ADHD research + tools for clearer minds</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Light banner</span>
+    </div>
+
+    <div class="logo-cell" style="align-items:flex-start;">
+      <div class="sw-banner-dark">
+        <div class="wm wm-banner on-dark" style="gap:24px;">
+          <svg width="64" height="64" viewBox="0 0 96 96" fill="none">
+            <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                  stroke="#F4F1EB" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <line x1="8" y1="66" x2="88" y2="66" stroke="#F4F1EB" stroke-width="1" opacity="0.08"/>
+            <path d="M50 52 L88 52" stroke="#E8B84B" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+            <circle cx="50" cy="52" r="3.5" fill="#E8B84B"/>
+          </svg>
+          <div class="wm-divider" style="color:#F4F1EB; height:40px;"></div>
+          <div class="wm-text">
+            <span class="wm-name"><strong>Mind Clear</strong></span>
+            <span class="wm-lab" style="font-size:12px;">Lab</span>
+            <span class="wm-tagline" style="margin-top:6px; font-size:10px;">ADHD research + tools for clearer minds</span>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Dark banner</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== FAVICON ===================== -->
+<div class="section">
+  <div class="section-label">Favicon — Scale test</div>
+  <div class="fav-row">
+
+    <div class="fav-cell">
+      <div class="fav-l" style="width:64px;height:64px;">
+        <svg width="46" height="46" viewBox="0 0 96 96" fill="none">
+          <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                stroke="#0E1929" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M50 52 L88 52" stroke="#C8922A" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <circle cx="50" cy="52" r="5" fill="#C8922A"/>
+        </svg>
+      </div>
+      <span class="caption">64px</span>
+    </div>
+
+    <div class="fav-cell">
+      <div class="fav-l" style="width:32px;height:32px;">
+        <svg width="23" height="23" viewBox="0 0 96 96" fill="none">
+          <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                stroke="#0E1929" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M50 52 L88 52" stroke="#C8922A" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="50" cy="52" r="6" fill="#C8922A"/>
+        </svg>
+      </div>
+      <span class="caption">32px</span>
+    </div>
+
+    <div class="fav-cell">
+      <div class="fav-l" style="width:16px;height:16px;">
+        <svg width="12" height="12" viewBox="0 0 96 96" fill="none">
+          <!-- Simplified at 16px: just the peak + amber tail -->
+          <path d="M8 52 L20 52 L27 30 L34 74 L41 42 L50 52 L88 52"
+                stroke="#0E1929" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M50 52 L88 52" stroke="#C8922A" stroke-width="9" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <span class="caption">16px</span>
+    </div>
+
+    <div class="fav-cell" style="margin-left:20px;">
+      <div class="fav-d" style="width:64px;height:64px;">
+        <svg width="46" height="46" viewBox="0 0 96 96" fill="none">
+          <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                stroke="#F4F1EB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M50 52 L88 52" stroke="#E8B84B" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <circle cx="50" cy="52" r="5" fill="#E8B84B"/>
+        </svg>
+      </div>
+      <span class="caption">64px dark</span>
+    </div>
+
+    <div class="fav-cell">
+      <div class="fav-d" style="width:32px;height:32px;">
+        <svg width="23" height="23" viewBox="0 0 96 96" fill="none">
+          <path d="M8 52 L18 52 L22 36 L27 68 L32 28 L37 72 L42 40 L46 56 L50 52 L88 52"
+                stroke="#F4F1EB" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M50 52 L88 52" stroke="#E8B84B" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="50" cy="52" r="6" fill="#E8B84B"/>
+        </svg>
+      </div>
+      <span class="caption">32px dark</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== PALETTE ===================== -->
+<div class="section">
+  <div class="section-label">Color palette</div>
+  <div style="display:flex; gap:12px; flex-wrap:wrap;">
+    <div style="display:flex;flex-direction:column;gap:6px;align-items:center;">
+      <div style="width:56px;height:56px;background:#0E1929;border-radius:6px;"></div>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--mid);">#0E1929<br>Navy</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;align-items:center;">
+      <div style="width:56px;height:56px;background:#F4F1EB;border:1px solid rgba(14,25,41,0.1);border-radius:6px;"></div>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--mid);">#F4F1EB<br>Cream</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;align-items:center;">
+      <div style="width:56px;height:56px;background:#C8922A;border-radius:6px;"></div>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--mid);">#C8922A<br>Amber</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;align-items:center;">
+      <div style="width:56px;height:56px;background:#E8B84B;border-radius:6px;"></div>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--mid);">#E8B84B<br>Amber (dark)</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;align-items:center;">
+      <div style="width:56px;height:56px;background:#8A9BB0;border-radius:6px;"></div>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--mid);">#8A9BB0<br>Slate</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== RATIONALE ===================== -->
+<div class="section">
+  <div class="section-label">Design rationale</div>
+  <p class="rationale">
+    <strong>The mark: a waveform resolving to calm.</strong> The left side of the mark reads as a classic EEG/neural trace — irregular, high-amplitude, scattered. Moving right, it resolves into a clean flat line. Read left to right, the mark tells the whole story: <em>from chaos to clarity.</em> The amber segment marks the exact moment of resolution — the transition point where overwhelm becomes focus. That's what the app does and what the research supports.
+    <br><br>
+    <strong>Typography: IBM Plex.</strong> IBM Plex Sans + Mono is the typeface of scientific publishing and developer tooling — rigorous without being cold. "LAB" is set in spaced caps in the mono variant, giving it the feel of a proper scientific designation (like a research unit) rather than a startup tagline.
+    <br><br>
+    <strong>Color: navy + amber.</strong> Deep navy pulls from academic and scientific publishing — journals, textbook covers, university logos. The amber is warm enough to prevent clinical sterility, and it bridges to the gold accent from the original Mind Clear identity, keeping a visual thread between the two brands.
+    <br><br>
+    <strong>Background grid.</strong> The subtle grid pattern on this page (and recommended for Lab-branded materials) evokes lab paper, graph paper, scientific notation. It adds context without decoration.
+  </p>
+</div>
+
+</body>
+</html>

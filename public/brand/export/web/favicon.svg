@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 110 110" fill="none">
+  <!-- Mind Clear favicon — auto-adapts to light/dark via prefers-color-scheme -->
+  <style>
+    .c-main  { stroke: #0F0F0F; }
+    .c-gold  { stroke: #C9A84C; fill: #C9A84C; }
+    @media (prefers-color-scheme: dark) {
+      .c-main  { stroke: #F7F5F0; }
+      .c-gold  { stroke: #E2BF6A; fill: #E2BF6A; }
+    }
+  </style>
+  <path class="c-gold"  d="M73 24 L31 24 Q15 24 15 40 L15 72 Q15 88 31 88 L73 88"
+        stroke-width="6" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <path class="c-main"  d="M70 18 L28 18 Q10 18 10 34 L10 68 Q10 86 28 86 L70 86"
+        stroke-width="9" stroke-linecap="round" fill="none"/>
+  <circle class="c-gold" cx="88" cy="52" r="11"/>
+</svg>

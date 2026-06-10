@@ -7,8 +7,9 @@ export function GooglePlayButton({ className = "" }: GooglePlayButtonProps) {
   return (
     <a
       href="#"
+      aria-label="Get it on Google Play"
       className={`inline-flex items-center gap-3 px-5 py-3 rounded-lg transition-opacity hover:opacity-80 ${className}`}
-      style={{ backgroundColor: "#D4AF37" }}
+      style={{ backgroundColor: "#D4AF37", boxShadow: "0 2px 8px rgba(0,0,0,0.18)" }}
     >
       <svg
         width="18"
@@ -29,7 +30,7 @@ export function GooglePlayButton({ className = "" }: GooglePlayButtonProps) {
       </svg>
       <div className="text-left leading-tight" style={{ color: "#111111" }}>
         <div
-          className="text-[10px] tracking-wider uppercase"
+          className="text-[10px] tracking-[0.06em] uppercase"
           style={{ fontWeight: 300 }}
         >
           Get it on

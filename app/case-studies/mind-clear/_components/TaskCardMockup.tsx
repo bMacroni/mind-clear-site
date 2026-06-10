@@ -41,7 +41,7 @@ export function TaskCardMockup({
           {title}
         </p>
         {meta && (
-          <p className="text-xs mt-0.5" style={{ color: "#888888" }}>
+          <p className="text-xs mt-0.5" style={{ color: "#888888", fontWeight: 300 }}>
             {meta}
           </p>
         )}

@@ -48,7 +48,7 @@ export default function StuckFeature() {
           style={{ backgroundColor: "#2A2A2A", borderRadius: "8px" }}
         >
           {steps.map((step) => (
-            <div key={step.label} className="flex items-center gap-3">
+            <div key={step.label} className="flex items-start gap-3">
               <div
                 className="flex-shrink-0 flex items-center justify-center"
                 style={{
@@ -59,6 +59,7 @@ export default function StuckFeature() {
                   backgroundColor: step.done ? "#10B981" : "transparent",
                 }}
               >
+                {/* strokeWidth 2.5 intentional — 1.5 is invisible at 13px inside a 22px circle */}
                 {step.done && (
                   <Check size={13} color="#fff" strokeWidth={2.5} />
                 )}

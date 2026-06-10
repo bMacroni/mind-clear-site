@@ -35,6 +35,9 @@ export default function OverdueDrip() {
 
         {/* Two-card visual with arrow */}
         <div className="flex flex-col items-center gap-3">
+          {/* Inline card structure used (not TaskCardMockup) because the "7 days waiting" pill
+              needs a dark surface (#2A2A1A) + gold text (#E6CF8E), which TaskCardMockup's pill
+              prop doesn't support. */}
           {/* Before card */}
           <div
             className="w-full relative px-4 py-3"

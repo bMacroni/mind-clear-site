@@ -60,7 +60,6 @@ export default function FocusFeature() {
             {actionIcons.map(({ Icon, label }) => (
               <div
                 key={label}
-                aria-label={label}
                 className="flex items-center justify-center"
                 style={{
                   width: 40,
@@ -70,7 +69,7 @@ export default function FocusFeature() {
                   color: "#444444",
                 }}
               >
-                <Icon size={18} strokeWidth={1.5} />
+                <Icon size={18} strokeWidth={1.5} aria-hidden={true} />
               </div>
             ))}
           </div>

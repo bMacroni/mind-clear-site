@@ -1,14 +1,15 @@
 // app/case-studies/mind-clear/_components/ProblemHook.tsx
 export default function ProblemHook() {
   return (
-    <section className="py-24 px-6" style={{ backgroundColor: "#E8E8E2" }}>
+    <section aria-labelledby="problem-heading" className="py-24 px-6" style={{ backgroundColor: "#E8E8E2" }}>
       <div className="max-w-2xl mx-auto">
-        <p
+        <h2
           className="text-xs tracking-[0.06em] uppercase mb-8"
+          id="problem-heading"
           style={{ color: "#888888", fontWeight: 300 }}
         >
           The Problem
-        </p>
+        </h2>
         <blockquote
           className="text-3xl md:text-4xl mb-8"
           style={{ color: "#111111", fontWeight: 300, lineHeight: 1.3 }}

@@ -3,7 +3,7 @@ import { TaskCardMockup } from "./TaskCardMockup";
 
 export default function BrainDump() {
   return (
-    <section className="py-24 px-6" style={{ backgroundColor: "#0D0D0D" }}>
+    <section aria-labelledby="braindump-heading" className="py-24 px-6" style={{ backgroundColor: "#0D0D0D" }}>
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Copy */}
         <div>
@@ -14,6 +14,7 @@ export default function BrainDump() {
             Brain Dump
           </p>
           <h2
+            id="braindump-heading"
             className="text-3xl mb-6"
             style={{ color: "#F2F2F2", fontWeight: 300, lineHeight: 1.25 }}
           >
@@ -54,9 +55,9 @@ export default function BrainDump() {
           <TaskCardMockup title="Morning walk" meta="Routine · weekdays" />
           <p
             className="text-xs text-center pt-2"
-            style={{ color: "#888888" }}
+            style={{ color: "#888888", fontWeight: 300 }}
           >
-            5 things, sorted.
+            4 things, sorted.
           </p>
         </div>
       </div>

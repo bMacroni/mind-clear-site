@@ -1,9 +1,11 @@
+// Roboto Light 300 is applied via roboto.className on <main> in page.tsx — inherited here.
 // app/case-studies/mind-clear/_components/Hero.tsx
 import { GooglePlayButton } from "./GooglePlayButton";
 
 export default function Hero() {
   return (
     <section
+      aria-labelledby="hero-heading"
       className="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24"
       style={{ backgroundColor: "#0D0D0D" }}
     >
@@ -14,6 +16,7 @@ export default function Hero() {
         For ADHD Brains
       </p>
       <h1
+        id="hero-heading"
         className="text-4xl md:text-6xl max-w-2xl mb-6"
         style={{ color: "#F2F2F2", fontWeight: 300, lineHeight: 1.2 }}
       >

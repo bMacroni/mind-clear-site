@@ -24,7 +24,7 @@ export default function DownloadCTA() {
           Free to download. 21-day premium trial. No payment upfront.
         </p>
         <GooglePlayButton />
-        <p className="mt-4 text-xs" style={{ color: "#6B6B6B" }}>
+        <p className="mt-4 text-xs" style={{ color: "#6B6B6B", fontWeight: 300 }}>
           Android only · iOS coming soon
         </p>
         <p

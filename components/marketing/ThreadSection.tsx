@@ -1,4 +1,4 @@
-// app/case-studies/mind-clear/_components/ThreadSection.tsx
+// components/marketing/ThreadSection.tsx
 // One node on the golden thread: spine segment, node circle, numbered
 // editorial eyebrow, ghost numeral, content indented right of the spine.
 interface ThreadSectionProps {
@@ -25,7 +25,7 @@ export function ThreadSection({
         <p className="flex items-baseline gap-3 mb-8">
           <span
             className="text-base italic"
-            style={{ fontFamily: "var(--font-fraunces)", color: "#6B5A20" }}
+            style={{ fontFamily: "var(--font-serif)", color: "#6B5A20" }}
           >
             № {number}
           </span>

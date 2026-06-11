@@ -1,4 +1,4 @@
-// app/case-studies/mind-clear/_components/Hero.tsx
+// components/marketing/Hero.tsx
 // All-cream hero. Faint scattered thought-fragments in the margins (the
 // swirling head); the golden thread fades in at the bottom and runs from
 // here through every section below.
@@ -33,7 +33,7 @@ export default function Hero() {
               left: f.left,
               right: f.right,
               transform: `rotate(${f.rotate}deg)`,
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-serif)",
               fontSize: "clamp(1.05rem, 1.9vw, 1.55rem)",
               color: "rgba(17,17,17,0.18)",
             }}
@@ -54,7 +54,7 @@ export default function Hero() {
           id="hero-heading"
           className="mc-rise mc-rise-2 mb-8"
           style={{
-            fontFamily: "var(--font-fraunces)",
+            fontFamily: "var(--font-serif)",
             fontWeight: 300,
             fontSize: "clamp(3rem, 9vw, 7.5rem)",
             lineHeight: 1.05,

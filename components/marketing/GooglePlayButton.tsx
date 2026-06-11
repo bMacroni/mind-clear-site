@@ -1,4 +1,4 @@
-// app/case-studies/mind-clear/_components/GooglePlayButton.tsx
+// components/marketing/GooglePlayButton.tsx
 interface GooglePlayButtonProps {
   className?: string;
 }

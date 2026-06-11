@@ -1,4 +1,4 @@
-// app/case-studies/mind-clear/_components/ProblemHook.tsx
+// components/marketing/ProblemHook.tsx
 import { ThreadSection } from "./ThreadSection";
 
 export default function ProblemHook() {
@@ -8,7 +8,7 @@ export default function ProblemHook() {
       <blockquote
         className="relative md:-ml-20 mb-10"
         style={{
-          fontFamily: "var(--font-fraunces)",
+          fontFamily: "var(--font-serif)",
           fontStyle: "italic",
           fontWeight: 300,
           fontSize: "clamp(2.1rem, 5vw, 4rem)",

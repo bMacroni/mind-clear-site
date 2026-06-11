@@ -1,4 +1,4 @@
-// app/case-studies/mind-clear/_components/TaskCardMockup.tsx
+// components/marketing/TaskCardMockup.tsx
 interface TaskCardMockupProps {
   title: string;
   meta?: string;

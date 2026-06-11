@@ -1,4 +1,4 @@
-// app/case-studies/mind-clear/_components/BrainDump.tsx
+// components/marketing/BrainDump.tsx
 import { TaskCardMockup } from "./TaskCardMockup";
 import { ThreadSection } from "./ThreadSection";
 
@@ -11,7 +11,7 @@ export default function BrainDump() {
           <h2
             className="mb-6"
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-serif)",
               fontWeight: 300,
               fontSize: "clamp(1.9rem, 3.4vw, 2.8rem)",
               lineHeight: 1.15,

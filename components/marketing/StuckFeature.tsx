@@ -1,4 +1,4 @@
-// app/case-studies/mind-clear/_components/StuckFeature.tsx
+// components/marketing/StuckFeature.tsx
 import { Check } from "lucide-react";
 import { ThreadSection } from "./ThreadSection";
 
@@ -23,7 +23,7 @@ export default function StuckFeature() {
           <h2
             className="mb-6"
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-serif)",
               fontWeight: 300,
               fontSize: "clamp(1.9rem, 3.4vw, 2.8rem)",
               lineHeight: 1.15,

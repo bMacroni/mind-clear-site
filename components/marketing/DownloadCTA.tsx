@@ -1,4 +1,4 @@
-// app/case-studies/mind-clear/_components/DownloadCTA.tsx
+// components/marketing/DownloadCTA.tsx
 // The thread ends here: a short spine segment terminating in one solid
 // gold dot — one step at a time, literalized.
 import { GooglePlayButton } from "./GooglePlayButton";
@@ -50,7 +50,7 @@ export default function DownloadCTA() {
             id="cta-heading"
             className="mb-6"
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-serif)",
               fontWeight: 300,
               fontSize: "clamp(2.4rem, 5.5vw, 4.5rem)",
               lineHeight: 1.1,

@@ -1,4 +1,4 @@
-// app/case-studies/mind-clear/_components/FocusFeature.tsx
+// components/marketing/FocusFeature.tsx
 import { Check, Pencil, Trash2 } from "lucide-react";
 import { ThreadSection } from "./ThreadSection";
 
@@ -20,7 +20,7 @@ export default function FocusFeature() {
           <h2
             className="mb-6"
             style={{
-              fontFamily: "var(--font-fraunces)",
+              fontFamily: "var(--font-serif)",
               fontWeight: 300,
               fontSize: "clamp(1.9rem, 3.4vw, 2.8rem)",
               lineHeight: 1.15,

@@ -1,18 +1,27 @@
 import type { Metadata } from 'next'
-import { Outfit, Playfair_Display } from 'next/font/google'
+import { Outfit, Fraunces } from 'next/font/google'
 import './globals.css'
 
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' })
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' })
+const fraunces = Fraunces({
+  weight: ['300', '400'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-serif',
+})
 
 export const metadata: Metadata = {
-  title: 'Mind Clear Studio - AI-Powered Solutions for Everyday Life',
-  description: 'Bringing the transformative power of AI into the hands of everyday people, one thoughtfully crafted app at a time.',
-  keywords: ['AI', 'productivity', 'ADHD', 'mindfulness', 'technology', 'apps'],
-  authors: [{ name: 'Mind Clear Studio' }],
+  metadataBase: new URL('https://mind-clear.com'),
+  title: 'Mind Clear — Clear your head. One step at a time.',
+  description:
+    'Dump everything on your mind. Mind Clear turns it into a plan. AI-powered planning built for ADHD brains — gentle on bad days. Free on Android.',
+  keywords: ['ADHD', 'ADHD planner', 'brain dump', 'task paralysis', 'AI planning'],
+  authors: [{ name: 'Mind Clear' }],
   openGraph: {
-    title: 'Mind Clear Studio',
-    description: 'AI-Powered Solutions for Everyday Life',
+    title: 'Mind Clear — Clear your head. One step at a time.',
+    description:
+      'Dump everything on your mind. Mind Clear turns it into a plan. Built for ADHD brains.',
     type: 'website',
   },
 }
@@ -24,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${playfair.variable} font-sans`}>{children}</body>
+      <body className={`${outfit.variable} ${fraunces.variable} font-sans`}>{children}</body>
     </html>
   )
 }

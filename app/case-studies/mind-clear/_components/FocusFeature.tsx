@@ -1,5 +1,6 @@
 // app/case-studies/mind-clear/_components/FocusFeature.tsx
 import { Check, Pencil, Trash2 } from "lucide-react";
+import { ThreadSection } from "./ThreadSection";
 
 const actionIcons = [
   { Icon: Check, label: "Complete" },
@@ -9,32 +10,33 @@ const actionIcons = [
 
 export default function FocusFeature() {
   return (
-    <section
-      aria-labelledby="focus-heading"
-      className="py-24 px-6"
-      style={{ backgroundColor: "#E8E8E2" }}
+    <ThreadSection
+      number="03"
+      label="Today's Focus"
+      ariaLabel="Today's Focus feature"
     >
-      <div className="max-w-2xl mx-auto">
-        <p
-          className="text-xs tracking-[0.06em] uppercase mb-6"
-          style={{ color: "#888888", fontWeight: 300 }}
-        >
-          Today's Focus
-        </p>
-        <h2
-          id="focus-heading"
-          className="text-2xl mb-6"
-          style={{ color: "#111111", fontWeight: 300, lineHeight: 1.3 }}
-        >
-          One task. Right now. That's all.
-        </h2>
-        <p
-          className="text-base leading-relaxed mb-12"
-          style={{ color: "#444444", fontWeight: 300 }}
-        >
-          Mind Clear picks one thing for you to focus on. Not a list — one
-          task. When you're done, it finds the next one.
-        </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-5xl">
+        <div>
+          <h2
+            className="mb-6"
+            style={{
+              fontFamily: "var(--font-fraunces)",
+              fontWeight: 300,
+              fontSize: "clamp(1.9rem, 3.4vw, 2.8rem)",
+              lineHeight: 1.15,
+              color: "#111111",
+            }}
+          >
+            One task. Right now. <em>That's all.</em>
+          </h2>
+          <p
+            className="text-base leading-relaxed"
+            style={{ color: "#444444" }}
+          >
+            Mind Clear picks one thing for you to focus on. Not a list — one
+            task. When you're done, it finds the next one.
+          </p>
+        </div>
 
         {/* Focus card visual */}
         <div
@@ -79,11 +81,14 @@ export default function FocusFeature() {
           >
             Draft the Q3 planning deck
           </p>
-          <p className="text-xs pl-1 mt-1" style={{ color: "#888888", fontWeight: 300 }}>
+          <p
+            className="text-xs pl-1 mt-1"
+            style={{ color: "#888888", fontWeight: 300 }}
+          >
             Due today · high priority
           </p>
         </div>
       </div>
-    </section>
+    </ThreadSection>
   );
 }

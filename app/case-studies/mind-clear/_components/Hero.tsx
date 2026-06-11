@@ -1,39 +1,87 @@
-// Roboto Light 300 is applied via roboto.className on <main> in page.tsx — inherited here.
 // app/case-studies/mind-clear/_components/Hero.tsx
+// All-cream hero. Faint scattered thought-fragments in the margins (the
+// swirling head); the golden thread fades in at the bottom and runs from
+// here through every section below.
 import { GooglePlayButton } from "./GooglePlayButton";
+
+const fragments = [
+  { text: "call the dentist", top: "12%", left: "5%", rotate: -7 },
+  { text: "that email", top: "20%", right: "9%", rotate: 5 },
+  { text: "renew the insurance", top: "38%", right: "4%", rotate: -8, desktopOnly: true },
+  { text: "the laundry", top: "47%", left: "7%", rotate: 8, desktopOnly: true },
+  { text: "mom's birthday", top: "66%", left: "4%", rotate: 4, desktopOnly: true },
+  { text: "the Q3 deck", top: "74%", right: "7%", rotate: -5 },
+];
 
 export default function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="min-h-screen flex flex-col items-center justify-center text-center px-6 py-24"
-      style={{ backgroundColor: "#0D0D0D" }}
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden px-6 py-24"
+      style={{ backgroundColor: "#E8E8E2" }}
     >
-      <p
-        className="text-xs tracking-[0.06em] uppercase mb-6"
-        style={{ color: "#D4AF37", fontWeight: 300 }}
-      >
-        For ADHD Brains
-      </p>
-      <h1
-        id="hero-heading"
-        className="text-4xl md:text-6xl max-w-2xl mb-6"
-        style={{ color: "#F2F2F2", fontWeight: 300, lineHeight: 1.2 }}
-      >
-        Clear your head.
-        <br />
-        One step at a time.
-      </h1>
-      <p
-        className="text-lg max-w-md mb-10"
-        style={{ color: "#A8A8A8", fontWeight: 300 }}
-      >
-        Dump everything on your mind. Mind Clear turns it into a plan.
-      </p>
-      <GooglePlayButton />
-      <p className="mt-4 text-xs" style={{ color: "#6B6B6B" }}>
-        Android · Free · 21-day premium trial
-      </p>
+      {/* Scattered thoughts — decorative */}
+      <div aria-hidden="true">
+        {fragments.map((f) => (
+          <span
+            key={f.text}
+            className={`mc-frag absolute italic whitespace-nowrap ${
+              f.desktopOnly ? "hidden md:inline" : ""
+            }`}
+            style={{
+              top: f.top,
+              left: f.left,
+              right: f.right,
+              transform: `rotate(${f.rotate}deg)`,
+              fontFamily: "var(--font-fraunces)",
+              fontSize: "clamp(1.05rem, 1.9vw, 1.55rem)",
+              color: "rgba(17,17,17,0.18)",
+            }}
+          >
+            {f.text}
+          </span>
+        ))}
+      </div>
+
+      <div style={{ paddingLeft: "var(--content-pad)", paddingRight: "1.5rem" }}>
+        <p
+          className="mc-rise text-xs uppercase tracking-[0.18em] mb-8"
+          style={{ color: "#6B5A20" }}
+        >
+          For ADHD Brains
+        </p>
+        <h1
+          id="hero-heading"
+          className="mc-rise mc-rise-2 mb-8"
+          style={{
+            fontFamily: "var(--font-fraunces)",
+            fontWeight: 300,
+            fontSize: "clamp(3rem, 9vw, 7.5rem)",
+            lineHeight: 1.05,
+            color: "#111111",
+            letterSpacing: "-0.01em",
+          }}
+        >
+          Clear your head.
+          <br />
+          <em style={{ fontWeight: 300 }}>One step at a time.</em>
+        </h1>
+        <p
+          className="mc-rise mc-rise-3 text-lg max-w-md mb-12"
+          style={{ color: "#444444" }}
+        >
+          Dump everything on your mind. Mind Clear turns it into a plan.
+        </p>
+        <div className="mc-rise mc-rise-4">
+          <GooglePlayButton />
+        </div>
+        <p className="mc-rise mc-rise-5 mt-5 text-xs" style={{ color: "#6B6B6B" }}>
+          Android · Free · 21-day premium trial
+        </p>
+      </div>
+
+      {/* The thread begins */}
+      <div className="mc-spine-leadin" aria-hidden="true" />
     </section>
   );
 }

@@ -8,7 +8,7 @@ export function GooglePlayButton({ className = "" }: GooglePlayButtonProps) {
     <a
       href="#"
       aria-label="Get it on Google Play"
-      className={`inline-flex items-center gap-3 px-5 py-3 rounded-lg transition-opacity hover:opacity-80 ${className}`}
+      className={`inline-flex items-center gap-3 px-6 py-3 rounded-full transition-opacity hover:opacity-80 ${className}`}
       style={{ backgroundColor: "#D4AF37", boxShadow: "0 2px 8px rgba(0,0,0,0.18)" }}
     >
       <svg

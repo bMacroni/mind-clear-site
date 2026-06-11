@@ -1,30 +1,30 @@
 // app/case-studies/mind-clear/_components/BrainDump.tsx
 import { TaskCardMockup } from "./TaskCardMockup";
+import { ThreadSection } from "./ThreadSection";
 
 export default function BrainDump() {
   return (
-    <section aria-labelledby="braindump-heading" className="py-24 px-6" style={{ backgroundColor: "#0D0D0D" }}>
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <ThreadSection number="02" label="Brain Dump" ariaLabel="Brain Dump feature">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-5xl">
         {/* Copy */}
         <div>
-          <p
-            className="text-xs tracking-[0.06em] uppercase mb-6"
-            style={{ color: "#6B6B6B", fontWeight: 300 }}
-          >
-            Brain Dump
-          </p>
           <h2
-            id="braindump-heading"
-            className="text-3xl mb-6"
-            style={{ color: "#F2F2F2", fontWeight: 300, lineHeight: 1.25 }}
+            className="mb-6"
+            style={{
+              fontFamily: "var(--font-fraunces)",
+              fontWeight: 300,
+              fontSize: "clamp(1.9rem, 3.4vw, 2.8rem)",
+              lineHeight: 1.15,
+              color: "#111111",
+            }}
           >
-            Dump everything.
+            Dump <em>everything.</em>
             <br />
             Get a plan.
           </h2>
           <p
             className="text-base leading-relaxed"
-            style={{ color: "#A8A8A8", fontWeight: 300 }}
+            style={{ color: "#444444" }}
           >
             Type whatever's swirling in your head — tasks, worries, half-formed
             ideas. Mind Clear's AI reads it all and turns it into goals, tasks,
@@ -35,7 +35,11 @@ export default function BrainDump() {
         {/* Visual: task card mockup in ivory container */}
         <div
           className="p-4 flex flex-col gap-2"
-          style={{ backgroundColor: "#F5F1E1", borderRadius: "20px" }}
+          style={{
+            backgroundColor: "#F5F1E1",
+            borderRadius: "20px",
+            border: "1px solid #DEDCD2",
+          }}
         >
           <TaskCardMockup
             title="Draft the Q3 planning deck"
@@ -61,6 +65,6 @@ export default function BrainDump() {
           </p>
         </div>
       </div>
-    </section>
+    </ThreadSection>
   );
 }

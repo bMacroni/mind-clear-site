@@ -1,37 +1,39 @@
 // app/case-studies/mind-clear/_components/OverdueDrip.tsx
 import { ArrowDown } from "lucide-react";
+import { ThreadSection } from "./ThreadSection";
 
 export default function OverdueDrip() {
   return (
-    <section
-      aria-labelledby="overdue-heading"
-      className="py-24 px-6"
-      style={{ backgroundColor: "#E8E8E2" }}
+    <ThreadSection
+      number="05"
+      label="Missed a Deadline?"
+      ariaLabel="Missed deadline rescheduling feature"
     >
-      <div className="max-w-2xl mx-auto">
-        <p
-          className="text-xs tracking-[0.06em] uppercase mb-6"
-          style={{ color: "#888888", fontWeight: 300 }}
-        >
-          Missed a Deadline?
-        </p>
-        <h2
-          id="overdue-heading"
-          className="text-2xl mb-6"
-          style={{ color: "#111111", fontWeight: 300, lineHeight: 1.3 }}
-        >
-          It doesn't disappear.
-          <br />
-          It just waits.
-        </h2>
-        <p
-          className="text-base leading-relaxed mb-12"
-          style={{ color: "#444444", fontWeight: 300 }}
-        >
-          Miss a due date and Mind Clear quietly reschedules it to an open day.
-          No overdue pile. No shame. It's still on the list — just moved to
-          when you can actually do it.
-        </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-5xl">
+        <div>
+          <h2
+            className="mb-6"
+            style={{
+              fontFamily: "var(--font-fraunces)",
+              fontWeight: 300,
+              fontSize: "clamp(1.9rem, 3.4vw, 2.8rem)",
+              lineHeight: 1.15,
+              color: "#111111",
+            }}
+          >
+            It doesn't disappear.
+            <br />
+            It just <em>waits.</em>
+          </h2>
+          <p
+            className="text-base leading-relaxed"
+            style={{ color: "#444444" }}
+          >
+            Miss a due date and Mind Clear quietly reschedules it to an open
+            day. No overdue pile. No shame. It's still on the list — just
+            moved to when you can actually do it.
+          </p>
+        </div>
 
         {/* Two-card visual with arrow */}
         <div className="flex flex-col items-center gap-3">
@@ -102,12 +104,15 @@ export default function OverdueDrip() {
             >
               Book the car service
             </p>
-            <p className="text-xs pl-1 mt-1" style={{ color: "#888888", fontWeight: 300 }}>
+            <p
+              className="text-xs pl-1 mt-1"
+              style={{ color: "#888888", fontWeight: 300 }}
+            >
               Moved to Thursday
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </ThreadSection>
   );
 }

@@ -1,5 +1,6 @@
 // app/case-studies/mind-clear/_components/StuckFeature.tsx
 import { Check } from "lucide-react";
+import { ThreadSection } from "./ThreadSection";
 
 const steps = [
   {
@@ -12,40 +13,45 @@ const steps = [
 
 export default function StuckFeature() {
   return (
-    <section
-      aria-labelledby="stuck-heading"
-      className="py-24 px-6"
-      style={{ backgroundColor: "#0D0D0D" }}
+    <ThreadSection
+      number="04"
+      label="When You're Stuck"
+      ariaLabel="Stuck task helper feature"
     >
-      <div className="max-w-2xl mx-auto">
-        <p
-          className="text-xs tracking-[0.06em] uppercase mb-6"
-          style={{ color: "#6B6B6B", fontWeight: 300 }}
-        >
-          When You're Stuck
-        </p>
-        <h2
-          id="stuck-heading"
-          className="text-2xl mb-6"
-          style={{ color: "#F2F2F2", fontWeight: 300, lineHeight: 1.3 }}
-        >
-          Can't start?
-          <br />
-          The AI breaks it down.
-        </h2>
-        <p
-          className="text-base leading-relaxed mb-12"
-          style={{ color: "#A8A8A8", fontWeight: 300 }}
-        >
-          Tap 'I'm stuck' on any task. Mind Clear splits it into tiny steps
-          you can actually begin — or reframes it entirely if that's what you
-          need.
-        </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-5xl">
+        <div>
+          <h2
+            className="mb-6"
+            style={{
+              fontFamily: "var(--font-fraunces)",
+              fontWeight: 300,
+              fontSize: "clamp(1.9rem, 3.4vw, 2.8rem)",
+              lineHeight: 1.15,
+              color: "#111111",
+            }}
+          >
+            Can't start?
+            <br />
+            The AI <em>breaks it down.</em>
+          </h2>
+          <p
+            className="text-base leading-relaxed"
+            style={{ color: "#444444" }}
+          >
+            Tap 'I'm stuck' on any task. Mind Clear splits it into tiny steps
+            you can actually begin — or reframes it entirely if that's what
+            you need.
+          </p>
+        </div>
 
-        {/* Step list visual */}
+        {/* Step list visual — ivory card on cream */}
         <div
           className="p-4 flex flex-col gap-3"
-          style={{ backgroundColor: "#2A2A2A", borderRadius: "8px" }}
+          style={{
+            backgroundColor: "#F5F1E1",
+            border: "1px solid #DEDCD2",
+            borderRadius: "8px",
+          }}
         >
           {steps.map((step) => (
             <div key={step.label} className="flex items-start gap-3">
@@ -55,7 +61,7 @@ export default function StuckFeature() {
                   width: 22,
                   height: 22,
                   borderRadius: "50%",
-                  border: step.done ? "none" : "1.5px solid #404040",
+                  border: step.done ? "none" : "1.5px solid #B5B2A4",
                   backgroundColor: step.done ? "#10B981" : "transparent",
                 }}
               >
@@ -67,7 +73,7 @@ export default function StuckFeature() {
               <p
                 className="text-sm"
                 style={{
-                  color: step.done ? "#6B6B6B" : "#F2F2F2",
+                  color: step.done ? "#888888" : "#111111",
                   textDecoration: step.done ? "line-through" : "none",
                   fontWeight: 300,
                 }}
@@ -76,11 +82,14 @@ export default function StuckFeature() {
               </p>
             </div>
           ))}
-          <p className="text-xs mt-1" style={{ color: "#6B6B6B", fontWeight: 300 }}>
+          <p
+            className="text-xs mt-1"
+            style={{ color: "#888888", fontWeight: 300 }}
+          >
             start with just the first one
           </p>
         </div>
       </div>
-    </section>
+    </ThreadSection>
   );
 }

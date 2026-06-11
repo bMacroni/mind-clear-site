@@ -31,8 +31,8 @@ export default function PrivacyPage() {
       content: (
         <div className="space-y-6">
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">2.1 Information You Provide Directly</h3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">2.1 Information You Provide Directly</h3>
+            <ul className="list-disc pl-6 space-y-2 text-[#444444]">
               <li><strong>Account Information:</strong> Email address, name, and profile picture (via Google Sign-In).</li>
               <li><strong>User Content:</strong> Goals, tasks, milestones, AI conversations, and other content you create.</li>
               <li><strong>Preferences:</strong> App settings, notification preferences, and scheduling preferences.</li>
@@ -42,8 +42,8 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">2.2 Information We Collect Automatically</h3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">2.2 Information We Collect Automatically</h3>
+            <ul className="list-disc pl-6 space-y-2 text-[#444444]">
               <li><strong>Device Information:</strong> Device type, operating system, app version, unique device identifiers.</li>
               <li><strong>Usage Data:</strong> How you interact with the app, features used, and time spent in the app.</li>
               <li><strong>Location Data:</strong> Approximate location for travel time calculations (only when you enable location services).</li>
@@ -54,12 +54,12 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">2.3 Information from Third Parties</h3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">2.3 Information from Third Parties</h3>
+            <ul className="list-disc pl-6 space-y-2 text-[#444444]">
               <li><strong>Google Account Data:</strong> Information from your Google account when you sign in.</li>
               <li><strong>Calendar Data:</strong> Google Calendar events (only when you grant permission).</li>
               <li><strong>Weather Data:</strong> Local weather information for scheduling optimization.</li>
-              <li><strong>Google OAuth Scopes:</strong> Specifically for Google integration, the following OAuth Scopes are requested: openid, email, profile, and <code className="bg-gray-800 text-yellow-300 rounded px-1 text-sm">https://www.googleapis.com/auth/calendar.events.readonly</code>.</li>
+              <li><strong>Google OAuth Scopes:</strong> Specifically for Google integration, the following OAuth Scopes are requested: openid, email, profile, and <code className="bg-[#F5F1E1] text-[#6B5A20] rounded px-1 text-sm">https://www.googleapis.com/auth/calendar.events.readonly</code>.</li>
             </ul>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
       content: (
         <div className="space-y-4">
           <p>We use the information we collect to:</p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-[#444444]">
             <li>Provide the Service: Deliver goal and task management features.</li>
             <li>AI Processing: Process your conversations, goals, and tasks to provide AI-powered assistance and personalized recommendations via trusted third-party AI services, including Groq and Google.</li>
             <li>Scheduling: Optimize task scheduling based on your preferences and external factors.</li>
@@ -94,35 +94,35 @@ export default function PrivacyPage() {
           <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
 
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">4.1 Service Providers</h3>
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">4.1 Service Providers</h3>
             <p className="mb-2">We share information with trusted third-party services that help us operate and provide our core features:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-[#444444]">
               <li><strong>Groq:</strong> Used for high-speed AI inference and processing of user prompts/conversations. For these specific AI requests, the user's input (prompts/context) is not retained by Groq and is not used to train their models.</li>
               <li><strong>Google:</strong> Authentication, Calendar integration, and other AI services.</li>
               <li><strong>Supabase:</strong> Database and authentication services.</li>
               <li><strong>Firebase:</strong> Analytics and crash reporting.</li>
               <li><strong>Railway:</strong> Backend hosting services.</li>
             </ul>
-            <p className="mt-2 text-sm text-gray-400"><strong>Note:</strong> This list may be updated as our technical infrastructure evolves.</p>
+            <p className="mt-2 text-sm text-[#6B6B6B]"><strong>Note:</strong> This list may be updated as our technical infrastructure evolves.</p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">4.2 Legal Requirements</h3>
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">4.2 Legal Requirements</h3>
             <p>We may disclose your information if required by law or to: comply with legal obligations, protect our rights, property, or safety, and the safety of our users, and prevent fraud, abuse, or security incidents.</p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">4.3 Business Transfers</h3>
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">4.3 Business Transfers</h3>
             <p>In the event of a merger, acquisition, or sale of assets, user information may be transferred to the new owner.</p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">4.4 Aggregated and De-Identified Data</h3>
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">4.4 Aggregated and De-Identified Data</h3>
             <p>We may share aggregated, anonymized data for research, analytics, or marketing purposes. This data cannot reasonably identify you.</p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">4.5 With Your Consent</h3>
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">4.5 With Your Consent</h3>
             <p>We may share your information with third parties when we have your explicit consent to do so.</p>
           </div>
         </div>
@@ -133,7 +133,7 @@ export default function PrivacyPage() {
       title: "5. Data Security",
       icon: Lock,
       content: (
-        <ul className="list-disc pl-6 space-y-2 text-gray-300">
+        <ul className="list-disc pl-6 space-y-2 text-[#444444]">
           <li><strong>Encryption:</strong> Data is encrypted in transit and at rest.</li>
           <li><strong>Access Controls:</strong> Limited access to personal information on a need-to-know basis.</li>
           <li><strong>Authentication:</strong> Secure authentication is enforced, primarily through trusted providers like Google Sign-In.</li>
@@ -150,7 +150,7 @@ export default function PrivacyPage() {
       content: (
         <div className="space-y-4">
           <p>We retain your information only as long as necessary to provide the Service:</p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-[#444444]">
             <li>Account Data: Retained while your account is active.</li>
             <li>User Content: Retained until you delete it or close your account.</li>
             <li>Analytics Data: Retained for up to 2 years.</li>
@@ -169,7 +169,7 @@ export default function PrivacyPage() {
       content: (
         <div className="space-y-6">
           <p>Depending on your location, you may have the following rights regarding your personal information:</p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-[#444444]">
             <li>Access: View and download your data.</li>
             <li>Correction: Update or correct your information.</li>
             <li>Deletion: Delete individual content or request account deletion.</li>
@@ -179,17 +179,17 @@ export default function PrivacyPage() {
           </ul>
 
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">7.1 Data Deletion & Account Management</h3>
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">7.1 Data Deletion & Account Management</h3>
             <p className="mb-2">You can delete your account and all associated data at any time by:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-[#444444]">
               <li>Using the "Delete Account" option in the app's Profile settings.</li>
-              <li>Contacting us directly at <a href="mailto:support@mind-clear.com" className="text-yellow-400 underline hover:text-yellow-300">support@mind-clear.com</a>.</li>
+              <li>Contacting us directly at <a href="mailto:support@mind-clear.com" className="text-[#6B5A20] underline hover:text-[#111111]">support@mind-clear.com</a>.</li>
             </ul>
-            <p className="mt-2 text-gray-300">When you request deletion, we will remove all your personal information, goals, tasks, calendar data, and authentication tokens, completing the deletion process within 30 days.</p>
+            <p className="mt-2 text-[#444444]">When you request deletion, we will remove all your personal information, goals, tasks, calendar data, and authentication tokens, completing the deletion process within 30 days.</p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-yellow-400 mb-3">7.2 Notification Preferences</h3>
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">7.2 Notification Preferences</h3>
             <p>You can manage push notification settings in your device settings or app preferences, and opt out of email notifications in your account settings.</p>
           </div>
         </div>
@@ -202,11 +202,11 @@ export default function PrivacyPage() {
       content: (
         <div className="space-y-4">
           <p>Our Service integrates with third-party services that have their own privacy policies. Key integrations include:</p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li><a href="https://policies.google.com/privacy" className="text-yellow-400 underline hover:text-yellow-300" target="_blank" rel="noopener noreferrer">Google Services: Privacy Policy</a></li>
-            <li><a href="https://groq.com/privacy" className="text-yellow-400 underline hover:text-yellow-300" target="_blank" rel="noopener noreferrer">Groq Services: Privacy Policy</a></li>
-            <li><a href="https://firebase.google.com/support/privacy" className="text-yellow-400 underline hover:text-yellow-300" target="_blank" rel="noopener noreferrer">Firebase: Privacy Policy</a></li>
-            <li><a href="https://supabase.com/privacy" className="text-yellow-400 underline hover:text-yellow-300" target="_blank" rel="noopener noreferrer">Supabase: Privacy Policy</a></li>
+          <ul className="list-disc pl-6 space-y-2 text-[#444444]">
+            <li><a href="https://policies.google.com/privacy" className="text-[#6B5A20] underline hover:text-[#111111]" target="_blank" rel="noopener noreferrer">Google Services: Privacy Policy</a></li>
+            <li><a href="https://groq.com/privacy" className="text-[#6B5A20] underline hover:text-[#111111]" target="_blank" rel="noopener noreferrer">Groq Services: Privacy Policy</a></li>
+            <li><a href="https://firebase.google.com/support/privacy" className="text-[#6B5A20] underline hover:text-[#111111]" target="_blank" rel="noopener noreferrer">Firebase: Privacy Policy</a></li>
+            <li><a href="https://supabase.com/privacy" className="text-[#6B5A20] underline hover:text-[#111111]" target="_blank" rel="noopener noreferrer">Supabase: Privacy Policy</a></li>
           </ul>
         </div>
       )
@@ -242,7 +242,7 @@ export default function PrivacyPage() {
       content: (
         <div className="space-y-4">
           <p>Our app includes AI-powered features that generate content and recommendations. Please note:</p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-[#444444]">
             <li>AI responses are generated based on your input and may not always be accurate.</li>
             <li>You should verify important information and use your best judgment.</li>
             <li>AI-generated content is for productivity assistance only and should not be used as a substitute for professional advice.</li>
@@ -257,9 +257,9 @@ export default function PrivacyPage() {
       content: (
         <div className="space-y-4">
           <p>If you have any questions about this Privacy Policy, please contact us:</p>
-          <div className="space-y-2 text-gray-300">
-            <p><strong>Email:</strong> <a href="mailto:support@mind-clear.com" className="text-yellow-400 underline hover:text-yellow-300">support@mind-clear.com</a></p>
-            <p><strong>Website:</strong> <Link href="/" className="text-yellow-400 underline hover:text-yellow-300">mind-clear.com</Link></p>
+          <div className="space-y-2 text-[#444444]">
+            <p><strong>Email:</strong> <a href="mailto:support@mind-clear.com" className="text-[#6B5A20] underline hover:text-[#111111]">support@mind-clear.com</a></p>
+            <p><strong>Website:</strong> <Link href="/" className="text-[#6B5A20] underline hover:text-[#111111]">mind-clear.com</Link></p>
             <p><strong>Address:</strong> Missouri, USA</p>
           </div>
         </div>
@@ -272,7 +272,7 @@ export default function PrivacyPage() {
       content: (
         <div className="space-y-4">
           <p>This Privacy Policy and our data practices are designed to comply with:</p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-[#444444]">
             <li>Google Play Store requirements</li>
             <li>General Data Protection Regulation (GDPR)</li>
             <li>California Consumer Privacy Act (CCPA)</li>
@@ -284,20 +284,20 @@ export default function PrivacyPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+    <div className="min-h-screen bg-[#E8E8E2]">
       {/* Header */}
       <header className="relative py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-yellow-600/30 backdrop-blur-sm mb-8">
-            <Shield className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm text-gray-300">Privacy Policy</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F5F1E1] border border-[#DEDCD2] mb-8">
+            <Shield className="w-4 h-4 text-[#6B5A20]" />
+            <span className="text-sm text-[#444444]">Privacy Policy</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-            Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Policy</span>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#111111]">
+            Privacy <span className="text-[#6B5A20]">Policy</span>
           </h1>
 
-          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-[#444444] mb-8 max-w-2xl mx-auto">
             Your privacy matters to us. Learn how we collect, use, and protect your information.
           </p>
 
@@ -306,10 +306,10 @@ export default function PrivacyPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10 hover:border-yellow-500/50 px-8 py-6 text-lg backdrop-blur-sm group transition-all"
+                className="border-2 border-[#DEDCD2] text-[#6B5A20] hover:bg-[#F5F1E1] hover:border-[#6B5A20] px-8 py-6 text-lg group transition-all"
               >
                 <ArrowLeft className="mr-2 w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                Back to Home
+                Back to Mind Clear
               </Button>
             </Link>
           </div>
@@ -318,24 +318,24 @@ export default function PrivacyPage() {
 
       {/* Content */}
       <main className="max-w-4xl mx-auto px-6 pb-20">
-        <div className="text-sm text-gray-400 mb-12 text-center">
-          <div>Effective Date: <strong className="text-gray-200">September 22, 2025</strong></div>
-          <div>Last Updated: <strong className="text-gray-200">December 7, 2025</strong></div>
+        <div className="text-sm text-[#6B6B6B] mb-12 text-center">
+          <div>Effective Date: <strong className="text-[#111111]">September 22, 2025</strong></div>
+          <div>Last Updated: <strong className="text-[#111111]">December 7, 2025</strong></div>
         </div>
 
         <div className="space-y-16">
           {sections.map((section, index) => (
             <section key={section.id} className="group">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 border border-yellow-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <section.icon className="w-6 h-6 text-yellow-500" strokeWidth={2} />
+                <div className="w-12 h-12 rounded-xl bg-[#F5F1E1] border border-[#DEDCD2] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <section.icon className="w-6 h-6 text-[#6B5A20]" strokeWidth={2} />
                 </div>
-                <h2 className="text-3xl font-bold text-yellow-500 group-hover:text-yellow-400 transition-colors">
+                <h2 className="text-3xl font-bold text-[#6B5A20] group-hover:text-[#111111] transition-colors">
                   {section.title}
                 </h2>
               </div>
 
-              <div className="ml-16 text-gray-300 leading-relaxed">
+              <div className="ml-16 text-[#444444] leading-relaxed">
                 {section.content}
               </div>
             </section>
@@ -345,11 +345,11 @@ export default function PrivacyPage() {
       </main>
 
       {/* Footer */}
-      <footer className="py-10 text-center text-sm text-gray-400 bg-black/50 border-t border-gray-800">
+      <footer className="py-10 text-center text-sm text-[#6B6B6B] bg-[#F5F1E1] border-t border-[#DEDCD2]">
         <div className="flex justify-center gap-4 mb-4">
-          <Link href="/" className="text-yellow-500 hover:underline">Home</Link>
-          <span className="text-gray-600">|</span>
-          <Link href="/terms" className="text-yellow-500 hover:underline">Terms of Service</Link>
+          <Link href="/" className="text-[#6B5A20] hover:underline">Home</Link>
+          <span className="text-[#6B6B6B]">|</span>
+          <Link href="/terms" className="text-[#6B5A20] hover:underline">Terms of Service</Link>
         </div>
         <p>© 2026 Mind Clear Studio. All rights reserved.</p>
         <p className="mt-2">This Privacy Policy is effective as of September 22, 2025.</p>
@@ -357,4 +357,3 @@ export default function PrivacyPage() {
     </div>
   );
 }
-

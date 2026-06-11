@@ -1,11 +1,13 @@
 // components/marketing/ThreadSection.tsx
 // One node on the golden thread: spine segment, node circle, numbered
 // editorial eyebrow, ghost numeral, content indented right of the spine.
+import type { ReactNode } from "react";
+
 interface ThreadSectionProps {
   number: string;
   label: string;
   ariaLabel: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function ThreadSection({

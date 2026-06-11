@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Delete Account - Mind Clear Studio',
+  title: 'Delete Account — Mind Clear',
   description: 'Learn how to permanently delete your Mind Clear account and all associated data.',
 };
 

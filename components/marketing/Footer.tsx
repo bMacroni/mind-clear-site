@@ -1,7 +1,7 @@
 // components/marketing/Footer.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { ArrowRight, Loader2 } from "lucide-react";
 
@@ -17,7 +17,7 @@ export default function Footer() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!email.trim() || status === "loading") return;
     setStatus("loading");

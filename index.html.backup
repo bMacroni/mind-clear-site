@@ -47,13 +47,13 @@
   <!-- App Download -->
   <section id="download" class="py-24 px-6 bg-neutral-900 text-center">
     <h2 class="text-3xl sm:text-4xl font-bold text-yellow-500 uppercase">Try the App</h2>
-    <p class="mt-6 text-lg text-gray-300">Coming soon to Google Play.</p>
+    <p class="mt-6 text-lg text-gray-300">Now available on Google Play.</p>
     <!-- Placeholder QR Code -->
     <div class="mt-8 flex justify-center">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://play.google.com/store/apps/details?id=your.app.id" 
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://play.google.com/store/apps/details?id=com.foci.mobile"
            alt="QR Code" class="w-44 h-44 border border-yellow-500 rounded-xl shadow-lg" />
     </div>
-    <a href="#" class="mt-10 inline-block bg-yellow-500 text-black px-8 py-4 rounded-full shadow-lg font-semibold hover:bg-yellow-400 transition">
+    <a href="https://play.google.com/store/apps/details?id=com.foci.mobile" target="_blank" rel="noopener noreferrer" class="mt-10 inline-block bg-yellow-500 text-black px-8 py-4 rounded-full shadow-lg font-semibold hover:bg-yellow-400 transition">
       Download on Google Play
     </a>
   </section>

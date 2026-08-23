@@ -1,18 +1,24 @@
 ---
 category: Primitives
 ---
-shadcn/ui card. Unused on the live site — no Golden Thread page renders one.
+shadcn/ui card, themed to the Golden Thread palette: warm-cream surface `#F5F1E1`, hairline border, ink text.
 
-**Read before using.** `Card` resolves `bg-card`, which the Tailwind theme still maps to the retired `#1E1E1E`, so an unstyled card is dark charcoal on a cream page. To use it on-brand, override the surface explicitly:
+Correct on the cream page with no overrides.
 
 ```tsx
-<Card className="border-[#DEDCD2] shadow-none" style={{ backgroundColor: "#F5F1E1" }}>
+<Card>
   <CardHeader>
-    <CardTitle style={{ fontFamily: "var(--font-serif)" }}>Brain Dump</CardTitle>
+    <CardTitle className="font-serif text-2xl font-light">Brain Dump</CardTitle>
+    <CardDescription>Everything swirling, in one place.</CardDescription>
   </CardHeader>
+  <CardContent>
+    <p className="text-sm text-ink-muted">Type whatever's on your mind.</p>
+  </CardContent>
 </Card>
 ```
 
-For showing app content, `TaskCardMockup` is the on-brand card and needs no overrides.
+Titles take `font-serif` (Fraunces) at `font-light` to match the site's headline treatment — the component doesn't apply that for you.
+
+For showing *app* content — a task, a to-do row — use `TaskCardMockup` instead; it carries the gold rail and focus treatment.
 
 Sub-components: `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`. All accept native `div` attributes.

@@ -1,20 +1,23 @@
 ---
 category: Primitives
 ---
-shadcn/ui button. Only the `outline` variant appears on the live site, and only on the legal pages.
+shadcn/ui button, themed to the Golden Thread palette.
 
-**Read before using.** The variant styles resolve against the Tailwind theme in `tailwind.config.js`, which still carries the site's retired dark palette (`background: #121212`, `primary: #FFD700`). `variant="default"` is electric gold on black and `variant="outline"` has a black fill — neither is Golden Thread. The site works around this by overriding the border and text through `className`:
+`default` is ink `#111111` with warm-cream text — the solid action. `outline` and `ghost` sit on the cream page and warm to `#F5F1E1` on hover. `secondary` is a warm-cream fill. No override is needed to stay on brand.
 
 ```tsx
-<Button
-  size="lg"
-  variant="outline"
-  className="border-2 border-[#DEDCD2] text-[#6B5A20] hover:bg-[#F5F1E1]"
->
+<Button>Get started</Button>
+<Button variant="outline">Read the privacy policy</Button>
+```
+
+The live site uses only `outline`, on the legal pages, with a heavier border and gold-deep text:
+
+```tsx
+<Button size="lg" variant="outline" className="border-2 text-gold-deep px-8 py-6 text-lg">
   Back to Mind Clear
 </Button>
 ```
 
-For a cream-page call to action, prefer that pattern — or `GooglePlayButton` where the action is "download the app".
+Where the action is "download the app", use `GooglePlayButton` instead — never a generic button.
 
-Props follow the shadcn contract: `variant`, `size`, `asChild`, plus all native button attributes.
+Props: `variant` (`default` | `secondary` | `outline` | `ghost` | `link` | `destructive`), `size` (`default` | `sm` | `lg` | `icon`), `asChild`, plus all native button attributes.

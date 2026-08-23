@@ -24,15 +24,43 @@ const { MindClearPage, Hero, ProblemHook, BrainDump, DownloadCTA, Footer } = win
 
 Page sections are designed to stack in narrative order and share one continuous gold spine. `Hero` goes first, `Footer` last.
 
-## The styling idiom
+## The color vocabulary
 
-Three layers, in this order of preference:
+Tailwind utilities carry the palette. Use these names — do not invent hex values:
 
-**1. `mc-*` structural classes** — the page skeleton. Defined in the stylesheet, not Tailwind:
+| Family | Utilities | Value | Use |
+|---|---|---|---|
+| Cream | `bg-cream` | `#E8E8E2` | page background |
+| | `bg-cream-warm` | `#F5F1E1` | cards, raised panels |
+| Ink | `text-ink` | `#111111` | headlines, primary text |
+| | `text-ink-muted` | `#444444` | body copy |
+| | `text-ink-soft` | `#6B6B6B` | tertiary text |
+| | `text-ink-faint` | `#888888` | captions, metadata |
+| Gold | `bg-gold` / `text-gold` | `#D4AF37` | the thread, nodes, focus states |
+| | `text-gold-deep` | `#6B5A20` | gold used as *text* (eyebrows, labels) |
+| | `text-gold-light` | `#E6CF8E` | gold at low emphasis |
+| | `text-gold-dark` | `#2A2A1A` | text on gold fills |
+| Line | `border-hairline` | `#DEDCD2` | borders, rules |
+
+The shadcn semantic slots are mapped onto the same palette, so the `Primitives` components are correct on a cream page with **no overrides**: `bg-background` is cream, `bg-card` / `bg-popover` / `bg-muted` / `bg-secondary` / `bg-accent` are warm cream, `bg-primary` is ink, `border-border` and `border-input` are hairline, `ring` is gold. `text-foreground` is ink. Either vocabulary works; the named families above read more clearly.
+
+The same values are also on `:root` as `--mc-cream`, `--mc-cream-warm`, `--mc-hairline`, `--mc-ink`, `--mc-ink-muted`, `--mc-ink-soft`, `--mc-ink-faint`, `--mc-gold`, `--mc-gold-deep`, `--mc-gold-light`, `--mc-gold-dark` — use those only for inline `style` where a utility won't do.
+
+## Type
+
+Two families, both on `:root`: `--font-sans` (Outfit) and `--font-serif` (Fraunces), exposed as `font-sans` and `font-serif`.
+
+- Headlines and pull-quotes are **Fraunces at `font-light`**, usually with one italic phrase for emphasis: `<h2 className="font-serif text-5xl font-light">One task. <em>That's all.</em></h2>`
+- Body text is Outfit — the default, no class needed.
+- Section eyebrows are Outfit, `text-xs uppercase tracking-[0.18em] text-gold-deep`.
+
+## The `mc-*` structural classes
+
+The page skeleton, defined in the stylesheet rather than Tailwind:
 
 | Class | Role |
 |---|---|
-| `mc-page` | the page shell; defines every layout variable below |
+| `mc-page` | the page shell; defines every layout variable |
 | `mc-spine` | the vertical gold thread down a section |
 | `mc-spine-leadin` | the thread fading in (used at the bottom of `Hero`) |
 | `mc-node` | the small gold circle marking a section start |
@@ -41,40 +69,6 @@ Three layers, in this order of preference:
 | `mc-grain` | a fixed, full-viewport film-grain overlay; add once per page, last child |
 
 Prefer composing `ThreadSection` over hand-assembling `mc-spine` / `mc-node` / `mc-ghost` / `mc-content` — it wires all four correctly.
-
-**2. Tailwind utilities** for layout and type — `flex`, `gap-*`, `px-*`, `max-w-*`, `text-4xl`, `tracking-[0.18em]`, `italic`, `font-light`.
-
-**3. Explicit color, via CSS variables or hex.** Colors are *not* taken from the Tailwind theme (see the warning below). The site sets them inline:
-
-```jsx
-<h2 className="text-4xl font-light" style={{ fontFamily: "var(--font-serif)", color: "#111111" }}>
-```
-
-Token variables available on `:root`:
-
-| Variable | Value | Use |
-|---|---|---|
-| `--font-sans` | Outfit | all body text, labels, UI |
-| `--font-serif` | Fraunces | every headline and pull-quote; italic for emphasis |
-| `--mc-cream` | `#E8E8E2` | page background |
-| `--mc-cream-warm` | `#F5F1E1` | cards, raised panels |
-| `--mc-hairline` | `#DEDCD2` | borders, rules |
-| `--mc-ink` | `#111111` | headlines, primary text |
-| `--mc-ink-muted` | `#444444` | body copy |
-| `--mc-ink-soft` | `#6B6B6B` | tertiary text |
-| `--mc-ink-faint` | `#888888` | captions, metadata |
-| `--mc-gold` | `#D4AF37` | the thread, nodes, focus states |
-| `--mc-gold-deep` | `#6B5A20` | gold used as *text* (eyebrows, labels) |
-| `--mc-gold-light` | `#E6CF8E` | gold at low emphasis |
-| `--mc-gold-dark` | `#2A2A1A` | text on gold fills |
-
-Typography rule: headlines are Fraunces at `font-light`, often with one italic phrase for emphasis. Section eyebrows are Outfit, `text-xs`, uppercase, `tracking-[0.18em]`, in `--mc-gold-deep`.
-
-## Warning — the Tailwind color theme is retired
-
-`bg-background`, `bg-card`, `bg-primary`, `text-foreground`, `bg-secondary`, `bg-accent` and friends still resolve to the site's **abandoned dark theme** (`#121212` charcoal, `#FFD700` electric gold, `#8f00ff` violet). They are not Golden Thread colors.
-
-Never style with those utilities. Use the variables and hex values above. This is why the four `Primitives` components (`Button`, `Card`, `Badge`, `Input`) render dark by default — their cards show both the raw and the corrected treatment, and their `.prompt.md` files give the override pattern for each. `Button` is the only one the live site uses.
 
 ## Where the truth lives
 
@@ -89,13 +83,10 @@ const { MindClearPage, ThreadSection, TaskCardMockup, GooglePlayButton } = windo
 
 <MindClearPage>
   <ThreadSection number="03" label="Today's focus" ariaLabel="Today's focus">
-    <h2
-      className="text-4xl md:text-5xl font-light leading-tight mb-6"
-      style={{ fontFamily: "var(--font-serif)", color: "var(--mc-ink)" }}
-    >
+    <h2 className="font-serif text-4xl md:text-5xl font-light leading-tight mb-6 text-ink">
       One task. Right now. <em>That's all.</em>
     </h2>
-    <p className="text-lg max-w-md mb-8" style={{ color: "var(--mc-ink-muted)" }}>
+    <p className="text-lg max-w-md mb-8 text-ink-muted">
       Mind Clear picks one thing for you to focus on. Not a list — one task.
     </p>
     <div className="flex flex-col gap-3" style={{ maxWidth: 360 }}>

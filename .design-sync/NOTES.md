@@ -57,22 +57,35 @@ spawning the `.cmd` shim fails with `EINVAL` on Windows under Node >= 22.
   artwork unaltered, so it renders wherever the stylesheet loads. If the badge
   file changes, the CSS rebuild picks it up automatically.
 
-## The retired Tailwind theme
+## The Tailwind theme (fixed 2026-08-23)
 
-`tailwind.config.js` still holds the abandoned dark palette (`background:
-#121212`, `primary: #FFD700`, `accent: #8f00ff`). The live cream site bypasses
-it entirely via `mc-*` classes and inline hex. Consequence: the four shadcn
-primitives (`Button`, `Card`, `Badge`, `Input`) render dark by default.
+`tailwind.config.js` originally carried the abandoned dark palette (`background:
+#121212`, `primary: #FFD700`, `accent: #8f00ff`), which made the four shadcn
+primitives render dark on the cream page. **Brian asked for it to be fixed**, so
+the config now maps every semantic slot onto Golden Thread and adds named
+families: `cream`/`cream-warm`, `ink`/`-muted`/`-soft`/`-faint`,
+`gold`/`-deep`/`-light`/`-dark`, and `hairline`.
 
-Decision (2026-08-23, Brian): **ship the Golden Thread palette only and leave
-`tailwind.config.js` untouched.** The mismatch is documented instead — in
-`.design-sync/conventions.md`, in each primitive's doc under
-`.design-sync/docs/`, and visibly in their preview cards, which show the raw
-variants beside the corrected treatment with a caption.
+Scope of that change, verified before shipping: the theme tokens are referenced
+ONLY by `components/ui/*` and two lines of `app/globals.css` (`* { @apply
+border-border }` and `body { @apply bg-background text-foreground }`). No
+marketing component or page used them. There are no `dark:` utilities and the
+`dark` class is never applied, so the `.dark` block was dead and was removed
+along with the now-unreferenced shadcn HSL color vars. `--radius` is still used
+by `borderRadius` and was kept.
 
-Only `Button` is actually used on the live site (legal pages, `variant="outline"`
-with cream overrides — the fill really is black there). `Card`, `Badge`, and
-`Input` are unused scaffolding.
+Live visual changes: the `body` background went from #121212 to cream (only ever
+visible in overscroll, since every page sets its own background), and the
+`variant=outline` button on the three legal pages went from a black fill to
+cream. Verified against a production build at computed-style level.
+
+Prefer the named families in new markup — `bg-cream-warm`, `text-ink-muted`,
+`border-hairline`, `text-gold-deep` — over raw hex.
+
+Open question worth a designer’s eye: `Input` uses shadcn’s `bg-background`, so
+a field is cream on a cream page, separated only by its hairline border. That
+suits the low-decoration philosophy but is worth revisiting if real forms get
+built. Changing it means overriding `bg-background` in `components/ui/input.tsx`.
 
 ## Tokens and fonts
 
@@ -108,9 +121,9 @@ source files would have to move.
   variables against `ds-bundle/_ds_bundle.css`, component names against
   `ds-bundle/components/*/`). Never rewrite the file wholesale — it's
   human-editable.
-- **If `tailwind.config.js` is ever fixed to the cream palette**, the primitives'
-  docs, previews, and the conventions warning all become wrong and must be
-  rewritten.
+- **The Tailwind palette is now the source of truth for the primitives.** Their
+  docs, previews, and the color table in `conventions.md` all enumerate it. If
+  `tailwind.config.js` changes again, update all three with it.
 - **`entry.tsx` is a manual export list.** New components in `components/` will
   NOT appear until they're added there *and* to `cfg.componentSrcMap`.
 - The 10 page sections take no props and contain fixed copy. They are brand

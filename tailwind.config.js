@@ -17,39 +17,63 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "#121212", // Charcoal Gray
-        foreground: "#FAFAFA",
+        // ── Golden Thread palette ──────────────────────────────────────────
+        // The named families. Prefer these when writing new markup:
+        // bg-cream, bg-cream-warm, text-ink-muted, border-hairline, text-gold-deep.
+        cream: {
+          DEFAULT: "#E8E8E2", // page background
+          warm: "#F5F1E1",    // cards, raised panels
+        },
+        ink: {
+          DEFAULT: "#111111", // headlines, primary text
+          muted: "#444444",   // body copy
+          soft: "#6B6B6B",    // tertiary text
+          faint: "#888888",   // captions, metadata
+        },
+        gold: {
+          DEFAULT: "#D4AF37", // the thread, nodes, focus states
+          deep: "#6B5A20",    // gold used as text (eyebrows, labels)
+          light: "#E6CF8E",   // gold at low emphasis
+          dark: "#2A2A1A",    // text on gold fills
+        },
+        hairline: "#DEDCD2",  // borders, rules
+
+        // ── shadcn/ui semantic slots, mapped onto Golden Thread ────────────
+        // components/ui/* read these. Changing one restyles those primitives.
+        border: "#DEDCD2",
+        input: "#DEDCD2",
+        ring: "#D4AF37",
+        background: "#E8E8E2",
+        foreground: "#111111",
         primary: {
-          DEFAULT: "#FFD700", // Electric Gold
-          foreground: "#000000",
+          DEFAULT: "#111111",
+          foreground: "#F5F1E1",
         },
         secondary: {
-          DEFAULT: "#1a1f2c", // Deep Slate (for contrast)
-          foreground: "#FAFAFA",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#F5F1E1",
+          foreground: "#111111",
         },
         accent: {
-          DEFAULT: "#8f00ff", // Electric Violet
-          foreground: "#FAFAFA",
+          DEFAULT: "#F5F1E1",
+          foreground: "#6B5A20",
         },
-        popover: {
-          DEFAULT: "#1E1E1E",
-          foreground: "#FAFAFA",
+        muted: {
+          DEFAULT: "#F5F1E1",
+          foreground: "#6B6B6B",
         },
         card: {
-          DEFAULT: "#1E1E1E",
-          foreground: "#FAFAFA",
+          DEFAULT: "#F5F1E1",
+          foreground: "#111111",
         },
+        popover: {
+          DEFAULT: "#F5F1E1",
+          foreground: "#111111",
+        },
+        destructive: {
+          DEFAULT: "#EF4444",
+          foreground: "#F5F1E1",
+        },
+        success: "#10B981",
       },
       borderRadius: {
         lg: "var(--radius)",

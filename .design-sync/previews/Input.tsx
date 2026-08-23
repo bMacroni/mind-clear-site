@@ -16,21 +16,14 @@ export const States = () => (
   </div>
 );
 
-/** In context: the waitlist capture on a cream surface. */
-export const OnCream = () => (
+/** In context: the waitlist capture on a warm-cream panel. */
+export const InContext = () => (
   <div
-    className="flex flex-col gap-3 p-6"
-    style={{ maxWidth: 400, backgroundColor: "#F5F1E1", border: "1px solid #DEDCD2", borderRadius: 8 }}
+    className="flex flex-col gap-3 p-6 bg-cream-warm border border-hairline rounded-lg"
+    style={{ maxWidth: 400 }}
   >
-    <label className="text-xs uppercase tracking-[0.18em]" style={{ color: "#6B5A20" }}>
-      Get notified
-    </label>
-    <Input placeholder="you@example.com" className="bg-white border-[#DEDCD2]" />
-    <Button
-      variant="outline"
-      className="border-2 border-[#6B5A20] text-[#6B5A20] hover:bg-[#E8E8E2]"
-    >
-      Notify me
-    </Button>
+    <label className="text-xs uppercase tracking-[0.18em] text-gold-deep">Get notified</label>
+    <Input placeholder="you@example.com" />
+    <Button variant="outline">Notify me</Button>
   </div>
 );

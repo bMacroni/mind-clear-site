@@ -1,0 +1,33 @@
+/* ---------------------------------------------------------------------------
+   Mind Clear website — Golden Thread design tokens
+   Generated for /design-sync. The site itself gets these values inline and via
+   next/font; this file makes them available outside the Next runtime.
+--------------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Outfit:wght@200..700&display=swap");
+
+:root {
+  /* Type */
+  --font-sans: "Outfit", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+
+  /* Surfaces */
+  --mc-cream: #E8E8E2;        /* page background */
+  --mc-cream-warm: #F5F1E1;   /* raised / tinted panels */
+  --mc-hairline: #DEDCD2;     /* borders, rules, card edges */
+
+  /* Ink */
+  --mc-ink: #111111;          /* primary text */
+  --mc-ink-muted: #444444;    /* body / secondary text */
+  --mc-ink-soft: #6B6B6B;     /* tertiary text */
+  --mc-ink-faint: #888888;    /* captions, metadata */
+
+  /* Gold — the thread */
+  --mc-gold: #D4AF37;         /* the spine, nodes, priority marks */
+  --mc-gold-deep: #6B5A20;    /* gold used as text (eyebrows, labels) */
+  --mc-gold-light: #E6CF8E;   /* gold at low emphasis */
+  --mc-gold-dark: #2A2A1A;    /* gold-tinted near-black */
+
+  /* Status */
+  --mc-success: #10B981;
+  --mc-error: #EF4444;
+}

@@ -156,3 +156,23 @@ source files would have to move.
 - The 10 page sections take no props and contain fixed copy. They are brand
   blocks, not configurable components — the design agent cannot vary them.
 - Hover, focus, and scroll-driven states aren't captured; previews are static.
+
+## Grade the grid capture, not the review sheet
+
+The pipeline writes two screenshots per component and they show different things:
+
+- `ds-bundle/_screenshots/review/<group>__<Name>.png` renders each story SOLO at full
+  width. Good for judging a single composition.
+- `ds-bundle/_screenshots/<group>__<Name>.png` renders the card as the product's
+  multi-column grid actually shows it.
+
+Only the second one can reveal clipping. Grading the review sheet and calling a
+component good is grading the wrong artifact, and it happened once here:
+`NotebookShell` passed with its entry titles sliced mid-word, because the solo
+capture structurally cannot show that. **Open the grid capture before writing any
+grade.**
+
+Rule of thumb: a component that fills `mc-content` (a whole page section, a page
+header, a listing) needs `cfg.overrides.<Name>: {"cardMode": "column"}` from the
+start. `NotebookShell` has it. Narrow components such as `EntryRow`, `Prose`,
+`TopicChips`, and `EntryHeader` are fine in the default grid.

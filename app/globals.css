@@ -111,3 +111,81 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* Rendered notebook markdown. Tag selectors because the HTML comes from remark. */
+.mc-prose {
+  max-width: 34rem;
+  color: #444444;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.mc-prose > * + * {
+  margin-top: 1.25rem;
+}
+.mc-prose h2 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  color: #111111;
+  margin-top: 2.75rem;
+}
+.mc-prose h3 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 1.375rem;
+  color: #111111;
+  margin-top: 2rem;
+}
+.mc-prose a {
+  color: #6B5A20;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(107, 90, 32, 0.4);
+}
+.mc-prose a:hover {
+  text-decoration-color: #6B5A20;
+}
+.mc-prose strong {
+  font-weight: 500;
+  color: #111111;
+}
+.mc-prose em {
+  font-style: italic;
+}
+.mc-prose ul,
+.mc-prose ol {
+  padding-left: 1.25rem;
+}
+.mc-prose ul {
+  list-style: disc;
+}
+.mc-prose ol {
+  list-style: decimal;
+}
+.mc-prose li + li {
+  margin-top: 0.5rem;
+}
+.mc-prose li::marker {
+  color: #D4AF37;
+}
+.mc-prose blockquote {
+  border-left: 2px solid #D4AF37;
+  padding-left: 1.25rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #111111;
+}
+.mc-prose hr {
+  border: 0;
+  border-top: 1px solid #DEDCD2;
+  margin-top: 2.5rem;
+}
+.mc-prose code {
+  font-size: 0.9em;
+  background-color: #F5F1E1;
+  border: 1px solid #DEDCD2;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}

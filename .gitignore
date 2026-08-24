@@ -43,3 +43,6 @@ next-env.d.ts
 /.design-sync/node_modules
 /.design-sync/compiled.css
 /.design-sync/.tw-input.css
+
+# brainstorming companion
+/.superpowers/

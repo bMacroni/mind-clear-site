@@ -82,10 +82,10 @@ cream. Verified against a production build at computed-style level.
 Prefer the named families in new markup — `bg-cream-warm`, `text-ink-muted`,
 `border-hairline`, `text-gold-deep` — over raw hex.
 
-Open question worth a designer’s eye: `Input` uses shadcn’s `bg-background`, so
-a field is cream on a cream page, separated only by its hairline border. That
-suits the low-decoration philosophy but is worth revisiting if real forms get
-built. Changing it means overriding `bg-background` in `components/ui/input.tsx`.
+Follow-up (same day): Brian asked for the input fill to be white so fields stand
+out against the cream page, so `components/ui/input.tsx` now uses `bg-white`
+rather than `bg-background`. It is the only place in the DS that deliberately
+breaks from the cream surfaces.
 
 ## Tokens and fonts
 

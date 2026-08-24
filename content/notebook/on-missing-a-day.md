@@ -2,7 +2,7 @@
 title: "On missing a day"
 date: 2026-08-18
 topics: ["bad-days"]
-excerpt: "The streak is not the point. Starting again is."
+excerpt: "What matters is coming back, not the streak you broke."
 metaDescription: "Why Mind Clear's routines forgive a missed day, and what streak-based apps get wrong about ADHD."
 ---
 
@@ -12,7 +12,7 @@ because every habit tracker has one.
 I used it for eleven days. On day twelve I was ill. On day thirteen I opened the app,
 saw the counter had gone back to zero, and did not open it again for a month.
 
-That is not a story about willpower. It is a story about design.
+That comes down to design, not willpower.
 
 ## What a streak actually measures
 
@@ -22,13 +22,14 @@ deleting the evidence that you ever showed up.
 
 For a lot of people that sting is motivating. Fine. For the people this app is for,
 it lands differently. If you have spent years being told you are inconsistent, an
-app that resets to zero is not giving you feedback. It is confirming something you
-already believe about yourself, in a bright colour, on a screen you chose to open.
+app that resets to zero just confirms what you already believed about yourself, in
+a bright color, on a screen you chose to open.
 
 ## What we do instead
 
-Routines in Mind Clear keep their history. A missed day is a gap, not a reset. The
-streak picks up where it left off rather than starting over, and nothing turns red.
+Routines in Mind Clear keep their history, so a missed day leaves a gap instead of
+erasing anything. The streak picks up where it left off rather than starting over,
+and nothing turns red.
 
 Overdue tasks work the same way. They do not pile up in an angry list. They wait,
 and get quietly moved to a day that has room.

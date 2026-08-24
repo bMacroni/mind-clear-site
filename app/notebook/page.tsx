@@ -8,7 +8,7 @@ import { getAllEntries, getTopics } from "../../lib/notebook";
 export const metadata: Metadata = {
   title: "The Notebook | Mind Clear",
   description:
-    "Notes on ADHD, planning, and building Mind Clear. Written when there is something worth writing down.",
+    "Notes on ADHD and building Mind Clear, written when there is something worth writing down.",
 };
 
 export default function NotebookIndex() {
@@ -25,7 +25,7 @@ export default function NotebookIndex() {
             What I&rsquo;m <em>noticing.</em>
           </>
         }
-        intro="Notes on ADHD, planning, and building Mind Clear. No schedule. Just what is worth writing down."
+        intro="Notes on ADHD and building Mind Clear, posted whenever there is something worth writing down."
       >
         <TopicChips topics={topics} />
         {entries.length === 0 ? (

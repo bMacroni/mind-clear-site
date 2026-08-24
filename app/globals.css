@@ -189,3 +189,28 @@
   border-radius: 4px;
   padding: 0.1em 0.35em;
 }
+.mc-prose pre {
+  background-color: #F5F1E1;
+  border: 1px solid #DEDCD2;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.mc-prose pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+.mc-prose img {
+  max-width: 100%;
+  height: auto;
+}
+.mc-prose table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.mc-prose th,
+.mc-prose td {
+  border-bottom: 1px solid #DEDCD2;
+  padding: 0.5rem 0.75rem;
+}

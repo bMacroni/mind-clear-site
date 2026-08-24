@@ -28,7 +28,7 @@ For me, two things. The list is shorter than it felt, which is a strange relief.
 two or three items turn out to be the same item wearing different clothes.
 
 Neither of those is visible while it is all still in your head. That is the point.
-It is not that writing it down solves anything. It is that a head is a bad place to
+Writing it down does not solve anything by itself. A head is just a bad place to
 hold a list, and it charges you rent the whole time.
 
 ## Then what

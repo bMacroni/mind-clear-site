@@ -17,7 +17,7 @@ export const Default = () => (
         What I&rsquo;m <em>noticing.</em>
       </>
     }
-    intro="Notes on ADHD, planning, and building Mind Clear. No schedule. Just what is worth writing down."
+    intro="Notes on ADHD and building Mind Clear. No schedule. Just what is worth writing down."
   >
     <TopicChips topics={topics} />
     <EntryRow entry={sampleEntry} />

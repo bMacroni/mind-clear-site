@@ -2,8 +2,8 @@
 title: "Why your to-do list makes you feel worse"
 date: 2026-07-21
 topics: ["brain-dump"]
-excerpt: "Every app I tried assumed I could already organise my thoughts."
-metaDescription: "Standard task apps expect you to arrive organised. For ADHD brains, getting organised is the hard part."
+excerpt: "Every app I tried assumed I could already organize my thoughts."
+metaDescription: "Standard task apps expect you to arrive organized. For ADHD brains, getting organized is the hard part."
 ---
 
 I have tried most of them. Todoist, Notion, Things, TickTick, a paper bullet journal
@@ -19,20 +19,20 @@ That assumption is the whole problem.
 
 When my head is full, the tasks are not sitting in a neat row waiting to be typed
 in. They are half-formed. "Something about the car." "That email I have been
-avoiding since Tuesday." "Mum's birthday, at some point, soon?"
+avoiding since Tuesday." "Mom's birthday, at some point, soon?"
 
 Opening a clean, well-designed task app in that state does not help. It asks me to
 do the sorting first, in my head, and then type the result. The sorting is the part
 I cannot do.
 
 So I would sit there. Sometimes I would type three things and close the app.
-Sometimes I would reorganise my project list instead, which felt productive and
+Sometimes I would reorganize my project list instead, which felt productive and
 was not.
 
 ## What actually changed it
 
 Getting it out first, in any order, in whatever broken half-sentences it arrives in.
-No categories. No priorities. No due dates. Just out.
+Categories, priorities, due dates: none of that gets sorted going in.
 
 Then let something else do the sorting.
 

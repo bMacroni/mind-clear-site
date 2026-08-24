@@ -18,7 +18,7 @@ export function generateMetadata({ params }: Params): Metadata {
   const label = topicLabel(params.topic);
   return {
     title: `${label} | The Notebook | Mind Clear`,
-    description: `Notebook entries about ${label.toLowerCase()}, from the people building Mind Clear.`,
+    description: `Notebook entries about ${label.toLowerCase()}, from the person building Mind Clear.`,
   };
 }
 

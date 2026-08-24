@@ -22,6 +22,8 @@ Rules, such as they are:
 
 When the timer goes, stop. Look at it.
 
+{{figure:brain-dump}}
+
 ## What usually happens
 
 For me, two things. The list is shorter than it felt, which is a strange relief. And

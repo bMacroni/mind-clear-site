@@ -70,6 +70,28 @@ The page skeleton, defined in the stylesheet rather than Tailwind:
 
 Prefer composing `ThreadSection` over hand-assembling `mc-spine` / `mc-node` / `mc-ghost` / `mc-content` — it wires all four correctly.
 
+## The Notebook group
+
+`Notebook` is the site's writing section (`/notebook`). Unlike the marketing sections, these components take real props and render whatever content you hand them.
+
+| Component | Role |
+|---|---|
+| `NotebookShell` | the listing shell: spine, node, ghost character, content column. The notebook's answer to `ThreadSection`, lettered rather than numbered |
+| `TopicChips` | the topic filter row that sits above a listing |
+| `EntryRow` | one entry in a list: date column, title, excerpt, hairline rule on top |
+| `EntryHeader` | the masthead of a single entry: number, topic eyebrow, title, date and reading time |
+| `Prose` | the rendered body of an entry |
+
+A listing is `NotebookShell` wrapping `TopicChips` and a stack of `EntryRow`. A single entry does not use `NotebookShell`: it hand-assembles `mc-spine`, `mc-node`, and `mc-content` around `EntryHeader` and `Prose`, because `EntryHeader` renders its own `mc-ghost` and needs a positioned parent to sit in.
+
+`EntryRow` and `EntryHeader` both take one `entry` object. Its shape is in their `.prompt.md`; the fields that show on screen are `title`, `date`, `excerpt`, `number`, `topics`, and `readingMinutes`.
+
+### `mc-prose`
+
+`Prose` renders its HTML inside `.mc-prose`, the one scope in this system that styles bare tags rather than classes. It has to: the HTML comes out of a markdown renderer, so there is nowhere to hang a `className`. Inside that scope `h2` and `h3` are Fraunces, `blockquote` gets a gold left rail and turns serif italic, `li::marker` is gold, `a` is `--mc-gold-deep` with an offset underline, `code` sits on warm cream inside a hairline border, and the block is capped at a `34rem` measure. Nothing else on the page is affected.
+
+`Prose` inserts its `html` without sanitizing it. That is safe only because the HTML is build-time output from markdown in the repo. Never route anything user-submitted or fetched at runtime through it.
+
 ## Where the truth lives
 
 - `styles.css` and what it imports (`_ds_bundle.css`) — every real class and variable.

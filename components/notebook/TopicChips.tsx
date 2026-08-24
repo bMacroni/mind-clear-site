@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Topic } from "../../lib/notebook";
+import type { Topic } from "../../lib/notebook-format";
 
 export function TopicChips({ topics, active }: { topics: Topic[]; active?: string }) {
   if (topics.length === 0) return null;

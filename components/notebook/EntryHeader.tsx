@@ -1,4 +1,4 @@
-import { formatEntryDate, topicLabel, type Entry } from "../../lib/notebook";
+import { formatEntryDate, topicLabel, type Entry } from "../../lib/notebook-format";
 
 export function EntryHeader({ entry }: { entry: Entry }) {
   const number = String(entry.number).padStart(2, "0");

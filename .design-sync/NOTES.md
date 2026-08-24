@@ -57,6 +57,31 @@ spawning the `.cmd` shim fails with `EINVAL` on Windows under Node >= 22.
   artwork unaltered, so it renders wherever the stylesheet loads. If the badge
   file changes, the CSS rebuild picks it up automatically.
 
+## `lib/notebook` and Node builtins (2026-08-23)
+
+The bundle is `platform: 'browser'`, so **any** Node builtin reachable from
+`entry.tsx` fails the build outright: `Could not resolve "node:fs"`. `lib/notebook.ts`
+imports `node:fs` to read markdown off disk, and `EntryRow` / `EntryHeader`
+imported `formatEntryDate` and `topicLabel` from it — which would have taken the
+whole bundle down the moment those two were exported.
+
+Fixed at the source rather than with a shim: the pure half (the `Entry` and
+`Topic` types, `formatEntryDate`, `topicLabel`, `readingMinutes`) now lives in
+`lib/notebook-format.ts`, which touches no builtins. `lib/notebook.ts` re-exports
+all of it, so every existing import site and the test file are unaffected. A shim
+would have put fake formatters in the design bundle; this way designs run the
+same code the site does.
+
+Previews must still never import `lib/notebook` itself. `.design-sync/previews/_entry-fixture.ts`
+holds a hand-built entry for that reason; the leading underscore keeps the
+converter from reading it as a preview.
+
+Side effect: `lib/notebook.ts` imports its pure half as `"./notebook-format.ts"`,
+with the extension, because `node --test` resolves ESM specifiers literally.
+`tsconfig.json` therefore sets `allowImportingTsExtensions: true` (legal here
+because `noEmit` is on). `lib/notebook.test.ts` already imported `"./notebook.ts"`
+the same way, so `next build` was failing on TS5097 before this flag was added.
+
 ## The Tailwind theme (fixed 2026-08-23)
 
 `tailwind.config.js` originally carried the abandoned dark palette (`background:
@@ -105,7 +130,9 @@ breaks from the cream surfaces.
 
 Groups come from the source directory, not the `category:` frontmatter in
 `.design-sync/docs/` — that's only a fallback. So `components/marketing/*` →
-`marketing` (13) and `components/ui/*` → `primitives` (4, via frontmatter, since
+`marketing` (13), `components/notebook/*` → `notebook` (5, lowercase from the
+directory, so the `category: Notebook` frontmatter on those docs is never read),
+and `components/ui/*` → `primitives` (4, via frontmatter, since
 `ui` is a generic dir name). The finer "Page Sections" / "Building Blocks" split
 in the docs' frontmatter is not reflected in the group labels. To get it, the
 source files would have to move.

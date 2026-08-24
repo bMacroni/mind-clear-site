@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatEntryDate, type Entry } from "../../lib/notebook";
+import { formatEntryDate, type Entry } from "../../lib/notebook-format";
 
 export function EntryRow({ entry }: { entry: Entry }) {
   return (

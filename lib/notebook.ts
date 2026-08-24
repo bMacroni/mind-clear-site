@@ -3,34 +3,20 @@ import path from "node:path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
+import { readingMinutes, topicLabel, type Entry, type Topic } from "./notebook-format.ts";
 
-export type Entry = {
-  slug: string;
-  number: number;
-  title: string;
-  date: string;
-  topics: string[];
-  excerpt: string;
-  metaDescription: string;
-  readingMinutes: number;
-  html: string;
-};
+// The pure half lives in notebook-format.ts so browser bundles can format an
+// entry without pulling this file's Node builtins in behind it.
+export {
+  formatEntryDate,
+  readingMinutes,
+  topicLabel,
+  type Entry,
+  type Topic,
+} from "./notebook-format.ts";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "notebook");
-const WORDS_PER_MINUTE = 220;
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-export function readingMinutes(markdown: string): number {
-  const words = markdown.trim().split(/\s+/).filter(Boolean).length;
-  return Math.max(1, Math.round(words / WORDS_PER_MINUTE));
-}
-
-/** Formats by hand so the output never depends on the build machine's locale or zone. */
-export function formatEntryDate(iso: string): string {
-  const [year, month, day] = iso.split("-");
-  return `${MONTHS[Number(month) - 1]} ${day}, ${year}`;
-}
 
 function fail(file: string, problem: string): never {
   throw new Error(`notebook entry ${file}: ${problem}`);
@@ -92,14 +78,6 @@ export function getAllEntries(): Entry[] {
 
 export function getEntry(slug: string): Entry | null {
   return getAllEntries().find((entry) => entry.slug === slug) ?? null;
-}
-
-export type Topic = { slug: string; label: string; count: number };
-
-/** A slug that needs a label this cannot produce is a reason to pick a better slug. */
-export function topicLabel(slug: string): string {
-  const words = slug.replace(/-/g, " ");
-  return words.charAt(0).toUpperCase() + words.slice(1);
 }
 
 export function getTopics(entries: Entry[] = getAllEntries()): Topic[] {

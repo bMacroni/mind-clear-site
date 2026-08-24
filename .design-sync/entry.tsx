@@ -17,6 +17,12 @@ export { ThreadSection } from "../components/marketing/ThreadSection";
 export { TaskCardMockup } from "../components/marketing/TaskCardMockup";
 export { GooglePlayButton } from "../components/marketing/GooglePlayButton";
 
+export { NotebookShell } from "../components/notebook/NotebookShell";
+export { EntryRow } from "../components/notebook/EntryRow";
+export { TopicChips } from "../components/notebook/TopicChips";
+export { EntryHeader } from "../components/notebook/EntryHeader";
+export { Prose } from "../components/notebook/Prose";
+
 export { Button, buttonVariants } from "../components/ui/button";
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "../components/ui/card";
 export { Badge, badgeVariants } from "../components/ui/badge";

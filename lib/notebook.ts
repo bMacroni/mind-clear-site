@@ -109,7 +109,7 @@ export function getTopics(entries: Entry[] = getAllEntries()): Topic[] {
       counts.set(topic, (counts.get(topic) ?? 0) + 1);
     }
   }
-  return [...counts.entries()]
+  return Array.from(counts.entries())
     .map(([slug, count]) => ({ slug, label: topicLabel(slug), count }))
     .sort((a, b) => a.label.localeCompare(b.label));
 }

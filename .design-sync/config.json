@@ -62,5 +62,8 @@
     "Input": "  type?: string;\n  placeholder?: string;\n  value?: string;\n  defaultValue?: string;\n  disabled?: boolean;\n  className?: string;\n  onChange?: React.ChangeEventHandler<HTMLInputElement>;",
     "Card": "  className?: string;\n  style?: React.CSSProperties;\n  children?: React.ReactNode;"
   },
+  "overrides": {
+    "NotebookShell": { "cardMode": "column" }
+  },
   "readmeHeader": ".design-sync/conventions.md"
 }

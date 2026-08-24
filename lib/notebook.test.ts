@@ -7,6 +7,9 @@ import {
   loadEntries,
   readingMinutes,
   formatEntryDate,
+  getTopics,
+  getEntriesByTopic,
+  topicLabel,
 } from "./notebook.ts";
 
 const FIXTURES = path.join(process.cwd(), "lib", "__fixtures__", "notebook");
@@ -78,4 +81,27 @@ test("throws when the date is not an ISO date", () => {
     '---\ntitle: "Bad date"\ndate: "last Tuesday"\nexcerpt: "x"\n---\n\nBody.\n',
   );
   assert.throws(() => loadEntries(dir), /baddate\.md.*date/i);
+});
+
+test("derives a topic label from its slug", () => {
+  assert.equal(topicLabel("brain-dump"), "Brain dump");
+  assert.equal(topicLabel("bad-days"), "Bad days");
+  assert.equal(topicLabel("focus"), "Focus");
+});
+
+test("collects topics with counts, sorted by label", () => {
+  const topics = getTopics(loadEntries(FIXTURES));
+  assert.deepEqual(topics, [
+    { slug: "bad-days", label: "Bad days", count: 1 },
+    { slug: "brain-dump", label: "Brain dump", count: 2 },
+  ]);
+});
+
+test("filters entries by topic, newest first", () => {
+  const entries = loadEntries(FIXTURES);
+  assert.deepEqual(
+    getEntriesByTopic("brain-dump", entries).map((e) => e.slug),
+    ["second-entry", "first-entry"],
+  );
+  assert.deepEqual(getEntriesByTopic("nope", entries), []);
 });

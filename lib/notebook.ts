@@ -93,3 +93,27 @@ export function getAllEntries(): Entry[] {
 export function getEntry(slug: string): Entry | null {
   return getAllEntries().find((entry) => entry.slug === slug) ?? null;
 }
+
+export type Topic = { slug: string; label: string; count: number };
+
+/** A slug that needs a label this cannot produce is a reason to pick a better slug. */
+export function topicLabel(slug: string): string {
+  const words = slug.replace(/-/g, " ");
+  return words.charAt(0).toUpperCase() + words.slice(1);
+}
+
+export function getTopics(entries: Entry[] = getAllEntries()): Topic[] {
+  const counts = new Map<string, number>();
+  for (const entry of entries) {
+    for (const topic of entry.topics) {
+      counts.set(topic, (counts.get(topic) ?? 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .map(([slug, count]) => ({ slug, label: topicLabel(slug), count }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+}
+
+export function getEntriesByTopic(topic: string, entries: Entry[] = getAllEntries()): Entry[] {
+  return entries.filter((entry) => entry.topics.includes(topic));
+}

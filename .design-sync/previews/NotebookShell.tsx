@@ -17,7 +17,7 @@ export const Default = () => (
         What I&rsquo;m <em>noticing.</em>
       </>
     }
-    intro="Notes on ADHD and building Mind Clear. No schedule. Just what is worth writing down."
+    intro="Notes on ADHD and building Mind Clear, posted whenever there is something worth writing down."
   >
     <TopicChips topics={topics} />
     <EntryRow entry={sampleEntry} />
@@ -51,7 +51,7 @@ export const Empty = () => (
         What I&rsquo;m <em>noticing.</em>
       </>
     }
-    intro="Notes on ADHD, planning, and building Mind Clear."
+    intro="Notes on ADHD and building Mind Clear, posted whenever there is something worth writing down."
   >
     <p className="mt-10 border-t border-hairline py-6 text-ink-soft">Nothing here yet.</p>
   </NotebookShell>

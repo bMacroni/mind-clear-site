@@ -120,6 +120,62 @@ export function CircleMark({
   );
 }
 
+/**
+ * A word crossed out mid-sentence, optionally with the correction squeezed in
+ * above it. The inline-block matters: it is what gives the stroke the width of
+ * the word rather than of whatever ancestor happens to be positioned.
+ */
+export function Struck({
+  children,
+  above,
+  color = MARKER.black,
+  aboveColor = MARKER.red,
+}: {
+  children: ReactNode;
+  above?: string;
+  color?: string;
+  aboveColor?: string;
+}) {
+  return (
+    <span className="relative inline-block">
+      {above ? (
+        <span
+          aria-hidden="true"
+          className="absolute left-1/2 whitespace-nowrap text-[0.7em] leading-none"
+          style={{
+            bottom: "76%",
+            transform: "translateX(-50%) rotate(-3deg)",
+            color: aboveColor,
+          }}
+        >
+          {above}
+        </span>
+      ) : null}
+      {children}
+      <Scratch color={color} className="left-0 top-[45%] h-[0.45em] w-full" />
+    </span>
+  );
+}
+
+/** A word ringed by someone who kept coming back to it. */
+export function Circled({
+  children,
+  color = MARKER.red,
+}: {
+  children: ReactNode;
+  color?: string;
+}) {
+  return (
+    <span className="relative inline-block">
+      {children}
+      <CircleMark
+        color={color}
+        className="left-[-11%] top-[-30%] h-[1.85em] w-[124%]"
+      />
+    </span>
+  );
+}
+
 /** A marker arrow. Points right by default; rotate for other directions. */
 export function ArrowMark({
   color = MARKER.black,

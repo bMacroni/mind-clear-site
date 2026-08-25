@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Outfit, Fraunces } from 'next/font/google'
+import { Outfit, Fraunces, Caveat } from 'next/font/google'
 import './globals.css'
 
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' })
@@ -9,6 +9,15 @@ const fraunces = Fraunces({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-serif',
+})
+
+// Handwriting for the notebook's whiteboard figures.
+// See components/notebook/Whiteboard.tsx.
+const caveat = Caveat({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-hand',
 })
 
 export const metadata: Metadata = {
@@ -33,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${fraunces.variable} font-sans`}>{children}</body>
+      <body className={`${outfit.variable} ${fraunces.variable} ${caveat.variable} font-sans`}>{children}</body>
     </html>
   )
 }

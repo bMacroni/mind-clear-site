@@ -97,6 +97,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)", "sans-serif"],
         serif: ["var(--font-serif)", "serif"],
+        hand: ["var(--font-hand)", "Comic Sans MS", "cursive"],
       },
     },
   },

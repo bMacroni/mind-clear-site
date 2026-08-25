@@ -3,12 +3,13 @@
    Generated for /design-sync. The site itself gets these values inline and via
    next/font; this file makes them available outside the Next runtime.
 --------------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Outfit:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Outfit:wght@200..700&family=Caveat:wght@400..700&display=swap");
 
 :root {
   /* Type */
   --font-sans: "Outfit", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-hand: "Caveat", "Comic Sans MS", cursive;
 
   /* Surfaces */
   --mc-cream: #E8E8E2;        /* page background */

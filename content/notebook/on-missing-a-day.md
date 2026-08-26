@@ -3,7 +3,7 @@ title: "On missing a day"
 date: 2026-08-18
 topics: ["bad-days"]
 excerpt: "What matters is coming back, not the streak you broke."
-metaDescription: "Why Mind Clear's routines forgive a missed day, and what streak-based apps get wrong about ADHD."
+metaDescription: "The streak still resets. What Mind Clear does differently is everything that happens after it."
 ---
 
 I built a habit tracker into an early version of this app. It had a streak counter,
@@ -29,9 +29,15 @@ a bright color, on a screen you chose to open.
 
 ## What we do instead
 
-Routines in Mind Clear keep their history, so a missed day leaves a gap instead of
-erasing anything. The streak picks up where it left off rather than starting over,
-and nothing turns red.
+The streak goes back to zero. I want to be straight about that, because plenty of
+apps imply otherwise and it is never quite true.
+
+What changes is what the app does with that fact. The badge turns into a heart
+rather than a broken flame. The routine card still shows its heatmap, so all eleven
+days you did show up are still sitting there in plain sight. And if you actually did
+the thing and just forgot to log it, you can back-date it.
+
+Same zero. Nothing turns red, and nothing tells you that you lost something.
 
 Overdue tasks work the same way. They do not pile up in an angry list. They wait,
 and get quietly moved to a day that has room.

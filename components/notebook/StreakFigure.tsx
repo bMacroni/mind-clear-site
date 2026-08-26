@@ -6,9 +6,14 @@ import { ArrowMark, BoxMark, MARKER, Struck, Tick, Whiteboard } from "./Whiteboa
 // on the twelfth, and opening the app again on the thirteenth. Do not round
 // them off to nicer numbers, they are the whole anecdote.
 //
-// The two outcomes below are the point. A streak app deletes the eleven; a
-// forgiving one leaves the gap sitting there and carries on counting. The
-// second row is deliberately the quieter of the two.
+// BOTH counters reset to zero. Mind Clear's streak breaks like any other, and
+// an earlier version of this figure claimed it carried on counting, which is
+// not true of the product. Do not reintroduce that.
+//
+// The contrast is what happens after the reset: one app makes sure you feel it,
+// the other leaves the eleven days visible on the routine's heatmap and lets you
+// back-date a day you forgot to log. The second row is deliberately the quieter
+// of the two, which is the whole argument.
 
 function DayCell({
   day,
@@ -89,8 +94,9 @@ export function StreakFigure() {
           </p>
           <p className="sr-only">
             Eleven days ticked, the twelfth missed while ill, the thirteenth still open.
-            A streak app throws the eleven away and starts from zero. A forgiving one
-            leaves the gap alone and carries on counting.
+            Both apps reset the count to zero. One announces that the streak is lost; the
+            other says nothing and leaves the eleven days visible on the routine&rsquo;s
+            heatmap.
           </p>
 
           <div aria-hidden="true">
@@ -107,15 +113,16 @@ export function StreakFigure() {
             <div className="space-y-3">
               <Outcome label="most apps" labelColor={MARKER.red}>
                 <Struck color={MARKER.red}>11 days</Struck>{" "}
-                <span style={{ color: MARKER.red, fontWeight: 700 }}>0</span>{" "}
-                <span className="ml-3 text-[0.95rem]" style={{ opacity: 0.6 }}>
-                  start again from nothing
+                <span style={{ color: MARKER.red, fontWeight: 700 }}>0</span>
+                <span className="ml-3 text-[0.95rem]" style={{ color: MARKER.red }}>
+                  streak lost!
                 </span>
               </Outcome>
               <Outcome label="mind clear" labelColor={MARKER.blue}>
-                11 days, then 12{" "}
+                <Struck color={MARKER.black}>11 days</Struck>{" "}
+                <span style={{ fontWeight: 700 }}>0</span>
                 <span className="ml-3 text-[0.95rem]" style={{ opacity: 0.6 }}>
-                  the gap just sits there
+                  same zero. the 11 days stay on the heatmap
                 </span>
               </Outcome>
             </div>
@@ -124,7 +131,8 @@ export function StreakFigure() {
       </Whiteboard>
 
       <figcaption className="mt-3 text-xs text-ink-soft">
-        A streak counts consecutive days. It cannot tell a bad week from giving up.
+        Both counters go back to zero. A streak cannot tell a bad week from giving up,
+        so only one of them makes a point of telling you.
       </figcaption>
     </figure>
   );

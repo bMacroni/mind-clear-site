@@ -25,6 +25,8 @@ Opening a clean, well-designed task app in that state does not help. It asks me 
 do the sorting first, in my head, and then type the result. The sorting is the part
 I cannot do.
 
+{{figure:task-form}}
+
 So I would sit there. Sometimes I would type three things and close the app.
 Sometimes I would reorganize my project list instead, which felt productive and
 was not.

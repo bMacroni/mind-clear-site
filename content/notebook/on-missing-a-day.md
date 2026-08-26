@@ -12,6 +12,8 @@ because every habit tracker has one.
 I used it for eleven days. On day twelve I was ill. On day thirteen I opened the app,
 saw the counter had gone back to zero, and did not open it again for a month.
 
+{{figure:streak}}
+
 That comes down to design, not willpower.
 
 ## What a streak actually measures

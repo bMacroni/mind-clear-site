@@ -176,6 +176,57 @@ export function Circled({
   );
 }
 
+/** A tick, drawn rather than typed. */
+export function Tick({
+  color = MARKER.green,
+  className = "",
+}: {
+  color?: string;
+  className?: string;
+}) {
+  return (
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none">
+      <path
+        d="M4 13 L 9.5 19 L 20 5"
+        stroke={color}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+/**
+ * A box drawn by hand. Corners never quite meet and the sides are never quite
+ * square, so each one takes a small rotation from its index.
+ */
+export function BoxMark({
+  children,
+  color = MARKER.black,
+  tilt = 0,
+  className = "",
+}: {
+  children?: ReactNode;
+  color?: string;
+  tilt?: number;
+  className?: string;
+}) {
+  return (
+    <span
+      className={`inline-flex items-center justify-center ${className}`}
+      style={{
+        border: `2px solid ${color}`,
+        borderRadius: "3px",
+        transform: `rotate(${tilt}deg)`,
+        opacity: 0.85,
+      }}
+    >
+      {children}
+    </span>
+  );
+}
+
 /** A marker arrow. Points right by default; rotate for other directions. */
 export function ArrowMark({
   color = MARKER.black,

@@ -43,6 +43,8 @@ Mind Clear lives in a specific emotional range. Here's where we sit:
 - **Pressure language:** Don't miss out, limited time, act now, you're falling behind, stop wasting time
 - **Filler phrases:** "It's important to note that," "In today's fast-paced world," "At the end of the day," "When it comes to"
 - **Passive voice** (when active works): "Tasks are organized by the AI" → "The AI organizes your tasks"
+- **Tired AI vocabulary:** delve, harness, underscore, testament, tapestry, realm, beacon
+- **Em dashes.** Use a period, a comma, parentheses, or a colon. Nothing else reads as machine-written so quickly.
 
 ---
 
@@ -97,6 +99,46 @@ Most room to breathe. Longer form, but still direct. First-person (Brian) or sec
 | "Dump everything on your mind" | "Input your tasks and let our AI categorize them" |
 | "The app handles it" | "Leverage our intelligent automation" |
 | "Some days are just hard" | "Everyone has off days on their productivity journey" |
+
+---
+
+## Sounding Human, Not Generated
+
+Our readers are people who are tired of being marketed at. Copy that reads like it came out of a
+language model breaks their trust before they finish the paragraph. These are the specific habits
+to hunt for on every reread.
+
+### Banned techniques
+
+**Em dashes.** No exceptions. A period usually works. So does a comma, a colon, or parentheses.
+
+**The rule of three.** Grouping ideas, adjectives, or examples into tidy sets of three, whether or
+not the third one earns its place. Two is often right. So is four. Count them and cut.
+
+**Balanced contrasts.** "It's not just a planner, it's a partner." "No fluff. No filler. Just
+results." The shape is the tell, and it shows up even with different words inside it.
+
+**Cliché openings.** "In today's fast-paced digital landscape." "As the world continues to evolve."
+Start with the actual thing you want to say.
+
+**Marketing fluff.** game-changer, cutting-edge, elevate, unlock, revolutionize.
+
+### Rhythm
+
+Generated prose keeps every sentence about the same length. Real writing does not. Some sentences
+run long and take their time getting where they are going, and then one lands short. Read a draft
+out loud. If the cadence never surprises you, rewrite it.
+
+### Take a position
+
+Do not hedge every point into an even-handed summary. If one option is worse, say so. Weighing both
+sides of everything reads as an unwillingness to think, not as fairness.
+
+### Use real detail
+
+Polished authority with nothing specific in it is the biggest tell. Name the app that failed you.
+Name the Tuesday it happened. Include the part that did not go well. A concrete, slightly awkward
+detail does more for credibility than any amount of smooth phrasing.
 
 ---
 

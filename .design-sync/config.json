@@ -1,0 +1,73 @@
+{
+  "projectId": "e43bad24-e984-476d-9e5c-042a95c369d6",
+  "shape": "package",
+  "pkg": "mind-clear-site",
+  "globalName": "MindClear",
+  "srcDir": "components",
+  "tsconfig": ".design-sync/tsconfig.json",
+  "cssEntry": ".design-sync/compiled.css",
+  "guidelinesGlob": [
+    "docs/brand-voice.md",
+    "docs/marketing-playbook.md"
+  ],
+  "componentSrcMap": {
+    "Hero": "components/marketing/Hero.tsx",
+    "ProblemHook": "components/marketing/ProblemHook.tsx",
+    "BrainDump": "components/marketing/BrainDump.tsx",
+    "FocusFeature": "components/marketing/FocusFeature.tsx",
+    "StuckFeature": "components/marketing/StuckFeature.tsx",
+    "OverdueDrip": "components/marketing/OverdueDrip.tsx",
+    "FeatureList": "components/marketing/FeatureList.tsx",
+    "FounderStoryThread": "components/marketing/FounderStoryThread.tsx",
+    "DownloadCTA": "components/marketing/DownloadCTA.tsx",
+    "Footer": "components/marketing/Footer.tsx",
+    "ThreadSection": "components/marketing/ThreadSection.tsx",
+    "TaskCardMockup": "components/marketing/TaskCardMockup.tsx",
+    "GooglePlayButton": "components/marketing/GooglePlayButton.tsx",
+    "NotebookShell": "components/notebook/NotebookShell.tsx",
+    "EntryRow": "components/notebook/EntryRow.tsx",
+    "TopicChips": "components/notebook/TopicChips.tsx",
+    "EntryHeader": "components/notebook/EntryHeader.tsx",
+    "Prose": "components/notebook/Prose.tsx",
+    "Button": "components/ui/button.tsx",
+    "Card": "components/ui/card.tsx",
+    "Badge": "components/ui/badge.tsx",
+    "Input": "components/ui/input.tsx",
+    "Whiteboard": "components/notebook/Whiteboard.tsx"
+  },
+  "provider": {
+    "component": "MindClearPage"
+  },
+  "docsDir": ".design-sync/docs",
+  "dtsPropsFor": {
+    "Hero": "  // No props — this section renders fixed copy.",
+    "ProblemHook": "  // No props — this section renders fixed copy.",
+    "BrainDump": "  // No props — this section renders fixed copy.",
+    "FocusFeature": "  // No props — this section renders fixed copy.",
+    "StuckFeature": "  // No props — this section renders fixed copy.",
+    "OverdueDrip": "  // No props — this section renders fixed copy.",
+    "FeatureList": "  // No props — this section renders fixed copy.",
+    "FounderStoryThread": "  // No props — this section renders fixed copy.",
+    "DownloadCTA": "  // No props — this section renders fixed copy.",
+    "Footer": "  // No props — this section renders fixed copy.",
+    "ThreadSection": "  /** Two-digit section number: the eyebrow and the ghost numeral behind the content. */\n  number: string;\n  /** Uppercase, letter-spaced eyebrow label. */\n  label: string;\n  /** Accessible name for the section element. */\n  ariaLabel: string;\n  children: React.ReactNode;",
+    "TaskCardMockup": "  /** Task title, the card's main line. */\n  title: string;\n  /** Small line under the title — due date, cadence, or priority. */\n  meta?: string;\n  /** Focus-mode treatment: translucent gold fill and gold border. */\n  isFocus?: boolean;\n  /** Status chip, e.g. \"3 days waiting\". */\n  pill?: string;\n  /** Darker chip for what the AI ranked up. */\n  priorityPill?: string;",
+    "GooglePlayButton": "  className?: string;\n  /** Rendered badge height in px. Width scales to preserve the badge ratio. */\n  height?: number;",
+    "NotebookShell": "  /** Uppercase, letter-spaced label above the heading. */\n  eyebrow: string;\n  /** The oversized translucent character behind the heading. */\n  ghost: string;\n  title: React.ReactNode;\n  /** One short paragraph under the heading. */\n  intro?: string;\n  children: React.ReactNode;",
+    "EntryRow": "  /** One notebook entry. The shape is inlined because the Entry type is not a bundle export. */\n  entry: { slug: string; number: number; title: string; date: string; topics: string[]; excerpt: string; metaDescription: string; readingMinutes: number; html: string };",
+    "TopicChips": "  topics: { slug: string; label: string; count: number }[];\n  /** Slug of the topic currently being viewed. Omit on the index. */\n  active?: string;",
+    "EntryHeader": "  /** One notebook entry. The shape is inlined because the Entry type is not a bundle export. */\n  entry: { slug: string; number: number; title: string; date: string; topics: string[]; excerpt: string; metaDescription: string; readingMinutes: number; html: string };",
+    "Prose": "  /** Trusted HTML, rendered from repo-owned markdown at build time. */\n  html: string;",
+    "Button": "  variant?: \"default\" | \"destructive\" | \"outline\" | \"secondary\" | \"ghost\" | \"link\";\n  size?: \"default\" | \"sm\" | \"lg\" | \"icon\";\n  /** Render as the child element (Radix Slot) instead of a <button>. */\n  asChild?: boolean;\n  className?: string;\n  disabled?: boolean;\n  type?: \"button\" | \"submit\" | \"reset\";\n  onClick?: React.MouseEventHandler<HTMLButtonElement>;\n  children?: React.ReactNode;",
+    "Badge": "  variant?: \"default\" | \"secondary\" | \"destructive\" | \"outline\";\n  className?: string;\n  children?: React.ReactNode;",
+    "Input": "  type?: string;\n  placeholder?: string;\n  value?: string;\n  defaultValue?: string;\n  disabled?: boolean;\n  className?: string;\n  onChange?: React.ChangeEventHandler<HTMLInputElement>;",
+    "Card": "  className?: string;\n  style?: React.CSSProperties;\n  children?: React.ReactNode;",
+    "Whiteboard": "  children: React.ReactNode;\n  /** Extra classes on the board itself, for width or margin. */\n  className?: string;"
+  },
+  "overrides": {
+    "NotebookShell": {
+      "cardMode": "column"
+    }
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}

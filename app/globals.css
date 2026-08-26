@@ -4,65 +4,9 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    /* Corner radius for the shadcn/ui primitives in components/ui/*.
+       All Golden Thread colors live in tailwind.config.js. */
     --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
   }
 }
 
@@ -166,4 +110,107 @@
 @keyframes mcFade {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Rendered notebook markdown. Tag selectors because the HTML comes from remark. */
+.mc-prose {
+  max-width: 34rem;
+  color: #444444;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.mc-prose > * + * {
+  margin-top: 1.25rem;
+}
+.mc-prose h2 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  color: #111111;
+  margin-top: 2.75rem;
+}
+.mc-prose h3 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 1.375rem;
+  color: #111111;
+  margin-top: 2rem;
+}
+.mc-prose a {
+  color: #6B5A20;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(107, 90, 32, 0.4);
+}
+.mc-prose a:hover {
+  text-decoration-color: #6B5A20;
+}
+.mc-prose strong {
+  font-weight: 500;
+  color: #111111;
+}
+.mc-prose em {
+  font-style: italic;
+}
+.mc-prose ul,
+.mc-prose ol {
+  padding-left: 1.25rem;
+}
+.mc-prose ul {
+  list-style: disc;
+}
+.mc-prose ol {
+  list-style: decimal;
+}
+.mc-prose li + li {
+  margin-top: 0.5rem;
+}
+.mc-prose li::marker {
+  color: #D4AF37;
+}
+.mc-prose blockquote {
+  border-left: 2px solid #D4AF37;
+  padding-left: 1.25rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #111111;
+}
+.mc-prose hr {
+  border: 0;
+  border-top: 1px solid #DEDCD2;
+  margin-top: 2.5rem;
+}
+.mc-prose code {
+  font-size: 0.9em;
+  background-color: #F5F1E1;
+  border: 1px solid #DEDCD2;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+.mc-prose pre {
+  background-color: #F5F1E1;
+  border: 1px solid #DEDCD2;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.mc-prose pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+.mc-prose img {
+  max-width: 100%;
+  height: auto;
+}
+.mc-prose table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.mc-prose th,
+.mc-prose td {
+  border-bottom: 1px solid #DEDCD2;
+  padding: 0.5rem 0.75rem;
 }

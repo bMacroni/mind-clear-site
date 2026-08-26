@@ -7,6 +7,7 @@ import { ArrowRight, Loader2 } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/notebook", label: "Notebook" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
   { href: "/delete-account", label: "Delete Account" },

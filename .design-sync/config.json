@@ -32,7 +32,8 @@
     "Button": "components/ui/button.tsx",
     "Card": "components/ui/card.tsx",
     "Badge": "components/ui/badge.tsx",
-    "Input": "components/ui/input.tsx"
+    "Input": "components/ui/input.tsx",
+    "Whiteboard": "components/notebook/Whiteboard.tsx"
   },
   "provider": {
     "component": "MindClearPage"
@@ -60,10 +61,13 @@
     "Button": "  variant?: \"default\" | \"destructive\" | \"outline\" | \"secondary\" | \"ghost\" | \"link\";\n  size?: \"default\" | \"sm\" | \"lg\" | \"icon\";\n  /** Render as the child element (Radix Slot) instead of a <button>. */\n  asChild?: boolean;\n  className?: string;\n  disabled?: boolean;\n  type?: \"button\" | \"submit\" | \"reset\";\n  onClick?: React.MouseEventHandler<HTMLButtonElement>;\n  children?: React.ReactNode;",
     "Badge": "  variant?: \"default\" | \"secondary\" | \"destructive\" | \"outline\";\n  className?: string;\n  children?: React.ReactNode;",
     "Input": "  type?: string;\n  placeholder?: string;\n  value?: string;\n  defaultValue?: string;\n  disabled?: boolean;\n  className?: string;\n  onChange?: React.ChangeEventHandler<HTMLInputElement>;",
-    "Card": "  className?: string;\n  style?: React.CSSProperties;\n  children?: React.ReactNode;"
+    "Card": "  className?: string;\n  style?: React.CSSProperties;\n  children?: React.ReactNode;",
+    "Whiteboard": "  children: React.ReactNode;\n  /** Extra classes on the board itself, for width or margin. */\n  className?: string;"
   },
   "overrides": {
-    "NotebookShell": { "cardMode": "column" }
+    "NotebookShell": {
+      "cardMode": "column"
+    }
   },
   "readmeHeader": ".design-sync/conventions.md"
 }

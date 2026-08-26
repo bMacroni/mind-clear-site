@@ -120,3 +120,31 @@ const { MindClearPage, ThreadSection, TaskCardMockup, GooglePlayButton } = windo
   <div className="mc-grain" aria-hidden="true" />
 </MindClearPage>
 ```
+
+## Figures are drawn on a whiteboard, not styled like the page
+
+Notebook entries carry diagrams, and those deliberately break out of the Golden Thread. A figure is a sketch on a whiteboard: white surface, dry-erase marker, handwriting. The contrast with the cream page is the point, so do not restyle a figure to match the site.
+
+```jsx
+const { Whiteboard, MARKER, Struck, Circled, Tick, BoxMark, ArrowMark } = window.MindClear;
+
+<Whiteboard>
+  <div className="p-5">
+    <p className="font-hand text-lg font-bold lowercase" style={{ color: MARKER.black }}>
+      in your head
+    </p>
+    <p className="font-hand" style={{ color: MARKER.blue }}>
+      a word <Struck above="four" color={MARKER.blue}>twice</Struck> corrected in flight
+    </p>
+  </div>
+</Whiteboard>
+```
+
+Rules for anything on a board:
+
+- Type is `font-hand` (Caveat), never Fraunces or Outfit. Every word on a board is handwritten, labels included.
+- Color comes from the `MARKER` object (`black`, `blue`, `red`, `green`, `orange`), never from the cream/ink/gold utilities. Those are page colors.
+- `Whiteboard` adds no padding. Give the content its own.
+- Marks available: `Struck` (crossed out, optional correction above), `Circled`, `Scratch`, `CircleMark`, `ArrowMark`, `Tick`, `BoxMark`.
+
+Worked examples: `BrainDumpFigure`, `StreakFigure` and `TaskFormFigure` in `components/notebook/`. Read them for the idiom. They are written for their own entries, so do not reuse them verbatim in a different context.

@@ -42,3 +42,21 @@ import * as React from "react";
 export function MindClearPage({ children }: { children: React.ReactNode }) {
   return <main className="mc-page overflow-x-hidden">{children}</main>;
 }
+
+// Whiteboard figures. The surface and its marker marks are reusable; the three
+// figures themselves are specific to their notebook entries and are exported
+// so the bundle can render them, not so they get imitated.
+export {
+  Whiteboard,
+  Scratch,
+  CircleMark,
+  ArrowMark,
+  Tick,
+  BoxMark,
+  Struck,
+  Circled,
+  MARKER,
+} from "../components/notebook/Whiteboard";
+export { BrainDumpFigure } from "../components/notebook/BrainDumpFigure";
+export { StreakFigure } from "../components/notebook/StreakFigure";
+export { TaskFormFigure } from "../components/notebook/TaskFormFigure";

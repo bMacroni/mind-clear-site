@@ -47,3 +47,5 @@ is remove one specific reason to stop, which turns out to matter more than I
 expected.
 
 Some days are just hard. The app should not make them harder.
+
+{{figure:video}}

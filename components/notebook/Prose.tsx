@@ -1,6 +1,7 @@
 import { BrainDumpFigure } from "./BrainDumpFigure";
 import { StreakFigure } from "./StreakFigure";
 import { TaskFormFigure } from "./TaskFormFigure";
+import { MindClearVideo } from "./MindClearVideo";
 
 // Entry HTML is generated at build time from repo-owned markdown. remark-html
 // (see lib/notebook.ts) sanitizes its output by default, so this isn't a raw
@@ -21,6 +22,7 @@ const FIGURES = {
   "brain-dump": BrainDumpFigure,
   streak: StreakFigure,
   "task-form": TaskFormFigure,
+  video: MindClearVideo,
 } as const;
 
 const FIGURE_MARKER = /<p>\{\{figure:([a-z0-9-]+)\}\}<\/p>/;

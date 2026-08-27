@@ -42,3 +42,5 @@ That is what Brain Dump is. You type the mess, and Mind Clear turns it into task
 and goals you can actually look at. The order comes after, not before.
 
 It is a small reversal and it took me an embarrassingly long time to notice it.
+
+{{figure:video}}

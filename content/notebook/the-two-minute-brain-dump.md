@@ -41,3 +41,5 @@ and go to bed.
 If you want to go further, that raw text is exactly what Brain Dump takes. You paste
 the mess in and get back tasks, goals, and routines you can work from. But the
 two-minute version works on its own, in any app you already have.
+
+{{figure:video}}

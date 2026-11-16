@@ -62,6 +62,27 @@ export default function PrivacyPage() {
               <li><strong>Google OAuth Scopes:</strong> Specifically for Google integration, the following OAuth Scopes are requested: openid, email, profile, and <code className="bg-[#F5F1E1] text-[#6B5A20] rounded px-1 text-sm">https://www.googleapis.com/auth/calendar.events.readonly</code>.</li>
             </ul>
           </div>
+
+          <div id="ad-measurement">
+            <h3 className="text-xl font-semibold text-[#6B5A20] mb-3">2.4 Ad Measurement (Google Analytics for Firebase)</h3>
+            <div className="space-y-3 text-[#444444]">
+              <p>
+                When you install Mind Clear from an ad, we use Google Analytics for Firebase to learn whether the ad led to a sign-up.
+                The app tells Google that you signed up, finished your first Brain Dump, or subscribed (with the price).
+              </p>
+              <p>
+                Google Analytics for Firebase also records basic app usage automatically (app opens, sessions and time in app),
+                device and app information, and your device's advertising ID.
+              </p>
+              <p>
+                We never send your tasks, Brain Dump text, goals, name or email. We don't use this data to show you personalized ads.
+              </p>
+              <p>
+                You can turn it off anytime in Mind Clear under <strong>Profile → Privacy → "Help measure our ads (Google Analytics)"</strong>,
+                or reset or delete your advertising ID in your Android settings (<strong>Settings → Privacy → Ads</strong>).
+              </p>
+            </div>
+          </div>
         </div>
       )
     },
@@ -100,7 +121,7 @@ export default function PrivacyPage() {
               <li><strong>Groq:</strong> Used for high-speed AI inference and processing of user prompts/conversations. For these specific AI requests, the user's input (prompts/context) is not retained by Groq and is not used to train their models.</li>
               <li><strong>Google:</strong> Authentication, Calendar integration, and other AI services.</li>
               <li><strong>Supabase:</strong> Database and authentication services.</li>
-              <li><strong>Firebase:</strong> Analytics and crash reporting.</li>
+              <li><strong>Firebase:</strong> Analytics, ad measurement (see <a href="#ad-measurement" className="text-[#6B5A20] underline hover:text-[#111111]">2.4</a>), and crash reporting.</li>
               <li><strong>Railway:</strong> Backend hosting services.</li>
             </ul>
             <p className="mt-2 text-sm text-[#6B6B6B]"><strong>Note:</strong> This list may be updated as our technical infrastructure evolves.</p>
@@ -320,7 +341,7 @@ export default function PrivacyPage() {
       <main className="max-w-4xl mx-auto px-6 pb-20">
         <div className="text-sm text-[#6B6B6B] mb-12 text-center">
           <div>Effective Date: <strong className="text-[#111111]">September 22, 2025</strong></div>
-          <div>Last Updated: <strong className="text-[#111111]">December 7, 2025</strong></div>
+          <div>Last Updated: <strong className="text-[#111111]">November 15, 2026</strong></div>
         </div>
 
         <div className="space-y-16">
